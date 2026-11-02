@@ -1,0 +1,1372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Isaac Gideon Poku · pisagid</title>
+<meta name="description" content="Isaac Gideon Poku (pisagid): Power Platform solution architect, Azure & DevOps engineer and full-stack web developer in Accra, Ghana.">
+<link rel="canonical" href="https://isaacgideonpoku.com/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Isaac Gideon Poku", "alternateName": "pisagid", "url": "https://isaacgideonpoku.com/", "image": "https://isaacgideonpoku.com/assets/og.png", "jobTitle": "Junior Technical Consultant", "worksFor": {"@type": "Organization", "name": "eSolutions Consulting Ghana"}, "address": {"@type": "PostalAddress", "addressLocality": "Accra", "addressCountry": "GH"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "Accra Institute of Technology"}, "email": "mailto:pisagid@gmail.com", "sameAs": ["https://www.linkedin.com/in/isaac-gideon-poku-591643163", "https://github.com/Pisagid", "https://twitter.com/pisagid", "https://www.facebook.com/pisagid/"], "knowsAbout": ["Microsoft Power Platform", "Power Apps", "Power Automate", "Power BI", "Microsoft Azure", "Azure DevOps", "SharePoint", "Microsoft 365", "Web development", "PHP", "MySQL"], "hasCredential": [{"@type": "EducationalOccupationalCredential", "name": "DevOps Engineer Expert", "credentialCategory": "certification", "recognizedBy": {"@type": "Organization", "name": "Microsoft"}}, {"@type": "EducationalOccupationalCredential", "name": "Power Platform Solution Architect Expert", "credentialCategory": "certification", "recognizedBy": {"@type": "Organization", "name": "Microsoft"}}, {"@type": "EducationalOccupationalCredential", "name": "Azure Network Engineer Associate", "credentialCategory": "certification", "recognizedBy": {"@type": "Organization", "name": "Microsoft"}}, {"@type": "EducationalOccupationalCredential", "name": "Azure Administrator Associate", "credentialCategory": "certification", "recognizedBy": {"@type": "Organization", "name": "Microsoft"}}, {"@type": "EducationalOccupationalCredential", "name": "Power BI Data Analyst Associate", "credentialCategory": "certification", "recognizedBy": {"@type": "Organization", "name": "Microsoft"}}, {"@type": "EducationalOccupationalCredential", "name": "Power Platform Developer Associate", "credentialCategory": "certification", "recognizedBy": {"@type": "Organization", "name": "Microsoft"}}]}</script>
+<meta property="og:title" content="Isaac Gideon Poku · pisagid">
+<meta property="og:description" content="I turn paperwork into working systems. Power Platform, Azure and web apps from Accra, Ghana.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://isaacgideonpoku.com/">
+<meta property="og:image" content="https://isaacgideonpoku.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pisagid">
+<meta name="theme-color" content="#EEF1F7">
+<link rel="icon" type="image/svg+xml" href="assets/logo/pisagid-icon.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/isaac.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<script>try{if(localStorage.getItem("igp-theme")==="dark")document.documentElement.dataset.theme="dark";}catch(e){}</script>
+<style>
+/* Layout: a loading screen hands off to one wide soft-UI frame. The frame keeps the nav and swaps "pages"
+   (Home, About me, Services, Works, Credentials, Let's work) by URL hash, like the reference's stacked frames. */
+:root{
+  --ground:#EEF1F7; --frame:#F6F8FC; --card:#FFFFFF; --sunk:#EEF2F9; --ink:#0E1B3D; --muted:#5D6886; --line:#E1E6F0;
+  --blue:#1F6FEB; --blue-ink:#1A5FCC; --blue-soft:#E4EEFE; --green:#13895A; --green-soft:#E1F4EB; --amber:#B7790A; --amber-soft:#FCF1DB;
+  --danger:#B3261E; --panel:linear-gradient(160deg,#E9EDF4,#D9DFEA);
+  --shadow:0 1px 2px rgba(14,27,61,.04), 0 12px 32px -12px rgba(14,27,61,.14);
+  --shadow-lg:0 2px 4px rgba(14,27,61,.04), 0 30px 60px -24px rgba(14,27,61,.22);
+  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --body:"Instrument Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --r:24px; --max:1480px; color-scheme:light;
+}
+:root[data-theme="dark"]{
+  --ground:#070C1C; --frame:#0C1428; --card:#111B35; --sunk:#0E1730; --ink:#EAF0FF; --muted:#97A3C4; --line:#1F2B4D;
+  --blue:#4C8DFF; --blue-ink:#7AABFF; --blue-soft:#14254A; --green:#3DD68C; --green-soft:#10302A; --amber:#F2B630; --amber-soft:#2E2612;
+  --danger:#FF8A80; --panel:linear-gradient(160deg,#121D3A,#0A1226);
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 12px 32px -12px rgba(0,0,0,.6);
+  --shadow-lg:0 2px 4px rgba(0,0,0,.3), 0 30px 60px -24px rgba(0,0,0,.7);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-0.02em}
+p{margin:0}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:8px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-ink)}
+.card{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:clamp(20px,2.4vw,30px);min-width:0;position:relative}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:14px;font-weight:600;font-size:15px;text-decoration:none;border:0;cursor:pointer;font-family:var(--body);transition:transform .15s, box-shadow .15s, background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.blue{background:var(--blue);color:#fff;box-shadow:0 10px 24px -8px color-mix(in srgb,var(--blue) 70%,transparent)}
+.btn.soft{background:var(--card);color:var(--ink);box-shadow:var(--shadow)}
+.btn[disabled]{opacity:.6;cursor:progress}
+.mini{border:0;background:var(--sunk);color:var(--muted);font-family:var(--mono);font-size:11px;padding:6px 10px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.mini:hover{color:var(--blue-ink);background:var(--blue-soft)}
+
+/* ---------- loader ---------- */
+#loader{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:var(--ground);transition:clip-path .9s cubic-bezier(.7,0,.2,1), visibility 0s .9s;clip-path:inset(0 0 0 0);
+  animation:failsafe .4s 6s forwards}
+#loader.done{clip-path:inset(0 0 100% 0);visibility:hidden}
+@keyframes failsafe{to{clip-path:inset(0 0 100% 0);visibility:hidden}}
+.ld{display:grid;justify-items:center;gap:26px;transition:transform .8s cubic-bezier(.7,0,.2,1), opacity .5s}
+#loader.done .ld{transform:translateY(-40px) scale(.94);opacity:0}
+.ld svg{width:min(62vw,360px);height:auto;color:var(--ink);overflow:visible}
+.ld .wm-letters{clip-path:inset(0 100% 0 0);animation:reveal 1s .15s cubic-bezier(.6,0,.2,1) forwards}
+@keyframes reveal{to{clip-path:inset(0 0 0 0)}}
+.ld .wm-link{stroke-dasharray:1000;stroke-dashoffset:1000;animation:draw .8s .95s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.ld .wm-dot{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:pop .45s cubic-bezier(.3,1.6,.5,1) forwards}
+.ld .wm-dot.d1{animation-delay:.85s}.ld .wm-dot.d2{animation-delay:1.6s}
+@keyframes pop{to{transform:scale(1)}}
+.ld .meter{width:min(62vw,360px);display:grid;gap:10px}
+.ld .track{height:4px;border-radius:4px;background:var(--line);overflow:hidden}
+.ld .fill{height:100%;width:0;background:var(--blue);border-radius:4px;transition:width .25s}
+.ld .row{display:flex;justify-content:space-between;font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+
+/* ---------- frame + nav ---------- */
+.stage{padding:clamp(10px,2vw,28px) max(12px, env(safe-area-inset-right, 0px)) 28px max(12px, env(safe-area-inset-left, 0px));position:relative}
+.frame{max-width:var(--max);margin:0 auto;position:relative;background:var(--frame);border-radius:clamp(22px,3vw,36px);box-shadow:var(--shadow-lg);isolation:isolate;min-height:min(860px,calc(100vh - 56px));display:flex;flex-direction:column;overflow:hidden}
+body.loading .frame{transform:scale(.97) translateY(20px);opacity:0}
+.frame{transition:transform .9s cubic-bezier(.2,.8,.2,1) .15s, opacity .6s .15s}
+.orb{position:absolute;border-radius:50%;pointer-events:none;background:radial-gradient(circle at 35% 30%, #fff, color-mix(in srgb,var(--ground) 70%, #9fb1d4) 75%);animation:float 9s ease-in-out infinite;z-index:0}
+:root[data-theme="dark"] .orb{background:radial-gradient(circle at 35% 30%, #3a5aa0, #0c1530 75%)}
+@keyframes float{50%{transform:translateY(-14px)}}
+nav.top{position:relative;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px clamp(18px,3.4vw,52px)}
+.logo{display:inline-flex;align-items:center;color:var(--ink);text-decoration:none}
+.logo svg{height:30px;width:auto;display:block}
+.menu{display:flex;align-items:center;gap:clamp(10px,2.2vw,34px);list-style:none;margin:0;padding:0}
+.menu a{position:relative;text-decoration:none;font-size:14.5px;font-weight:500;color:var(--muted);padding:6px 2px}
+.menu a:hover,.menu a[aria-current]{color:var(--blue-ink)}
+.menu a[aria-current]::after{content:"";position:absolute;left:50%;bottom:-4px;width:18px;height:2.5px;border-radius:2px;background:var(--blue);transform:translateX(-50%)}
+.right{display:flex;align-items:center;gap:10px}
+.icon-btn{width:42px;height:42px;border-radius:12px;border:0;background:var(--card);color:var(--ink);box-shadow:var(--shadow);display:grid;place-items:center;cursor:pointer}
+.icon-btn svg{width:18px;height:18px}
+.hireme{padding:12px 22px;font-size:14px}
+#menuBtn{display:none}
+@media (max-width:920px){
+  #menuBtn{display:grid}
+  .menu{position:absolute;top:calc(100% - 6px);right:clamp(18px,3.4vw,52px);flex-direction:column;align-items:stretch;gap:2px;padding:8px;background:var(--card);border-radius:18px;box-shadow:var(--shadow-lg);min-width:200px;opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .2s, transform .2s}
+  .menu.open{opacity:1;pointer-events:auto;transform:none}
+  .menu a{padding:10px 14px;border-radius:12px}
+  .menu a[aria-current]{background:var(--blue-soft)}
+  .menu a[aria-current]::after{display:none}
+}
+@media (max-width:440px){.logo svg{height:24px}.hireme{padding:11px 14px}.right{gap:6px}}
+
+.view{position:relative;z-index:1;flex:1;display:flex;flex-direction:column}
+.page{flex:1;display:flex;flex-direction:column;padding:0 clamp(18px,3.4vw,52px) clamp(24px,3vw,44px)}
+.page.enter{animation:pageIn .6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes pageIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.ptitle{display:flex;align-items:center;justify-content:center;gap:14px;font-family:var(--display);font-weight:800;font-size:clamp(2rem,4.6vw,3.6rem);letter-spacing:.02em;text-transform:uppercase;text-align:center;margin:clamp(6px,1.5vw,18px) 0 6px}
+.ptitle::before,.ptitle::after{content:"✦";font-size:.45em;color:var(--blue)}
+.psub{text-align:center;color:var(--muted);max-width:60ch;margin:0 auto clamp(24px,3vw,40px)}
+footer.site{max-width:var(--max);margin:18px auto 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;color:var(--muted);font-size:13.5px;padding:0 6px}
+
+/* ---------- single page: stacked panels ---------- */
+html{scroll-behavior:smooth}
+.page{scroll-margin-top:84px}
+#home{scroll-margin-top:0}
+.frame.sheet{min-height:0;margin-top:clamp(16px,2.2vw,30px)}
+.sheet>.page{padding-top:clamp(36px,5vw,72px);padding-bottom:clamp(36px,5vw,64px)}
+.minibar{position:fixed;z-index:50;top:calc(env(safe-area-inset-top,0px) + 12px);left:0;right:0;margin:0 auto;width:max-content;max-width:calc(100% - 24px);display:flex;align-items:center;gap:clamp(10px,2vw,26px);padding:7px 7px 7px 16px;border-radius:18px;
+  background:color-mix(in srgb,var(--card) 82%,transparent);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);box-shadow:var(--shadow-lg);
+  visibility:hidden;opacity:0;transform:translateY(-12px);transition:opacity .25s, transform .25s, visibility 0s .25s}
+.minibar.on{visibility:visible;opacity:1;transform:none;transition:opacity .25s, transform .25s}
+.mlogo{display:flex;color:var(--ink)}
+.mlogo svg{height:22px;width:auto}
+.mlinks{display:flex;gap:clamp(8px,1.6vw,22px);list-style:none;margin:0;padding:0}
+.mlinks a{text-decoration:none;font-size:14px;font-weight:500;color:var(--muted)}
+.mlinks a:hover,.mlinks a[aria-current]{color:var(--blue-ink)}
+.minibar .btn{padding:10px 18px;font-size:14px}
+@media (max-width:760px){.mlinks{display:none}}
+
+/* ---------- reveal on scroll + hero entrance ---------- */
+.rv{opacity:.15;transform:translateY(28px);transition:opacity .7s ease, transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.hello>*,#me{transition:opacity .8s ease, transform .9s cubic-bezier(.2,.8,.2,1)}
+.hello>*:nth-child(1){transition-delay:.30s}.hello>*:nth-child(2){transition-delay:.38s}.hello>*:nth-child(3){transition-delay:.46s}
+.hello>*:nth-child(4){transition-delay:.54s}.hello>*:nth-child(5){transition-delay:.62s}.hello>*:nth-child(6){transition-delay:.70s}
+#me{transition-delay:.35s}
+body.loading .hello>*{opacity:0;transform:translateY(24px)}
+body.loading #me{opacity:0;transform:translateY(40px) scale(.97)}
+@keyframes unhide{to{opacity:1;transform:none}}
+body.loading .frame,body.loading .hello>*,body.loading #me{animation:unhide .01s 7s forwards}
+
+/* ---------- HOME ---------- */
+.hero{flex:1;display:grid;grid-template-columns:1fr minmax(300px,1.15fr) minmax(220px,.8fr);align-items:end;gap:clamp(12px,2vw,30px);min-height:clamp(560px,48vw,700px);padding-bottom:0!important}
+.hero>*{min-width:0}
+#home{padding-bottom:0}
+.hello{align-self:center;display:grid;gap:18px;padding-bottom:48px}
+.hello .hi{font-family:var(--display);font-weight:500;font-size:clamp(1.3rem,2vw,1.8rem)}
+.hello h1{font-weight:800;font-size:clamp(3rem,6.2vw,6rem);line-height:.9;text-transform:uppercase}
+.hello h1 span{display:block;color:transparent;-webkit-text-stroke:2px var(--ink)}
+.hello .bio{color:var(--muted);max-width:42ch;font-size:15.5px}
+.hello .bio b{color:var(--ink);font-weight:600}
+.ctas{display:flex;flex-wrap:wrap;gap:10px}
+.reach{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
+.mailpill{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:12px;background:var(--card);box-shadow:var(--shadow);font-size:13.5px;font-weight:500;user-select:all}
+.clock{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.clock b{color:var(--ink);font-weight:500}
+.socials{display:flex;gap:10px}
+.socials a{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--card);box-shadow:var(--shadow);color:var(--ink);transition:transform .15s}
+.socials a:hover{transform:translateY(-2px)}
+.socials a.main{background:var(--blue);color:#fff}
+.socials svg{width:18px;height:18px}
+
+.portrait{position:relative;align-self:stretch;display:flex;justify-content:center;align-items:flex-end}
+.portrait::before{content:"";position:absolute;z-index:0;width:88%;aspect-ratio:1;left:50%;top:50%;transform:translate(-50%,-48%);border-radius:50%;background:radial-gradient(circle, var(--card) 0 60%, color-mix(in srgb,var(--blue) 8%,transparent) 61%, transparent 72%)}
+.portrait img{position:relative;z-index:2;display:block;width:min(100%,460px);height:auto;filter:drop-shadow(0 24px 30px rgba(14,27,61,.18))}
+.ring{position:absolute;z-index:1;left:50%;border:1.5px dashed color-mix(in srgb,var(--blue) 45%,transparent);border-radius:50%;pointer-events:none}
+.badge{position:absolute;left:0;top:0;width:var(--bs,66px);height:auto;padding:0;border:0;background:none;cursor:pointer;will-change:transform;z-index:1}
+.badge img{display:block;width:100%;height:auto;filter:drop-shadow(0 8px 12px rgba(14,27,61,.25));transition:transform .2s}
+.badge:hover img,.badge:focus-visible img{transform:scale(1.12)}
+.badge .tip{position:absolute;left:50%;bottom:calc(100% + 10px);transform:translate(-50%,6px);width:max-content;max-width:220px;padding:9px 12px;border-radius:12px;background:var(--ink);color:var(--ground);font-family:var(--body);font-size:12.5px;font-weight:600;line-height:1.3;text-align:center;opacity:0;pointer-events:none;transition:opacity .18s, transform .18s;box-shadow:var(--shadow-lg)}
+.badge .tip small{display:block;font-weight:400;opacity:.7;font-size:11.5px;margin-top:2px}
+.badge .tip::after{content:"";position:absolute;left:50%;top:100%;transform:translateX(-50%);border:6px solid transparent;border-top-color:var(--ink)}
+.badge:hover .tip,.badge:focus-visible .tip,.badge.show .tip{opacity:1;transform:translate(-50%,0)}
+.badge:hover,.badge:focus-visible,.badge.show{z-index:30!important}
+
+.roles{align-self:center;display:grid;gap:24px;padding-bottom:30px;justify-items:center}
+.role{display:grid;justify-items:center;animation:float 8s ease-in-out infinite;text-decoration:none}
+.role:nth-child(2){animation-delay:-2.5s;margin-left:36px}
+.role:nth-child(3){animation-delay:-5s}
+.shot{width:156px;height:100px;border-radius:16px;background:var(--card);box-shadow:var(--shadow-lg);padding:10px;overflow:hidden}
+.stem{width:2px;height:14px;background:var(--ink);opacity:.5;position:relative}
+.stem::after{content:"";position:absolute;left:50%;top:50%;width:8px;height:8px;border-radius:50%;background:var(--ink);transform:translate(-50%,-50%)}
+.role .lab{padding:9px 16px;border-radius:12px;background:var(--card);box-shadow:var(--shadow);font-size:13px;font-weight:600;white-space:nowrap}
+.role:hover .lab{color:var(--blue-ink)}
+@media (max-width:1060px){
+  .hero{grid-template-columns:1fr 1fr;min-height:0}
+  .roles{grid-column:1/-1;grid-row:2;display:flex;flex-wrap:wrap;justify-content:center;gap:16px;padding:24px 0 8px}
+  .role:nth-child(2){margin-left:0}
+  .portrait{grid-row:1/3;grid-column:2}
+}
+@media (max-width:700px){
+  .hero{grid-template-columns:1fr}
+  .hello{padding-bottom:8px}
+  .portrait{grid-row:auto;grid-column:auto;min-height:440px}
+  .portrait img{width:min(78%,340px)}
+  .roles{grid-row:auto}
+}
+
+/* tiny mockups (shared) */
+.m-app{display:grid;grid-template-columns:44px 1fr;gap:8px;height:100%}
+.m-phone{border-radius:8px;background:var(--sunk);padding:5px;display:grid;gap:4px;align-content:start}
+.m-phone i{display:block;height:6px;border-radius:3px;background:var(--line)}
+.m-phone i:first-child{height:12px;background:var(--blue)}
+.m-list{display:grid;gap:6px;align-content:center}
+.m-list span{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:8.5px;color:var(--muted)}
+.m-list span::before{content:"";width:8px;height:8px;border-radius:3px;background:var(--green)}
+.m-list span.p::before{background:var(--amber)}
+.m-pipe{display:grid;gap:8px;height:100%;align-content:center}
+.m-pipe .row{display:flex;align-items:center;gap:4px}
+.m-pipe .st{flex:1;border-radius:6px;padding:4px 0;text-align:center;font-family:var(--mono);font-size:8px;background:var(--green-soft);color:var(--green)}
+.m-pipe .st.run{background:var(--blue-soft);color:var(--blue-ink)}
+.m-pipe .bar{height:5px;border-radius:3px;background:var(--sunk);overflow:hidden}
+.m-pipe .bar i{display:block;height:100%;width:70%;background:var(--blue);border-radius:3px;animation:load 3s ease-in-out infinite}
+@keyframes load{0%{width:15%}60%,100%{width:92%}}
+.m-web{height:100%;display:grid;grid-template-rows:auto 1fr;gap:6px}
+.m-web .dots{display:flex;gap:3px}.m-web .dots i{width:6px;height:6px;border-radius:50%;background:var(--line)}
+.m-web .code{display:grid;gap:5px;align-content:start}
+.m-web .code span{display:block;height:5px;border-radius:3px}
+.c1{width:70%;background:var(--blue)}.c2{width:52%;margin-left:10px;background:var(--line)}.c3{width:60%;margin-left:10px;background:var(--amber)}.c4{width:40%;background:var(--line)}.c5{width:58%;margin-left:10px;background:var(--green)}
+.m-bars{height:100%;display:flex;align-items:flex-end;gap:6px;padding:4px 4px 0}
+.m-bars i{flex:1;border-radius:4px 4px 0 0;background:var(--blue-soft)}
+.m-bars i:nth-child(3n){background:var(--blue)}
+.m-flow{height:100%;display:flex;align-items:center;justify-content:space-between;gap:4px}
+.m-flow span{width:28px;height:28px;border-radius:9px;background:var(--blue-soft);display:grid;place-items:center;font-family:var(--mono);font-size:8px;color:var(--blue-ink)}
+.m-flow span.go{background:var(--blue);color:#fff}
+.m-flow i{flex:1;height:2px;background:var(--line);position:relative}
+.m-flow i::after{content:"";position:absolute;right:-1px;top:-3px;border:4px solid transparent;border-left-color:var(--line)}
+.m-site{height:100%;display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:14px 1fr 1fr;gap:5px}
+.m-site b{grid-column:1/-1;border-radius:4px;background:var(--blue)}
+.m-site i{border-radius:6px;background:var(--sunk)}
+.m-site i:nth-child(3){background:var(--green-soft)}.m-site i:nth-child(6){background:var(--amber-soft)}
+
+/* ---------- ABOUT ---------- */
+.about{display:grid;grid-template-columns:minmax(260px,.85fr) 1.4fr;gap:clamp(20px,4vw,64px);align-items:start}
+.about>*{min-width:0}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+.about-photo{position:relative;border-radius:28px;background:var(--panel);overflow:hidden;aspect-ratio:4/5;display:flex;align-items:flex-end;justify-content:center;box-shadow:var(--shadow)}
+.about-photo{position:sticky;top:20px}
+.about-photo img{height:94%;width:auto;max-width:none;display:block}
+.about-photo .tagline{position:absolute;left:16px;top:16px;padding:8px 12px;border-radius:12px;background:var(--card);box-shadow:var(--shadow);font-size:13px;font-weight:600}
+.about-photo .tagline small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+.about-body{display:grid;gap:30px}
+.lbl{font-family:var(--display);font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+.bio-txt{color:var(--muted);font-size:16px;max-width:66ch;display:grid;gap:10px}
+.bio-txt b{color:var(--ink);font-weight:600}
+.rows{list-style:none;margin:0;padding:0}
+.rows li{display:grid;grid-template-columns:150px 1fr auto;gap:6px 20px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)}
+.rows li:first-child{border-top:1px solid var(--line)}
+.rows .yr{font-variant-numeric:tabular-nums;font-weight:500}
+.rows .role-t{font-weight:600}
+.rows .org{color:var(--muted);font-size:14px;text-align:right}
+@media (max-width:620px){.rows li{grid-template-columns:1fr}.rows .org{text-align:left}}
+.fc{display:inline-block;background:var(--blue);color:#fff;font-weight:700;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-left:8px;vertical-align:middle}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:13.5px;padding:6px 12px;border-radius:999px;background:var(--card);box-shadow:var(--shadow)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:700px){.two{grid-template-columns:1fr}}
+
+/* ---------- SERVICES ---------- */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:980px){.services{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.services{grid-template-columns:1fr}}
+.svc{display:grid;gap:12px;align-content:start;text-align:center;transition:transform .2s, box-shadow .2s}
+.svc:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.svc .ill{height:150px;border-radius:18px;background:var(--panel);display:grid;place-items:center;overflow:hidden}
+.svc .ill .shot{width:190px;height:116px;transform:perspective(600px) rotateX(10deg) rotateY(-14deg);transition:transform .4s}
+.svc:hover .ill .shot{transform:perspective(600px) rotateX(0) rotateY(0) scale(1.04)}
+.svc h3{font-size:1.25rem;font-weight:700}
+.svc p{color:var(--muted);font-size:14.5px;max-width:34ch;margin:0 auto}
+.center{display:flex;justify-content:center;margin-top:28px}
+
+/* ---------- WORKS ---------- */
+.works{flex:1;display:grid;grid-template-columns:minmax(300px,.9fr) 1.2fr;gap:0;border-radius:28px;overflow:hidden;background:var(--card);box-shadow:var(--shadow);min-height:560px}
+.works>*{min-width:0}
+@media (max-width:920px){.works{grid-template-columns:1fr}}
+.w-info{display:flex;flex-direction:column;gap:18px;padding:clamp(22px,3vw,40px)}
+.w-info h2{font-family:var(--display);font-weight:800;font-size:clamp(2rem,3.6vw,3rem);text-transform:uppercase;letter-spacing:.01em}
+.tabs{display:flex;flex-wrap:wrap;gap:4px 18px}
+.tabs button{font:inherit;font-size:14px;border:0;background:none;padding:4px 0;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent}
+.tabs button[aria-pressed="true"]{color:var(--blue-ink);border-bottom-color:var(--blue)}
+.w-detail{margin-top:auto;display:grid;gap:10px}
+.w-detail .k{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.w-detail h3{font-size:clamp(1.5rem,2.4vw,2rem);font-weight:800}
+.w-detail p{color:var(--muted);font-size:15px;max-width:52ch}
+.state{display:inline-block;font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;margin-left:8px;vertical-align:middle;letter-spacing:0}
+.state.live{background:var(--green-soft);color:var(--green)}
+.state.wip{background:var(--amber-soft);color:var(--amber)}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:14px}
+.ba div{background:var(--sunk);border-radius:12px;padding:10px 12px}
+.ba div.after{background:var(--blue-soft)}
+.ba b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
+@media (max-width:480px){.ba{grid-template-columns:1fr}}
+.tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tag{font-family:var(--mono);font-size:11.5px;padding:4px 9px;border-radius:8px;background:var(--sunk);color:var(--muted)}
+.repo{font-size:13.5px;font-weight:600;text-decoration:none;color:var(--blue-ink)}
+.w-foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.w-foot button{font:inherit;border:0;background:none;color:inherit;cursor:pointer;padding:0;text-transform:uppercase}
+.w-foot button:hover{color:var(--blue-ink)}
+.w-visual{position:relative;background:var(--panel);display:grid;place-items:center;overflow:hidden;min-height:420px;perspective:1200px}
+.w-visual::before{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:color-mix(in srgb,var(--card) 55%,transparent);left:30%;top:6%}
+.w-visual .cap{position:absolute;right:20px;top:18px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.scene{position:relative;width:min(92%,620px);height:380px;transform-style:preserve-3d}
+.scene.swap{animation:sceneIn .7s cubic-bezier(.2,.8,.2,1) both}
+@keyframes sceneIn{from{opacity:0;transform:translateX(40px) rotateY(-12deg)}to{opacity:1;transform:none}}
+.dev{position:absolute;background:var(--card);box-shadow:0 40px 60px -30px rgba(14,27,61,.45), 0 2px 6px rgba(14,27,61,.08);overflow:hidden}
+.dev.desk{left:0;top:40px;width:78%;aspect-ratio:16/10;border-radius:14px;transform:rotateY(14deg) rotateX(6deg)}
+.dev.phone{right:2%;top:70px;width:31%;aspect-ratio:9/18.5;border-radius:26px;border:6px solid var(--ink);transform:rotateY(-18deg) rotateX(4deg) translateZ(60px)}
+.dev.solo{left:50%;top:10px;right:auto;transform:translateX(-50%) rotateY(-14deg) rotateX(5deg)}
+.dev .bar{height:26px;display:flex;align-items:center;gap:5px;padding:0 10px;background:var(--sunk);font-family:var(--mono);font-size:10px;color:var(--muted)}
+.dev .bar i{width:7px;height:7px;border-radius:50%;background:var(--line)}
+.dev .bar span{margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dev .body{padding:12px;display:grid;gap:8px;font-size:11px}
+.phone .head{background:var(--blue);color:#fff;padding:14px 12px 12px;font-weight:700;font-size:12.5px;font-family:var(--display)}
+.phone .head small{display:block;font-weight:400;opacity:.8;font-family:var(--body);font-size:10px}
+.li{display:flex;justify-content:space-between;align-items:center;gap:6px;padding:8px 9px;border-radius:9px;background:var(--sunk);font-size:10.5px}
+.li em{font-style:normal;font-size:9.5px;font-weight:600;padding:2px 7px;border-radius:999px;white-space:nowrap}
+.li em.g{background:var(--green-soft);color:var(--green)}.li em.a{background:var(--amber-soft);color:var(--amber)}.li em.b{background:var(--blue-soft);color:var(--blue-ink)}
+.fld{display:grid;gap:3px;font-size:9.5px;color:var(--muted)}
+.fld span{display:block;height:22px;border-radius:7px;background:var(--sunk);border:1px solid var(--line)}
+.pbtn{margin-top:4px;padding:8px;border-radius:9px;background:var(--blue);color:#fff;text-align:center;font-weight:600;font-size:10.5px}
+.tbl{display:grid;gap:4px}
+.tr{display:grid;grid-template-columns:1.3fr 1.6fr 1fr;gap:8px;align-items:center;padding:6px 8px;border-radius:7px;background:var(--sunk);font-size:10px}
+.tr.h{background:none;color:var(--muted);font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:.06em}
+.prog{height:6px;border-radius:3px;background:var(--line);overflow:hidden}.prog i{display:block;height:100%;background:var(--blue)}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.kpi{padding:8px;border-radius:9px;background:var(--sunk)}.kpi b{display:block;font-family:var(--display);font-size:16px}.kpi small{color:var(--muted);font-size:9px}
+.grid7{display:grid;grid-template-columns:70px repeat(5,1fr);gap:4px;font-size:9px;align-items:center}
+.grid7 .h{color:var(--muted);font-family:var(--mono);font-size:8.5px;text-align:center}
+.grid7 i{height:16px;border-radius:5px;background:var(--green-soft)}
+.grid7 i.x{background:var(--amber-soft)}.grid7 i.n{background:var(--sunk)}
+.docp{background:var(--card)}
+.docp .body{gap:6px}
+.docp h4{margin:0;font-family:var(--display);font-size:13px}
+.docl{height:5px;border-radius:3px;background:var(--line)}
+.pdf{position:absolute;right:10px;top:34px;padding:3px 8px;border-radius:6px;background:#D93025;color:#fff;font-weight:700;font-size:9.5px;font-family:var(--mono)}
+.chart{height:90px;border-radius:9px;background:var(--sunk);padding:6px}
+.chart svg{width:100%;height:100%;display:block}
+.w-nav{position:absolute;left:20px;bottom:18px;display:flex;gap:8px;z-index:3}
+.w-nav button{width:42px;height:42px;border-radius:50%;border:1px solid color-mix(in srgb,var(--ink) 18%,transparent);background:color-mix(in srgb,var(--card) 60%,transparent);color:var(--ink);cursor:pointer;display:grid;place-items:center;backdrop-filter:blur(6px)}
+.w-nav button:hover{background:var(--card)}
+.w-count{position:absolute;right:18px;bottom:22px;display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;color:var(--muted);z-index:3;padding:8px 12px;border-radius:999px;background:color-mix(in srgb,var(--card) 75%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.w-count .ticks{display:flex;gap:4px}
+.w-count .ticks i{width:14px;height:2px;border-radius:2px;background:color-mix(in srgb,var(--ink) 20%,transparent)}
+.w-count .ticks i.on{width:30px;background:var(--ink)}
+@media (max-width:560px){.scene{height:300px}.dev.desk{width:86%}.dev.phone{width:36%}}
+
+/* ---------- CREDENTIALS ---------- */
+.creds{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:980px){.creds{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.creds{grid-template-columns:1fr}}
+.cred{display:grid;grid-template-columns:84px 1fr;gap:14px 18px;align-items:center;transition:transform .2s, box-shadow .2s}
+.cred:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.cred img{width:84px;height:auto;display:block;filter:drop-shadow(0 8px 10px rgba(14,27,61,.18))}
+.cred .lvl{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-ink)}
+.cred h3{font-family:var(--body);font-size:1.05rem;font-weight:600;line-height:1.3;letter-spacing:0;margin-top:2px}
+.cred .earned{color:var(--muted);font-size:13.5px;margin-top:4px}
+.cred .id{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:8px;padding-top:12px;border-top:1px dashed var(--line);font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.cred code{user-select:all;overflow-wrap:anywhere}
+.note{margin-top:22px;text-align:center;color:var(--muted);font-size:14px}
+
+/* ---------- HIRE ---------- */
+.hire{display:grid;grid-template-columns:1fr 1.35fr;gap:18px;align-items:stretch}
+.hire>*{min-width:0}
+@media (max-width:900px){.hire{grid-template-columns:1fr}}
+.hire-side{display:flex;flex-direction:column;gap:18px;background:linear-gradient(155deg,#2A78F0,#1A5FCC 70%);color:#fff;overflow:hidden}
+:root[data-theme="dark"] .hire-side{background:linear-gradient(155deg,#1E4FA8,#14306E 75%)}
+.hire-side::after{content:"";position:absolute;right:-110px;bottom:-110px;width:300px;height:300px;border-radius:50%;border:44px solid rgba(255,255,255,.07);pointer-events:none}
+.hs-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.hire-side h2{font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:800}
+.avail{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.14);font-size:13px;font-weight:600}
+.avail i{width:8px;height:8px;border-radius:50%;background:#5BE49B;box-shadow:0 0 0 4px rgba(91,228,155,.25)}
+.hire-side>p{opacity:.85}
+.contacts{display:grid;gap:10px;position:relative;z-index:1}
+.ct{display:flex;align-items:center;gap:14px;padding:12px 14px;border-radius:18px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);text-decoration:none;color:#fff;transition:background .2s, transform .2s, border-color .2s}
+.ct:hover,.ct:focus-visible{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.3);transform:translateY(-2px)}
+.ci{flex-shrink:0;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:#fff;color:var(--c);box-shadow:0 6px 14px -6px rgba(0,0,0,.35)}
+.ci svg{width:22px;height:22px}
+.cx{display:grid;min-width:0;flex:1}
+.cx small{font-size:12px;opacity:.75;letter-spacing:.02em}
+.cx b{font-weight:600;font-size:15.5px;overflow-wrap:anywhere}
+.ct .go{width:18px;height:18px;opacity:.6;transition:transform .2s, opacity .2s;flex-shrink:0}
+.ct:hover .go{transform:translate(2px,-2px);opacity:1}
+.soc-lbl{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.7;position:relative;z-index:1}
+.next{display:grid;gap:12px;position:relative;z-index:1;margin-top:auto;padding:16px 18px;border-radius:18px;background:rgba(9,30,80,.18)}
+.next ol{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.next li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;line-height:1.45}
+.next li span{flex-shrink:0;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#1A5FCC;font-weight:800;font-size:12.5px;font-family:var(--display)}
+.socgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;position:relative;z-index:1}
+.sg{display:grid;justify-items:center;gap:8px;padding:14px 6px 12px;border-radius:18px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);color:#fff;text-decoration:none;font-size:13px;font-weight:600;text-align:center;transition:background .2s, transform .2s}
+.sg:hover,.sg:focus-visible{background:rgba(255,255,255,.2);transform:translateY(-2px)}
+.sg .ci{width:40px;height:40px;border-radius:12px}
+.sg .ci svg{width:20px;height:20px}
+@media (max-width:520px){.socgrid{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- modern dropdowns ---------- */
+.flabel{font-size:14px;font-weight:600}
+.dd{position:relative}
+.dd-btn{display:flex;align-items:center;gap:10px;width:100%;font:inherit;font-size:15px;color:var(--ink);background:var(--sunk);border:1px solid transparent;border-radius:14px;padding:11px 14px;cursor:pointer;text-align:left;transition:background .15s, border-color .15s, box-shadow .15s}
+.dd-btn:hover{border-color:var(--line)}
+.dd.open .dd-btn,.dd-btn:focus-visible{outline:none;background:var(--card);border-color:var(--blue);box-shadow:0 0 0 4px color-mix(in srgb,var(--blue) 18%,transparent)}
+.dd-btn .chev{width:18px;height:18px;margin-left:auto;color:var(--muted);transition:transform .2s;flex-shrink:0}
+.dd.open .chev{transform:rotate(180deg)}
+.dd-ico{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--blue-soft);color:var(--blue-ink);flex-shrink:0}
+.dd-ico svg{width:17px;height:17px}
+.dd-val{font-weight:500}
+.dd-pop{position:absolute;z-index:40;top:calc(100% + 8px);left:0;right:0;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow-lg);padding:6px;transform-origin:top left;animation:ddIn .16s cubic-bezier(.2,.8,.2,1)}
+.dd-pop.wide{right:auto;width:min(340px,calc(100vw - 48px))}
+@keyframes ddIn{from{opacity:0;transform:translateY(-6px) scale(.98)}}
+.dd-list{list-style:none;margin:0;padding:0;max-height:280px;overflow-y:auto;overscroll-behavior:contain;outline:none;scrollbar-width:thin}
+.dd-list li{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;cursor:pointer;font-size:14.5px;position:relative}
+.dd-list li.act{background:var(--sunk)}
+.dd-list li[aria-selected="true"]{color:var(--blue-ink);font-weight:600}
+.dd-list li[aria-selected="true"]::after{content:"";margin-left:auto;width:16px;height:16px;flex-shrink:0;background:currentColor;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12.5 4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/contain no-repeat;
+          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12.5 4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/contain no-repeat}
+#whenList li{flex-wrap:wrap;row-gap:0}
+.o-main{font-weight:600}
+.o-sub{flex-basis:100%;order:3;font-size:12.5px;color:var(--muted);font-weight:400}
+.dd-search{display:flex;align-items:center;gap:8px;padding:4px 10px;margin:2px 2px 6px;border-radius:12px;background:var(--sunk)}
+.dd-search svg{width:16px;height:16px;color:var(--muted);flex-shrink:0}
+.dd-search input{border:0!important;background:transparent!important;padding:9px 0!important;outline:none!important;font-size:14.5px}
+.dd-empty{padding:14px 12px;color:var(--muted);font-size:14px}
+.flag{display:inline-block;width:24px;height:18px;border-radius:4px;flex-shrink:0;background:var(--line) url("assets/flags.webp") no-repeat;background-size:384px auto;background-position:calc(var(--fx,0) * -24px) calc(var(--fy,0) * -18px);box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 12%,transparent)}
+.dd-list .c-name{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dd-list .c-dial{font-family:var(--mono);font-size:12.5px;color:var(--muted);font-weight:400}
+.tel{display:flex;gap:8px}
+.tel .dd{flex-shrink:0}
+.dd-btn.cc{width:auto;gap:8px;padding:11px 10px 11px 12px;font-variant-numeric:tabular-nums}
+.dd-btn.cc .chev{margin-left:0;width:16px;height:16px}
+.tel input{flex:1;min-width:0}
+.sent-ico{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--green-soft);color:var(--green);animation:popIn .5s cubic-bezier(.3,1.6,.5,1)}
+.sent-ico svg{width:26px;height:26px}
+@keyframes popIn{from{transform:scale(.4);opacity:0}}
+.btn .spin{width:16px;height:16px;border-radius:50%;border:2.5px solid rgba(255,255,255,.4);border-top-color:#fff;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hire>.card:last-child{display:flex;flex-direction:column}
+form.hf{display:flex;flex-direction:column;gap:16px;flex:1}
+.field.grow{flex:1;display:flex;flex-direction:column}
+.field.grow textarea{flex:1}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:560px){.row2{grid-template-columns:1fr}}
+.field{display:grid;gap:6px;min-width:0}
+.field label,.field legend{font-size:14px;font-weight:600;padding:0}
+.opt{font-weight:400;color:var(--muted)}
+input[type=text],input[type=email],input[type=tel],textarea{width:100%;font:inherit;font-size:15px;color:var(--ink);background:var(--sunk);border:1px solid transparent;border-radius:14px;padding:12px 14px}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--blue);outline-offset:0;background:var(--card)}
+fieldset{border:0;margin:0;padding:0}
+.needs{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.needs input{position:absolute;opacity:0;pointer-events:none}
+.needs label{font-weight:500;font-size:14px;padding:8px 14px;border-radius:999px;background:var(--sunk);cursor:pointer;user-select:none;transition:background .15s}
+.needs input:checked+label{background:var(--blue);color:#fff}
+.needs input:focus-visible+label{outline:2px solid var(--blue);outline-offset:2px}
+.err{color:var(--danger);font-size:13px}
+.err:empty{display:none}
+.foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.foot p{color:var(--muted);font-size:13px;max-width:38ch}
+.panel{display:grid;gap:14px;align-content:start}
+.panel h3{font-size:1.7rem;font-weight:800}
+.panel pre{margin:0;white-space:pre-wrap;word-break:break-word;font-family:var(--mono);font-size:13px;line-height:1.55;background:var(--sunk);border-radius:14px;padding:14px;max-height:280px;overflow:auto}
+.panel .actions{display:flex;flex-wrap:wrap;gap:8px}
+.panel p{color:var(--muted);font-size:14px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--ground);padding:10px 16px;border-radius:999px;font-size:14px;z-index:70;opacity:0;pointer-events:none;transition:opacity .2s}
+.toast.show{opacity:1}
+/* ---------- impact strip ---------- */
+.impact{max-width:var(--max);margin:clamp(14px,1.8vw,22px) auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.4vw,18px)}
+.impact .stat{display:flex;align-items:center;gap:16px;padding:18px 22px}
+.impact b{font-family:var(--display);font-weight:800;font-size:clamp(2rem,3.4vw,2.8rem);line-height:1;color:var(--blue-ink);font-variant-numeric:tabular-nums;min-width:2.1ch;flex-shrink:0}
+.impact span{color:var(--muted);font-size:14.5px;line-height:1.35}
+@media (max-width:900px){.impact{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:420px){.impact .stat{padding:14px 16px;gap:12px}}
+
+/* ---------- process ---------- */
+.process{margin-top:clamp(36px,5vw,64px)}
+.proc-title{font-family:var(--display);font-weight:800;font-size:clamp(1.4rem,2.4vw,1.9rem);text-align:center;margin-bottom:22px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative}
+.steps::before{content:"";position:absolute;z-index:1;left:12%;right:12%;top:calc(clamp(20px,2.4vw,30px) + 25px);height:2px;background:repeating-linear-gradient(90deg,var(--blue) 0 8px,transparent 8px 16px);opacity:.45}
+.step{display:grid;gap:8px;align-content:start;text-align:center;justify-items:center}
+.step .num{position:relative;z-index:2;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-family:var(--display);font-weight:800;font-size:17px;box-shadow:0 0 0 8px var(--card)}
+.step h4{margin:6px 0 0;font-family:var(--display);font-size:1.12rem;font-weight:700}
+.step p{color:var(--muted);font-size:14.5px;max-width:30ch}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}.steps::before{display:none}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* ---------- music ---------- */
+.mus{display:grid;grid-template-columns:minmax(280px,.8fr) 1.5fr;gap:clamp(22px,4vw,56px);align-items:center}
+.mus>*{min-width:0}
+@media (max-width:980px){.mus{grid-template-columns:1fr}}
+.mus-copy{display:grid;gap:16px;justify-items:start}
+.mus-copy h2{font-size:clamp(2rem,3.8vw,3rem);font-weight:800}
+.mus-copy p{color:var(--muted);max-width:46ch}
+.instr{display:flex;flex-wrap:wrap;gap:6px}
+.instr span{font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:999px;background:var(--card);box-shadow:var(--shadow)}
+.player{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.player .hint{font-size:13px;color:var(--muted)}
+#playBtn svg{width:16px;height:16px}
+#playBtn .i-stop{display:none}
+#playBtn[aria-pressed="true"] .i-play{display:none}
+#playBtn[aria-pressed="true"] .i-stop{display:block}
+.staff-card{margin:0;background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:clamp(14px,2vw,24px);display:grid;gap:10px;position:relative;overflow:hidden}
+.staff-card::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 220px at 70% 0%, var(--blue-soft), transparent 70%);pointer-events:none}
+.staff-scroll{position:relative;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin}
+#staff{display:block;width:100%;min-width:640px;height:auto;overflow:visible}
+.staff-card figcaption{position:relative;font-size:12.5px;color:var(--muted)}
+#staff .ln{stroke:var(--ink);stroke-opacity:.55;stroke-width:1.3}
+#staff .bar{stroke:var(--ink);stroke-opacity:.7;stroke-width:1.6}
+#staff .bar.thick{stroke-width:5;stroke-opacity:.85}
+#staff .clef{fill:var(--ink)}
+#staff .tsig{font-family:var(--display);font-weight:800;font-size:38px;fill:var(--ink);text-anchor:middle;dominant-baseline:central}
+#staff .note{cursor:pointer;animation:bob 3.4s ease-in-out infinite;animation-delay:calc(var(--i) * -.21s)}
+@keyframes bob{50%{transform:translateY(-3.5px)}}
+#staff .nb{transform-box:fill-box;transform-origin:center;transition:transform .18s cubic-bezier(.3,1.6,.5,1)}
+#staff .head{fill:var(--ink);transition:fill .15s}
+#staff .head.open{fill:var(--card);stroke:var(--ink);stroke-width:2.6}
+#staff .stem,#staff .beam{stroke:var(--ink);transition:stroke .15s}
+#staff .beam{fill:var(--ink);stroke:none}
+#staff .dot{fill:var(--ink)}
+#staff .note:hover .head:not(.open),#staff .note.on .head:not(.open){fill:var(--blue)}
+#staff .note:hover .head.open,#staff .note.on .head.open{stroke:var(--blue);fill:var(--blue-soft)}
+#staff .note.on .stem{stroke:var(--blue)}
+#staff .note.on .nb{transform:scale(1.22)}
+#staff .lyr{font-family:var(--mono);font-size:12.5px;fill:var(--muted);text-anchor:middle;transition:fill .15s}
+#staff .lyr.on{fill:var(--blue-ink);font-weight:500}
+#staff .ph{fill:var(--blue);opacity:0;transition:opacity .3s}
+#staff.playing .ph{opacity:.16}
+#staff .spark{fill:var(--blue);animation:rise 1.4s ease-out forwards;pointer-events:none}
+@keyframes rise{from{opacity:.95;transform:translate(0,0) rotate(0)}to{opacity:0;transform:translate(var(--dx),-70px) rotate(var(--rot))}}
+.eq{display:inline-flex;align-items:flex-end;gap:2px;height:14px}
+.eq i{width:3px;height:30%;background:currentColor;border-radius:2px}
+#playBtn[aria-pressed="true"] .eq i{animation:eq .8s ease-in-out infinite}
+.eq i:nth-child(2){animation-delay:-.3s!important}.eq i:nth-child(3){animation-delay:-.55s!important}
+@keyframes eq{50%{height:100%}}
+
+footer.site a{color:inherit;text-decoration:none}
+footer.site a:hover{color:var(--blue-ink)}
+
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important}}
+</style>
+</head>
+<body class="loading">
+
+<div id="loader" role="status" aria-label="Loading">
+  <div class="ld">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-60 -51 3123 1091" aria-hidden="true" focusable="false"><path d="M62.0 929.0V502.0V232.0H194.0L196.0 382.0L214.0 384.0Q223.0 328.0 246.0 291.0Q269.0 254.0 305.5 236.0Q342.0 218.0 389.0 218.0Q459.0 218.0 509.5 252.0Q560.0 286.0 587.0 349.0Q614.0 412.0 614.0 500.0Q614.0 578.0 590.5 640.0Q567.0 702.0 519.5 738.0Q472.0 774.0 399.0 774.0Q350.0 774.0 316.0 756.5Q282.0 739.0 258.5 705.0Q235.0 671.0 219.0 620.0H200.0Q206.0 647.0 211.0 675.0Q216.0 703.0 219.5 729.0Q223.0 755.0 223.0 779.0V929.0ZM340.0 647.0Q373.0 647.0 396.5 629.0Q420.0 611.0 433.0 578.0Q446.0 545.0 446.0 501.0Q446.0 454.0 432.5 420.5Q419.0 387.0 394.0 368.5Q369.0 350.0 336.0 350.0Q305.0 350.0 283.5 363.5Q262.0 377.0 248.5 398.5Q235.0 420.0 229.0 444.0Q223.0 468.0 223.0 489.0V511.0Q223.0 530.0 228.0 549.0Q233.0 568.0 243.0 585.5Q253.0 603.0 267.0 617.0Q281.0 631.0 299.5 639.0Q318.0 647.0 340.0 647.0Z M702.0 760.0V232.0H863.0V760.0Z M1196.0 774.0Q1143.0 774.0 1100.0 764.5Q1057.0 755.0 1025.0 737.0Q993.0 719.0 972.5 693.5Q952.0 668.0 944.0 637.0L1064.0 584.0Q1071.0 601.0 1088.5 618.5Q1106.0 636.0 1135.5 647.0Q1165.0 658.0 1207.0 658.0Q1247.0 658.0 1269.5 646.5Q1292.0 635.0 1292.0 613.0Q1292.0 597.0 1279.5 587.5Q1267.0 578.0 1242.0 570.5Q1217.0 563.0 1180.0 556.0Q1142.0 548.0 1103.0 537.5Q1064.0 527.0 1030.0 508.5Q996.0 490.0 975.5 459.5Q955.0 429.0 955.0 382.0Q955.0 333.0 981.0 296.5Q1007.0 260.0 1058.5 239.0Q1110.0 218.0 1184.0 218.0Q1250.0 218.0 1300.0 235.0Q1350.0 252.0 1383.5 283.5Q1417.0 315.0 1430.0 359.0L1301.0 405.0Q1296.0 383.0 1280.5 367.0Q1265.0 351.0 1241.5 342.5Q1218.0 334.0 1186.0 334.0Q1147.0 334.0 1125.5 346.0Q1104.0 358.0 1104.0 378.0Q1104.0 394.0 1118.5 404.5Q1133.0 415.0 1160.0 422.0Q1187.0 429.0 1224.0 437.0Q1263.0 445.0 1301.5 455.5Q1340.0 466.0 1371.5 483.5Q1403.0 501.0 1421.5 529.5Q1440.0 558.0 1440.0 603.0Q1440.0 656.0 1412.0 694.5Q1384.0 733.0 1329.5 753.5Q1275.0 774.0 1196.0 774.0Z M1675.0 774.0Q1722.0 774.0 1759.5 756.5Q1797.0 739.0 1823.5 707.5Q1850.0 676.0 1864.0 638.0H1883.0Q1884.8788452148438 669.9406051635742 1888.5227661132812 700.5573654174805L1896.6908874511719 810.8271713256836Q1895.0343322753906 826.0442810058594 1884.5 837.0Q1872.0 850.0 1840.0 856.0Q1808.0 862.0 1750.0 862.0Q1706.0 862.0 1679.5 858.0Q1653.0 854.0 1641.0 843.5Q1640.9401397705078 843.447624206543 1640.8796081542969 843.394172668457L1504.1405296325684 804.3258666992188Q1476.0 831.6096649169922 1476.0 872.0Q1476.0 910.0 1502.0 936.5Q1528.0 963.0 1584.5 976.5Q1641.0 990.0 1729.0 990.0Q1834.0 990.0 1902.0 971.0Q1970.0 952.0 2003.0 912.5Q2035.719970703125 873.3352203369141 2035.9976196289062 815.0H2036.0L2039.0 760.0L2032.2628173828125 683.0035781860352Q2029.9281616210938 648.2516250610352 2028.5 613.5Q2027.0 577.0 2027.0 541.0V460.0Q2027.0 376.0 2002.5 322.5Q1978.0 269.0 1927.5 243.5Q1877.0 218.0 1797.0 218.0Q1749.0 218.0 1706.5 227.5Q1664.0 237.0 1631.0 257.5Q1598.0 278.0 1574.5 309.0Q1551.0 340.0 1538.0 382.0L1680.0 424.0Q1688.0 397.0 1704.0 378.0Q1720.0 359.0 1742.5 349.0Q1765.0 339.0 1793.0 339.0Q1833.0 339.0 1851.0 357.0Q1869.0 375.0 1869.0 400.0Q1869.0 419.0 1859.0 429.0Q1849.0 439.0 1829.5 443.5Q1810.0 448.0 1781.0 453.0Q1721.0 462.0 1674.0 473.5Q1627.0 485.0 1593.5 502.5Q1560.0 520.0 1542.5 549.5Q1525.0 579.0 1525.0 624.0Q1525.0 672.0 1544.0 705.5Q1563.0 739.0 1597.0 756.5Q1631.0 774.0 1675.0 774.0ZM1748.0 660.0Q1718.0 660.0 1699.0 643.0Q1680.0 626.0 1680.0 598.0Q1680.0 577.0 1690.0 565.0Q1700.0 553.0 1717.5 546.0Q1735.0 539.0 1757.5 534.5Q1780.0 530.0 1803.5 526.0Q1827.0 522.0 1850.0 515.0Q1860.6360168457031 511.76295471191406 1870.4166259765625 507.45668029785156L1872.0 570.0Q1865.0 590.0 1851.0 607.0Q1837.0 624.0 1820.0 635.5Q1803.0 647.0 1784.5 653.5Q1766.0 660.0 1748.0 660.0Z M2138.0 760.0V232.0H2299.0V760.0Z M2609.0 774.0Q2543.0 774.0 2493.5 740.5Q2444.0 707.0 2416.0 644.5Q2388.0 582.0 2388.0 495.0Q2388.0 415.0 2412.0 353.0Q2436.0 291.0 2483.5 255.5Q2531.0 220.0 2601.0 220.0Q2651.0 220.0 2685.5 238.0Q2720.0 256.0 2743.0 292.0Q2766.0 328.0 2780.0 383.0H2805.0Q2798.0 349.0 2792.0 318.5Q2786.0 288.0 2782.5 261.5Q2779.0 235.0 2779.0 215.0V40.0H2941.0V502.0V760.0H2809.0L2807.0 604.0H2785.0Q2774.0 664.0 2750.5 701.5Q2727.0 739.0 2691.5 756.5Q2656.0 774.0 2609.0 774.0ZM2667.0 644.0Q2698.0 644.0 2719.5 630.5Q2741.0 617.0 2754.0 596.0Q2767.0 575.0 2773.0 551.0Q2779.0 527.0 2779.0 506.0V485.0Q2779.0 466.0 2774.0 447.0Q2769.0 428.0 2759.5 410.0Q2750.0 392.0 2736.0 378.0Q2722.0 364.0 2703.5 356.0Q2685.0 348.0 2663.0 348.0Q2630.0 348.0 2606.5 366.0Q2583.0 384.0 2570.5 417.0Q2558.0 450.0 2558.0 495.0Q2558.0 540.0 2571.0 573.5Q2584.0 607.0 2609.0 625.5Q2634.0 644.0 2667.0 644.0Z" class="wm-letters" fill="currentColor"/><path d="M782.5 126.0 Q 1500.5 6.0 2218.5 126.0" class="wm-link" pathLength="1000" fill="none" stroke="var(--blue)" stroke-width="34" stroke-linecap="round"/><circle class="wm-dot d1" cx="782.5" cy="126.0" r="62" fill="var(--blue)"/><circle class="wm-dot d2" cx="2218.5" cy="126.0" r="62" fill="var(--blue)"/></svg>
+    <div class="meter">
+      <div class="track"><div class="fill" id="ldFill"></div></div>
+      <div class="row"><span>Isaac Gideon Poku</span><span id="ldPct">0%</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="stage">
+  <span class="orb" aria-hidden="true" style="width:26px;height:26px;left:2%;top:14px"></span>
+  <span class="orb" aria-hidden="true" style="width:16px;height:16px;right:4%;top:46%;animation-delay:-4s"></span>
+  <div class="frame">
+    <nav class="top" aria-label="Main">
+      <a class="logo" href="#home" aria-label="pisagid, home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-60 -51 3123 1091" aria-hidden="true" focusable="false"><path d="M62.0 929.0V502.0V232.0H194.0L196.0 382.0L214.0 384.0Q223.0 328.0 246.0 291.0Q269.0 254.0 305.5 236.0Q342.0 218.0 389.0 218.0Q459.0 218.0 509.5 252.0Q560.0 286.0 587.0 349.0Q614.0 412.0 614.0 500.0Q614.0 578.0 590.5 640.0Q567.0 702.0 519.5 738.0Q472.0 774.0 399.0 774.0Q350.0 774.0 316.0 756.5Q282.0 739.0 258.5 705.0Q235.0 671.0 219.0 620.0H200.0Q206.0 647.0 211.0 675.0Q216.0 703.0 219.5 729.0Q223.0 755.0 223.0 779.0V929.0ZM340.0 647.0Q373.0 647.0 396.5 629.0Q420.0 611.0 433.0 578.0Q446.0 545.0 446.0 501.0Q446.0 454.0 432.5 420.5Q419.0 387.0 394.0 368.5Q369.0 350.0 336.0 350.0Q305.0 350.0 283.5 363.5Q262.0 377.0 248.5 398.5Q235.0 420.0 229.0 444.0Q223.0 468.0 223.0 489.0V511.0Q223.0 530.0 228.0 549.0Q233.0 568.0 243.0 585.5Q253.0 603.0 267.0 617.0Q281.0 631.0 299.5 639.0Q318.0 647.0 340.0 647.0Z M702.0 760.0V232.0H863.0V760.0Z M1196.0 774.0Q1143.0 774.0 1100.0 764.5Q1057.0 755.0 1025.0 737.0Q993.0 719.0 972.5 693.5Q952.0 668.0 944.0 637.0L1064.0 584.0Q1071.0 601.0 1088.5 618.5Q1106.0 636.0 1135.5 647.0Q1165.0 658.0 1207.0 658.0Q1247.0 658.0 1269.5 646.5Q1292.0 635.0 1292.0 613.0Q1292.0 597.0 1279.5 587.5Q1267.0 578.0 1242.0 570.5Q1217.0 563.0 1180.0 556.0Q1142.0 548.0 1103.0 537.5Q1064.0 527.0 1030.0 508.5Q996.0 490.0 975.5 459.5Q955.0 429.0 955.0 382.0Q955.0 333.0 981.0 296.5Q1007.0 260.0 1058.5 239.0Q1110.0 218.0 1184.0 218.0Q1250.0 218.0 1300.0 235.0Q1350.0 252.0 1383.5 283.5Q1417.0 315.0 1430.0 359.0L1301.0 405.0Q1296.0 383.0 1280.5 367.0Q1265.0 351.0 1241.5 342.5Q1218.0 334.0 1186.0 334.0Q1147.0 334.0 1125.5 346.0Q1104.0 358.0 1104.0 378.0Q1104.0 394.0 1118.5 404.5Q1133.0 415.0 1160.0 422.0Q1187.0 429.0 1224.0 437.0Q1263.0 445.0 1301.5 455.5Q1340.0 466.0 1371.5 483.5Q1403.0 501.0 1421.5 529.5Q1440.0 558.0 1440.0 603.0Q1440.0 656.0 1412.0 694.5Q1384.0 733.0 1329.5 753.5Q1275.0 774.0 1196.0 774.0Z M1675.0 774.0Q1722.0 774.0 1759.5 756.5Q1797.0 739.0 1823.5 707.5Q1850.0 676.0 1864.0 638.0H1883.0Q1884.8788452148438 669.9406051635742 1888.5227661132812 700.5573654174805L1896.6908874511719 810.8271713256836Q1895.0343322753906 826.0442810058594 1884.5 837.0Q1872.0 850.0 1840.0 856.0Q1808.0 862.0 1750.0 862.0Q1706.0 862.0 1679.5 858.0Q1653.0 854.0 1641.0 843.5Q1640.9401397705078 843.447624206543 1640.8796081542969 843.394172668457L1504.1405296325684 804.3258666992188Q1476.0 831.6096649169922 1476.0 872.0Q1476.0 910.0 1502.0 936.5Q1528.0 963.0 1584.5 976.5Q1641.0 990.0 1729.0 990.0Q1834.0 990.0 1902.0 971.0Q1970.0 952.0 2003.0 912.5Q2035.719970703125 873.3352203369141 2035.9976196289062 815.0H2036.0L2039.0 760.0L2032.2628173828125 683.0035781860352Q2029.9281616210938 648.2516250610352 2028.5 613.5Q2027.0 577.0 2027.0 541.0V460.0Q2027.0 376.0 2002.5 322.5Q1978.0 269.0 1927.5 243.5Q1877.0 218.0 1797.0 218.0Q1749.0 218.0 1706.5 227.5Q1664.0 237.0 1631.0 257.5Q1598.0 278.0 1574.5 309.0Q1551.0 340.0 1538.0 382.0L1680.0 424.0Q1688.0 397.0 1704.0 378.0Q1720.0 359.0 1742.5 349.0Q1765.0 339.0 1793.0 339.0Q1833.0 339.0 1851.0 357.0Q1869.0 375.0 1869.0 400.0Q1869.0 419.0 1859.0 429.0Q1849.0 439.0 1829.5 443.5Q1810.0 448.0 1781.0 453.0Q1721.0 462.0 1674.0 473.5Q1627.0 485.0 1593.5 502.5Q1560.0 520.0 1542.5 549.5Q1525.0 579.0 1525.0 624.0Q1525.0 672.0 1544.0 705.5Q1563.0 739.0 1597.0 756.5Q1631.0 774.0 1675.0 774.0ZM1748.0 660.0Q1718.0 660.0 1699.0 643.0Q1680.0 626.0 1680.0 598.0Q1680.0 577.0 1690.0 565.0Q1700.0 553.0 1717.5 546.0Q1735.0 539.0 1757.5 534.5Q1780.0 530.0 1803.5 526.0Q1827.0 522.0 1850.0 515.0Q1860.6360168457031 511.76295471191406 1870.4166259765625 507.45668029785156L1872.0 570.0Q1865.0 590.0 1851.0 607.0Q1837.0 624.0 1820.0 635.5Q1803.0 647.0 1784.5 653.5Q1766.0 660.0 1748.0 660.0Z M2138.0 760.0V232.0H2299.0V760.0Z M2609.0 774.0Q2543.0 774.0 2493.5 740.5Q2444.0 707.0 2416.0 644.5Q2388.0 582.0 2388.0 495.0Q2388.0 415.0 2412.0 353.0Q2436.0 291.0 2483.5 255.5Q2531.0 220.0 2601.0 220.0Q2651.0 220.0 2685.5 238.0Q2720.0 256.0 2743.0 292.0Q2766.0 328.0 2780.0 383.0H2805.0Q2798.0 349.0 2792.0 318.5Q2786.0 288.0 2782.5 261.5Q2779.0 235.0 2779.0 215.0V40.0H2941.0V502.0V760.0H2809.0L2807.0 604.0H2785.0Q2774.0 664.0 2750.5 701.5Q2727.0 739.0 2691.5 756.5Q2656.0 774.0 2609.0 774.0ZM2667.0 644.0Q2698.0 644.0 2719.5 630.5Q2741.0 617.0 2754.0 596.0Q2767.0 575.0 2773.0 551.0Q2779.0 527.0 2779.0 506.0V485.0Q2779.0 466.0 2774.0 447.0Q2769.0 428.0 2759.5 410.0Q2750.0 392.0 2736.0 378.0Q2722.0 364.0 2703.5 356.0Q2685.0 348.0 2663.0 348.0Q2630.0 348.0 2606.5 366.0Q2583.0 384.0 2570.5 417.0Q2558.0 450.0 2558.0 495.0Q2558.0 540.0 2571.0 573.5Q2584.0 607.0 2609.0 625.5Q2634.0 644.0 2667.0 644.0Z" fill="currentColor"/><path d="M782.5 126.0 Q 1500.5 6.0 2218.5 126.0" fill="none" stroke="var(--blue)" stroke-width="34" stroke-linecap="round"/><circle cx="782.5" cy="126.0" r="62" fill="var(--blue)"/><circle cx="2218.5" cy="126.0" r="62" fill="var(--blue)"/></svg></a>
+      <ul class="menu" id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+      </ul>
+      <div class="right">
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch light or dark theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+        <button class="icon-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="5" r="2"/><circle cx="12" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="12" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></svg></button>
+        <a class="btn blue hireme" href="#hire">Hire Me</a>
+      </div>
+    </nav>
+
+    <main class="view">
+      <!-- HOME -->
+      <section class="page" id="home" aria-label="Home">
+        <div class="hero">
+          <div class="hello">
+            <p class="hi">Hello, I'm</p>
+            <h1>Isaac<span>Poku</span></h1>
+            <p class="bio">Technical consultant at <b>eSolutions Consulting Ghana</b> with 10+ years in IT. I turn paper forms, spreadsheets and email chains into <b>Power Platform, Azure and web systems</b> people actually use.</p>
+            <div class="ctas"><a class="btn blue" href="#hire">Hire Me</a><a class="btn soft" href="#works">See my work</a></div>
+            <div class="reach"><span class="mailpill">pisagid@gmail.com</span><span class="clock">Accra <b id="clock">--:--</b> <span id="clockNote"></span></span></div>
+            <div class="socials">
+              <a class="main" href="#hire" aria-label="Contact form"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></a>
+              <a href="https://www.linkedin.com/in/isaac-gideon-poku-591643163" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V21h-4v-4.9c0-1.17-.02-2.68-1.63-2.68-1.64 0-1.89 1.28-1.89 2.6V21h-4z"/></svg></a>
+              <a href="https://github.com/Pisagid" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a>
+              <a href="https://twitter.com/pisagid" target="_blank" rel="noopener" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.78zm-1.08 16.2h1.7L7.4 4.7H5.58z"/></svg></a>
+              <a href="https://www.facebook.com/pisagid/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.3A22 22 0 0 0 14.6 2C12.2 2 10.6 3.5 10.6 6.1v2.4H8V12h2.6v10H14V12h2.7l.4-3.5z"/></svg></a>
+            </div>
+          </div>
+
+          <div class="portrait" id="portrait">
+            <div class="ring" id="ring" aria-hidden="true"></div>
+            <img id="me" src="assets/isaac.webp" width="900" height="1560" alt="Isaac Gideon Poku in a navy suit">
+            <div id="orbit" aria-label="Microsoft certifications earned"></div>
+          </div>
+
+          <div class="roles" aria-label="What I do">
+            <a class="role" href="#services"><div class="shot" aria-hidden="true"><div class="m-app"><div class="m-phone"><i></i><i></i><i></i><i></i><i></i></div><div class="m-list"><span>Approved</span><span class="p">Pending</span><span>Approved</span></div></div></div><div class="stem" aria-hidden="true"></div><div class="lab">Power Platform Architect</div></a>
+            <a class="role" href="#services"><div class="shot" aria-hidden="true"><div class="m-pipe"><div class="row"><span class="st">build</span><span class="st">test</span><span class="st run">deploy</span></div><div class="bar"><i></i></div><div class="row"><span class="st">vnet</span><span class="st">vm</span><span class="st">sql</span></div></div></div><div class="stem" aria-hidden="true"></div><div class="lab">Azure &amp; DevOps Engineer</div></a>
+            <a class="role" href="#services"><div class="shot" aria-hidden="true"><div class="m-web"><div class="dots"><i></i><i></i><i></i></div><div class="code"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span><span class="c5"></span></div></div></div><div class="stem" aria-hidden="true"></div><div class="lab">Full-Stack Web Developer</div></a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="impact" id="impact" aria-label="At a glance">
+    <div class="card stat"><b data-count="6">6</b><span>active Microsoft certifications</span></div>
+    <div class="card stat"><b data-count="2">2</b><span>Expert-level: DevOps &amp; Solution Architect</span></div>
+    <div class="card stat"><b data-count="10" data-suffix="+">10+</b><span>years in IT, since 2012</span></div>
+    <div class="card stat"><b data-count="9">9</b><span>apps &amp; systems built or in progress</span></div>
+  </div>
+
+  <div class="frame sheet">
+      <section class="page" id="about" aria-label="About me">
+        <h2 class="ptitle">About me</h2>
+        <p class="psub">From fixing school computers in 2012 to architecting Power Platform and Azure solutions today.</p>
+        <div class="about">
+          <div class="about-photo"><img src="assets/isaac.webp" width="900" height="1560" alt="Isaac Gideon Poku" loading="lazy"><div class="tagline">Isaac Gideon Poku<small>Accra, Ghana</small></div></div>
+          <div class="about-body">
+            <div>
+              <div class="lbl">Bio</div>
+              <div class="bio-txt">
+                <p>I'm a technical consultant at <b>eSolutions Consulting Ghana</b>. My mission is simple: replace manual processes with efficient electronic systems, so teams stop re-typing, chasing signatures and losing paper.</p>
+                <p>I design and build Power Apps, Power Automate flows, Power BI dashboards and Azure-backed applications, and I train client teams so the tools actually get used. I also mentor computer engineering interns and enjoy teaching young people to think logically.</p>
+              </div>
+            </div>
+            <div>
+              <div class="lbl">Experience</div>
+              <ul class="rows">
+                <li><span class="yr">2021 – Present</span><span class="role-t">Junior Technical Consultant</span><span class="org">eSolutions Consulting Ghana</span></li>
+                <li><span class="yr">2019 – 2021</span><span class="role-t">Web Developer</span><span class="org">Accra Institute of Technology</span></li>
+                <li><span class="yr">2018 – 2020</span><span class="role-t">Teaching Assistant, C++</span><span class="org">Accra Institute of Technology</span></li>
+                <li><span class="yr">2012 – 2015</span><span class="role-t">Computer Technician</span><span class="org">Cobmenson School of Technology</span></li>
+              </ul>
+            </div>
+            <div>
+              <div class="lbl">Education</div>
+              <ul class="rows">
+                <li><span class="yr">2017 – 2021</span><span class="role-t">BSc Information Technology (Network Systems)<span class="fc">First Class</span></span><span class="org">AIT · awarded by KNUST</span></li>
+                <li><span class="yr">2012 – 2015</span><span class="role-t">WASSCE</span><span class="org">Assin Manso Senior High School</span></li>
+              </ul>
+            </div>
+            <div>
+              <div><div class="lbl">Toolkit</div><div class="chips"><span class="chip">Power Apps</span><span class="chip">Power Automate</span><span class="chip">Power BI</span><span class="chip">Azure</span><span class="chip">Azure DevOps</span><span class="chip">SharePoint</span><span class="chip">PHP</span><span class="chip">JavaScript</span><span class="chip">MySQL</span><span class="chip">ASP.NET</span><span class="chip">Windows Server</span><span class="chip">Active Directory</span></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  </div>
+
+  <div class="frame sheet">
+      <section class="page" id="music" aria-label="Off the clock">
+        <div class="mus">
+          <div class="mus-copy">
+            <span class="eyebrow">Off the clock</span>
+            <h2>Choir director, brass player, music teacher.</h2>
+            <p>Leading a choir is a lot like delivering a system: every part has to know its line and come in on time. When I'm not building apps, I'm rehearsing, conducting or teaching music.</p>
+            <div class="instr"><span>Keyboard / Piano</span><span>Organ</span><span>Trumpet</span><span>Trombone</span><span>Euphonium</span><span>Choir direction</span></div>
+            <div class="player">
+              <button class="btn blue" id="playBtn" type="button" aria-pressed="false" aria-controls="staff">
+                <svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg>
+                <svg class="i-stop" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>
+                <span id="playLbl">Play the phrase</span>
+                <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
+              </button>
+              <span class="hint">Or tap any note to hear it.</span>
+            </div>
+          </div>
+          <figure class="staff-card">
+            <div class="staff-scroll"><svg id="staff" role="img" aria-label="The opening phrase of Amazing Grace written on a treble staff in three-four time"></svg></div>
+            <figcaption>Amazing Grace, opening phrase. Words by John Newton (1779), tune "New Britain".</figcaption>
+          </figure>
+        </div>
+      </section>
+  </div>
+
+  <div class="frame sheet">
+      <section class="page" id="services" aria-label="Services">
+        <h2 class="ptitle">Services</h2>
+        <p class="psub">Systems that replace manual work, built on the Microsoft cloud and the open web.</p>
+        <div class="services">
+          <article class="card svc"><div class="ill"><div class="shot"><div class="m-app"><div class="m-phone"><i></i><i></i><i></i><i></i><i></i></div><div class="m-list"><span>Approved</span><span class="p">Pending</span><span>Approved</span></div></div></div></div><h3>Power Apps solutions</h3><p>Approval, onboarding, helpdesk and data-capture apps your staff use on phone or desktop.</p></article>
+          <article class="card svc"><div class="ill"><div class="shot"><div class="m-flow"><span>form</span><i></i><span>flow</span><i></i><span class="go">✓</span></div></div></div><h3>Workflow automation</h3><p>Power Automate flows that route requests, send reminders and move data without re-typing.</p></article>
+          <article class="card svc"><div class="ill"><div class="shot"><div class="m-pipe"><div class="row"><span class="st">build</span><span class="st">test</span><span class="st run">deploy</span></div><div class="bar"><i></i></div><div class="row"><span class="st">vnet</span><span class="st">vm</span><span class="st">sql</span></div></div></div></div><h3>Azure &amp; DevOps</h3><p>Azure environments, networking and CI/CD pipelines, set up and documented properly.</p></article>
+          <article class="card svc"><div class="ill"><div class="shot"><div class="m-bars"><i style="height:40%"></i><i style="height:65%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:92%"></i></div></div></div><h3>Power BI dashboards</h3><p>Reports that pull your data together so managers see the numbers without asking for them.</p></article>
+          <article class="card svc"><div class="ill"><div class="shot"><div class="m-web"><div class="dots"><i></i><i></i><i></i></div><div class="code"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span><span class="c5"></span></div></div></div></div><h3>Web development</h3><p>Management systems and websites in PHP, JavaScript and MySQL, from database to front end.</p></article>
+          <article class="card svc"><div class="ill"><div class="shot"><div class="m-site"><b></b><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div><h3>Microsoft 365 &amp; training</h3><p>SharePoint and Microsoft 365 rollouts, with hands-on training so your team adopts them.</p></article>
+        </div>
+        <div class="process">
+          <h3 class="proc-title">How I work</h3>
+          <ol class="steps">
+            <li class="card step"><span class="num">01</span><h4>Map the process</h4><p>I sit with the people doing the work today and note every form, signature and spreadsheet involved.</p></li>
+            <li class="card step"><span class="num">02</span><h4>Prototype fast</h4><p>You get a clickable app or page early, so decisions are made on something real.</p></li>
+            <li class="card step"><span class="num">03</span><h4>Build &amp; automate</h4><p>Apps, flows, data and Azure services, secured and documented as I go.</p></li>
+            <li class="card step"><span class="num">04</span><h4>Train &amp; hand over</h4><p>Your team is trained to use it, and I stay on hand after go-live.</p></li>
+          </ol>
+        </div>
+        <div class="center"><a class="btn blue" href="#hire">Start a project</a></div>
+      </section>
+
+  </div>
+
+  <div class="frame sheet">
+      <section class="page" id="works" aria-label="Works">
+        <div class="works">
+          <div class="w-info">
+            <h2>Selected works</h2>
+            <div class="tabs" id="tabs" role="group" aria-label="Filter projects">
+              <button type="button" data-f="all" aria-pressed="true">All</button>
+              <button type="button" data-f="power" aria-pressed="false">Power Platform</button>
+              <button type="button" data-f="web" aria-pressed="false">Web</button>
+              <button type="button" data-f="wip" aria-pressed="false">In progress</button>
+            </div>
+            <div class="w-detail" id="wDetail" aria-live="polite"></div>
+            <div class="w-foot"><span id="wCtx"></span><button type="button" id="wNextName"></button></div>
+          </div>
+          <div class="w-visual">
+            <span class="cap">Illustration</span>
+            <div class="scene" id="scene"></div>
+            <div class="w-nav"><button type="button" id="wPrev" aria-label="Previous project"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg></button><button type="button" id="wNext" aria-label="Next project"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button></div>
+            <div class="w-count"><span class="ticks" id="ticks"></span><span id="wNum">1/9</span></div>
+          </div>
+        </div>
+      </section>
+
+  </div>
+
+  <div class="frame sheet">
+      <section class="page" id="credentials" aria-label="Credentials">
+        <h2 class="ptitle">Credentials</h2>
+        <p class="psub">Six Microsoft certifications, all verifiable online. Copy a credential ID to check it with Microsoft Learn.</p>
+        <div class="creds" id="creds"></div>
+        <p class="note">Also: BSc IT (Network Systems), First Class Honours · MCSE, System &amp; Network Administration (2016) · Diploma in Hardware &amp; Networking (2012)</p>
+      </section>
+
+  </div>
+
+  <div class="frame sheet">
+      <section class="page" id="hire" aria-label="Let's work">
+        <h2 class="ptitle">Let's work</h2>
+        <p class="psub">Tell me what you're still doing by hand, and I'll show you what it could look like as an app.</p>
+        <div class="hire">
+          <div class="card hire-side">
+            <div class="hs-top">
+              <h2>Hire me</h2>
+              <span class="avail"><i aria-hidden="true"></i>Taking on projects</span>
+            </div>
+            <p>Reach me wherever suits you, or fill in the form.</p>
+            <div class="contacts">
+              <a class="ct" href="https://wa.me/233571174104" target="_blank" rel="noopener"><span class="ci" style="--c:#25D366"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span><span class="cx"><small>WhatsApp</small><b>+233 57 117 4104</b></span><svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              <a class="ct" href="tel:+233550612038"><span class="ci" style="--c:#1F6FEB"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span class="cx"><small>Call</small><b>+233 55 061 2038</b></span><svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              <a class="ct" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=pisagid@gmail.com" target="_blank" rel="noopener"><span class="ci" style="--c:#EA4335"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></span><span class="cx"><small>Gmail</small><b>pisagid@gmail.com</b></span><svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              <a class="ct" href="https://outlook.live.com/mail/0/deeplink/compose?to=pisagid@outlook.com" target="_blank" rel="noopener"><span class="ci" style="--c:#0078D4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6.5 9 6.5 9-6.5"/></svg></span><span class="cx"><small>Outlook</small><b>pisagid@outlook.com</b></span><svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+            <div class="next">
+              <div class="soc-lbl">What happens next</div>
+              <ol>
+                <li><span>1</span>You send the details using the form or any channel above.</li>
+                <li><span>2</span>We have a short call about how the work is done today.</li>
+                <li><span>3</span>You get a clear plan, a timeline and a quote.</li>
+              </ol>
+            </div>
+            <div class="soc-lbl">Find me online</div>
+            <div class="socgrid">
+              <a class="sg" href="https://www.linkedin.com/in/isaac-gideon-poku-591643163" target="_blank" rel="noopener"><span class="ci" style="--c:#0A66C2"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>LinkedIn</a>
+              <a class="sg" href="https://github.com/Pisagid" target="_blank" rel="noopener"><span class="ci" style="--c:#181717"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>GitHub</a>
+              <a class="sg" href="https://twitter.com/pisagid" target="_blank" rel="noopener"><span class="ci" style="--c:#000000"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></span>X (Twitter)</a>
+              <a class="sg" href="https://www.facebook.com/pisagid/" target="_blank" rel="noopener"><span class="ci" style="--c:#0866FF"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></span>Facebook</a>
+            </div>
+          </div>
+          <div class="card">
+            <form class="hf" id="hireForm" novalidate>
+              <div class="row2">
+                <div class="field"><label for="f-name">Your name</label><input id="f-name" type="text" autocomplete="name" placeholder="Ama Mensah"><span class="err" id="e-name"></span></div>
+                <div class="field"><label for="f-org">Organisation <span class="opt">(optional)</span></label><input id="f-org" type="text" autocomplete="organization" placeholder="Company or school"></div>
+              </div>
+              <div class="row2">
+                <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" autocomplete="email" placeholder="you@company.com"><span class="err" id="e-email"></span></div>
+                <div class="field"><label for="f-phone">Phone <span class="opt">(optional)</span></label>
+                  <div class="tel">
+                    <div class="dd" id="ddCountry">
+                      <button type="button" class="dd-btn cc" id="ccBtn" aria-haspopup="listbox" aria-expanded="false" aria-controls="ccList" aria-label="Country code"><span class="flag" id="ccFlag" aria-hidden="true"></span><span id="ccDial">+233</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                      <div class="dd-pop wide" hidden>
+                        <div class="dd-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="text" id="ccSearch" placeholder="Search country or code" autocomplete="off" aria-label="Search countries" aria-controls="ccList"></div>
+                        <ul class="dd-list" role="listbox" id="ccList" aria-label="Countries"></ul>
+                        <p class="dd-empty" id="ccEmpty" hidden>No country matches that.</p>
+                      </div>
+                    </div>
+                    <input id="f-phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="023 123 4567">
+                  </div>
+                  <span class="err" id="e-phone"></span>
+                </div>
+              </div>
+              <fieldset class="field">
+                <legend>What do you need?</legend>
+                <div class="needs" id="needs">
+                  <input type="checkbox" id="n1" value="Power Apps / Power Automate solution"><label for="n1">Power Platform app</label>
+                  <input type="checkbox" id="n2" value="Azure or DevOps setup"><label for="n2">Azure / DevOps</label>
+                  <input type="checkbox" id="n3" value="Website or web application"><label for="n3">Website / web app</label>
+                  <input type="checkbox" id="n4" value="Power BI dashboard"><label for="n4">Power BI dashboard</label>
+                  <input type="checkbox" id="n5" value="Microsoft 365 / SharePoint"><label for="n5">Microsoft 365 / SharePoint</label>
+                  <input type="checkbox" id="n6" value="Training"><label for="n6">Training</label>
+                </div>
+                <span class="err" id="e-needs"></span>
+              </fieldset>
+              <div class="field"><span class="flabel" id="l-when">When do you want to start?</span>
+                <div class="dd" id="ddWhen">
+                  <button type="button" class="dd-btn full" id="whenBtn" aria-haspopup="listbox" aria-expanded="false" aria-controls="whenList" aria-labelledby="l-when whenVal"><span class="dd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg></span><span class="dd-val" id="whenVal">In 1–3 months</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <div class="dd-pop" hidden>
+                    <ul class="dd-list" role="listbox" id="whenList" aria-labelledby="l-when" tabindex="-1">
+                      <li role="option" id="w1" data-v="As soon as possible" aria-selected="false"><span class="o-main">As soon as possible</span><span class="o-sub">There's a deadline coming</span></li>
+                      <li role="option" id="w2" data-v="Within a month" aria-selected="false"><span class="o-main">Within a month</span><span class="o-sub">Ready to get going soon</span></li>
+                      <li role="option" id="w3" data-v="In 1–3 months" aria-selected="true"><span class="o-main">In 1–3 months</span><span class="o-sub">Planning for next quarter</span></li>
+                      <li role="option" id="w4" data-v="Just exploring" aria-selected="false"><span class="o-main">Just exploring</span><span class="o-sub">Ideas, options and pricing</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <input type="hidden" id="f-when" value="In 1–3 months">
+              </div>
+              <div aria-hidden="true" style="position:absolute;left:-9999px"><label for="f-gotcha">Leave this empty</label><input id="f-gotcha" type="text" tabindex="-1" autocomplete="off"></div>
+              <div class="field grow"><label for="f-msg">What happens today, and what should change?</label>
+                <textarea id="f-msg" placeholder="Example: Leave requests are on paper and HR re-types them into Excel. We want staff to request leave on their phones and managers to approve in one tap."></textarea><span class="err" id="e-msg"></span></div>
+              <div class="foot"><p id="formHint">Your message goes straight to my inbox.</p><button class="btn blue" type="submit" id="sendBtn">Send message</button></div>
+            </form>
+            <div class="panel" id="sent" hidden>
+              <span class="sent-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+              <span class="eyebrow">Message sent</span><h3 id="sentTitle">Thanks, I've got it.</h3>
+              <p>Your message is in my inbox and I'll reply to the email address you gave. For anything urgent, WhatsApp me on +233 57 117 4104.</p>
+              <button class="mini" type="button" id="another" style="justify-self:start">Send another message</button>
+            </div>
+            <div class="panel" id="sendout" hidden>
+              <span class="eyebrow">Ready to send</span><h3 id="sendoutTitle">Choose how to send it</h3>
+              <pre id="preview"></pre>
+              <div class="actions"><a class="btn blue" id="wa" href="#" target="_blank" rel="noopener">WhatsApp ↗</a><a class="btn soft" id="em" href="#">Email app</a><a class="btn soft" id="gm" href="#" target="_blank" rel="noopener">Gmail ↗</a><button class="btn soft" type="button" id="copyMsg">Copy</button></div>
+              <p>If none of these opens, copy the message and send it to pisagid@gmail.com or +233 57 117 4104.</p>
+              <button class="mini" type="button" id="editMsg" style="justify-self:start">Edit my answers</button>
+            </div>
+          </div>
+        </div>
+      </section>
+  </div>
+  <footer class="site"><span>© <span id="yr">2026</span> Isaac Gideon Poku · isaacgideonpoku.com · Accra, Ghana</span><a href="#home">Back to top ↑</a></footer>
+</div>
+<div class="minibar" id="minibar">
+  <a class="mlogo" href="#home" aria-label="pisagid, back to top"></a>
+  <ul class="mlinks">
+    <li><a href="#about">About me</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#works">Works</a></li>
+    <li><a href="#credentials">Credentials</a></li>
+  </ul>
+  <a class="btn blue" href="#hire">Hire Me</a>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  /* ── SETTINGS ─────────────────────────────────────────────
+     Paste your form endpoint between the quotes to receive
+     submissions in your inbox (see README.md), e.g.
+     "https://formspree.io/f/abcdwxyz"
+     Left empty, the form offers WhatsApp / email instead. */
+  const FORM_ENDPOINT = "https://formsubmit.co/ajax/pisagid@gmail.com";
+  /* ───────────────────────────────────────────────────────── */
+
+  /* Certifications (no expiry shown). level: "associate" | "expert" */
+  const certs = [
+    {t:"DevOps Engineer Expert", lvl:"expert", e:"Dec 2025", id:"D86CFE6E0A85A48F"},
+    {t:"Power Platform Solution Architect Expert", lvl:"expert", e:"Apr 2024", id:"12BF170A295A3256"},
+    {t:"Azure Network Engineer Associate", lvl:"associate", e:"Jul 2026", id:"C53532BB7E5C68DF"},
+    {t:"Azure Administrator Associate", lvl:"associate", e:"Jun 2025", id:"B534F1B00FBA07F5"},
+    {t:"Power BI Data Analyst Associate", lvl:"associate", e:"May 2026", id:"F695D84BE881377"},
+    {t:"Power Platform Developer Associate", lvl:"associate", e:"Oct 2023", id:"396E644BF9641AEB"}
+  ];
+
+  /* Projects. image: optional screenshot path (e.g. "assets/work/helpdesk.png") replaces the illustration.
+     mock: which illustration to draw when there is no image. */
+  const projects = [
+    {title:"Licence Proposal Generator", ctx:"eSolutions · Microsoft licensing", status:"wip", cats:["power"],
+     before:"Client proposals for Microsoft licences priced and formatted by hand.", after:"Proposals generated automatically as PDFs, with partner discount and markup applied per licence.",
+     tags:["Microsoft licensing","PDF generation","Automation"], mock:"proposal"},
+    {title:"Agency Onboarding App", ctx:"Smart Workplace", status:"live", cats:["power"],
+     desc:"Registers new agencies onto the Smart Workplace platform.", tags:["Onboarding","Registration"], repo:"https://github.com/Pisagid/Onboarding_App", mock:"onboarding"},
+    {title:"Helpdesk App", ctx:"Support", status:"live", cats:["power"],
+     desc:"A helpdesk app for logging and following up support requests.", tags:["Helpdesk","Requests"], repo:"https://github.com/Pisagid/Helpdesk_App", mock:"helpdesk"},
+    {title:"Sensor Data Pipeline", ctx:"Intern mentoring", status:"wip", cats:["power"],
+     desc:"A project I designed for the two computer engineering interns I supervise: MATLAB logs sensor readings to OneDrive, Power Automate moves them into a list, and a Power App shows them.",
+     tags:["MATLAB","OneDrive","Power Automate","Power Apps"], mock:"sensor"},
+    {title:"Approval System", ctx:"Power Platform", status:"live", cats:["power"],
+     before:"Documents and products passed hand to hand for review and sign-off.", after:"Reviews and approvals routed and tracked in one Power App.",
+     tags:["Power Apps","Power Automate"], repo:"https://github.com/Pisagid/Approval", mock:"approval"},
+    {title:"Capstone Tracker", ctx:"Accra Institute of Technology", status:"live", cats:["web"],
+     desc:"Supervisors follow every final-year project's progress in real time instead of chasing students one by one.", tags:["PHP","MySQL","JavaScript"], repo:"https://github.com/Pisagid/Capstone-Project-Tracker", mock:"capstone"},
+    {title:"Lectures & Attendance Monitoring", ctx:"Accra Institute of Technology", status:"live", cats:["web"],
+     desc:"Lecture scheduling and lecturer attendance moved from paper into one web system.", tags:["PHP","MySQL","jQuery"], mock:"attendance"},
+    {title:"NPP Membership & MIS", ctx:"Core contributor", status:"", cats:["web"],
+     desc:"A membership and management information system that keeps member records and reporting in one place.", tags:["Web application","Database"], mock:"mis"},
+    {title:"Enterprise Power Platform delivery", ctx:"eSolutions Consulting Ghana", status:"", cats:["power"],
+     desc:"Business apps, workflows and Microsoft 365 / SharePoint rollouts for clients across sectors, with training so teams adopt them.", tags:["Power Platform","Azure","SharePoint"], mock:"enterprise"}
+  ];
+
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const badgeSrc = l => `assets/badges/${l}.webp`;
+
+  /* ---------- loader ---------- */
+  (function(){
+    const fill = $("ldFill"), pct = $("ldPct"), start = performance.now();
+    const minTime = reduce ? 200 : 1900;
+    const imgs = [$("me"), ...certs.map(c => { const i = new Image(); i.src = badgeSrc(c.lvl); return i; })];
+    let shown = 0, finished = false;
+    const ready = () => imgs.filter(i => i.complete).length / imgs.length;
+    function step(){
+      const t = Math.min(1, (performance.now() - start) / minTime);
+      const target = Math.min(ready(), t) * 100;
+      shown += (target - shown) * 0.18;
+      if(target >= 100 && shown > 99.4) shown = 100;
+      fill.style.width = shown + "%"; pct.textContent = Math.round(shown) + "%";
+      if(shown >= 100 && !finished){ finished = true; setTimeout(done, reduce ? 0 : 250); return; }
+      if(!finished) requestAnimationFrame(step);
+    }
+    function done(){ $("loader").classList.add("done"); document.body.classList.remove("loading"); }
+    requestAnimationFrame(step);
+    setTimeout(() => { if(!finished){ finished = true; done(); } }, 5500);
+  })();
+
+  /* ---------- section highlight (single page) ---------- */
+  const pages = ["home","about","services","works","credentials","hire"];
+  let current = "home";
+  const allLinks = () => document.querySelectorAll(".menu a, .mlinks a");
+  function spy(){
+    let cur = "home";
+    pages.forEach(id => { if($(id).getBoundingClientRect().top < innerHeight*0.4) cur = id; });
+    if(innerHeight + scrollY >= document.documentElement.scrollHeight - 4) cur = "hire";
+    current = cur;
+    allLinks().forEach(a => a.getAttribute("href") === "#"+cur ? a.setAttribute("aria-current","location") : a.removeAttribute("aria-current"));
+    $("minibar").classList.toggle("on", $("home").getBoundingClientRect().bottom < 90);
+  }
+  addEventListener("scroll", spy, {passive:true});
+  addEventListener("resize", spy);
+  $("minibar").querySelector(".mlogo").innerHTML = document.querySelector("nav.top .logo").innerHTML;
+
+  /* mobile menu */
+  const menu = $("menu"), menuBtn = $("menuBtn");
+  function closeMenu(){ menu.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); }
+  menuBtn.addEventListener("click", e => { e.stopPropagation(); const o = !menu.classList.contains("open"); menu.classList.toggle("open", o); menuBtn.setAttribute("aria-expanded", String(o)); });
+  document.addEventListener("click", e => { if(!e.target.closest("#menu") || e.target.closest("#menu a")) closeMenu(); });
+
+  /* ---------- orbiting badges ---------- */
+  const orbit = $("orbit"), portrait = $("portrait"), ring = $("ring");
+  orbit.innerHTML = certs.map((c,i) => `<button class="badge" type="button" data-i="${i}" aria-label="${esc(c.t)}, earned ${c.e}"><img src="${badgeSrc(c.lvl)}" alt="" width="348" height="360"><span class="tip">${esc(c.t)}<small>Earned ${c.e}</small></span></button>`).join("");
+  const badges = [...orbit.children];
+  let geo = null, angle = -Math.PI/2, paused = false, last = 0;
+  const TILT = -10 * Math.PI/180;
+  function layoutOrbit(){
+    const W = portrait.clientWidth, H = portrait.clientHeight;
+    if(!W || !H) return;
+    const bs = W < 360 ? 50 : W < 460 ? 58 : 80;
+    const rx = Math.min(W*(W < 500 ? 0.44 : 0.55), 360), ry = rx*0.24, cx = W/2, cy = H*0.5;
+    geo = {W,H,bs,rx,ry,cx,cy};
+    orbit.style.setProperty("--bs", bs+"px");
+    badges.forEach(b => b.style.setProperty("--bs", bs+"px"));
+    Object.assign(ring.style, {width: rx*2+"px", height: ry*2+"px", top: (cy-ry)+"px", transform:`translateX(-50%) rotate(${TILT*180/Math.PI}deg)`});
+    place();
+  }
+  function place(){
+    if(!geo) return;
+    const n = badges.length;
+    badges.forEach((b,i) => {
+      const a = angle + i*(Math.PI*2/n);
+      const x = Math.cos(a)*geo.rx, y = Math.sin(a)*geo.ry;
+      const px = geo.cx + x*Math.cos(TILT) - y*Math.sin(TILT);
+      const py = geo.cy + x*Math.sin(TILT) + y*Math.cos(TILT);
+      const depth = Math.sin(a);              // >0 = in front of me
+      const s = 0.72 + 0.28*(depth+1)/2;
+      b.style.transform = `translate(${px - geo.bs/2}px, ${py - geo.bs*0.52}px) scale(${s.toFixed(3)})`;
+      b.style.zIndex = depth > 0 ? 4 : 1;
+      b.style.opacity = (0.7 + 0.3*(depth+1)/2).toFixed(2);
+    });
+  }
+  function spin(ts){
+    const dt = Math.min(48, ts - (last || ts)); last = ts;
+    if(!paused && current === "home") { angle += dt * (Math.PI*2/30000); place(); }
+    requestAnimationFrame(spin);
+  }
+  badges.forEach(b => {
+    b.addEventListener("mouseenter", () => paused = true);
+    b.addEventListener("mouseleave", () => { if(!b.classList.contains("show")) paused = false; });
+    b.addEventListener("focus", () => paused = true);
+    b.addEventListener("blur", () => { b.classList.remove("show"); paused = false; });
+    b.addEventListener("click", e => { e.stopPropagation(); const on = !b.classList.contains("show"); badges.forEach(x => x.classList.remove("show")); b.classList.toggle("show", on); paused = on; });
+  });
+  document.addEventListener("click", () => { badges.forEach(x => x.classList.remove("show")); paused = false; });
+  addEventListener("resize", layoutOrbit);
+  $("me").addEventListener("load", layoutOrbit);
+  if(!reduce) requestAnimationFrame(spin);
+
+  /* ---------- works carousel ---------- */
+  const mocks = {
+    proposal: () => `<div class="dev desk docp"><div class="bar"><i></i><i></i><i></i><span>Proposal · Client Ltd.pdf</span></div><span class="pdf">PDF</span><div class="body"><h4>Licence proposal</h4><div class="docl" style="width:60%"></div><div class="tbl"><div class="tr h"><span>Licence</span><span>Qty × unit</span><span>Total</span></div><div class="tr"><span>Microsoft 365 E3</span><span>50 × ···</span><span>···</span></div><div class="tr"><span>Power BI Pro</span><span>20 × ···</span><span>···</span></div><div class="tr"><span>Partner discount</span><span>applied</span><span>−···</span></div><div class="tr"><span><b>Total</b></span><span></span><span><b>···</b></span></div></div></div></div>
+      <div class="dev phone"><div class="head">New proposal<small>Pick licences</small></div><div class="body"><div class="li">Microsoft 365 E3<em class="b">×50</em></div><div class="li">Power BI Pro<em class="b">×20</em></div><div class="li">Third-party<em class="a">no markup</em></div><div class="pbtn">Generate PDF</div></div></div>`,
+    onboarding: () => `<div class="dev desk"><div class="bar"><i></i><i></i><i></i><span>Smart Workplace · Agencies</span></div><div class="body"><div class="kpis"><div class="kpi"><b>Agencies</b><small>registered</small></div><div class="kpi"><b>Pending</b><small>review</small></div><div class="kpi"><b>Users</b><small>onboarded</small></div></div><div class="li">Agency record<em class="g">Active</em></div><div class="li">Agency record<em class="a">Review</em></div><div class="li">Agency record<em class="g">Active</em></div></div></div>
+      <div class="dev phone"><div class="head">Register agency<small>Smart Workplace</small></div><div class="body"><div class="fld">Agency name<span></span></div><div class="fld">Registration no.<span></span></div><div class="fld">Contact person<span></span></div><div class="fld">Email<span></span></div><div class="pbtn">Register agency</div></div></div>`,
+    helpdesk: () => `<div class="dev desk"><div class="bar"><i></i><i></i><i></i><span>Helpdesk · Requests</span></div><div class="body"><div class="kpis"><div class="kpi"><b>Open</b><small>requests</small></div><div class="kpi"><b>Today</b><small>new</small></div><div class="kpi"><b>Resolved</b><small>this week</small></div></div><div class="li">Printer offline<em class="a">Open</em></div><div class="li">Password reset<em class="g">Resolved</em></div><div class="li">VPN access<em class="b">In progress</em></div></div></div>
+      <div class="dev phone"><div class="head">Helpdesk<small>Log a request</small></div><div class="body"><div class="fld">What's wrong?<span></span></div><div class="fld">Category<span></span></div><div class="pbtn">Submit request</div><div class="li">Password reset<em class="g">Done</em></div></div></div>`,
+    sensor: () => `<div class="dev desk"><div class="bar"><i></i><i></i><i></i><span>Sensor readings · Power App</span></div><div class="body"><div class="chart"><svg viewBox="0 0 300 80" preserveAspectRatio="none"><polyline points="0,60 25,52 50,56 75,40 100,44 125,30 150,36 175,22 200,28 225,18 250,26 275,14 300,20" fill="none" stroke="var(--blue)" stroke-width="2.5"/><polyline points="0,70 300,70" stroke="var(--line)" stroke-width="1"/></svg></div><div class="li">MATLAB → OneDrive<em class="g">synced</em></div><div class="li">Power Automate → List<em class="b">running</em></div></div></div>
+      <div class="dev phone"><div class="head">Readings<small>Live from the list</small></div><div class="body"><div class="li">Sensor A<em class="b">latest</em></div><div class="li">Sensor B<em class="b">latest</em></div><div class="li">Sensor C<em class="a">check</em></div></div></div>`,
+    approval: () => `<div class="dev phone solo" style="width:38%"><div class="head">Approvals<small>3 waiting for you</small></div><div class="body"><div class="li">Purchase request<em class="a">Pending</em></div><div class="li">Product sheet<em class="g">Approved</em></div><div class="li">Policy document<em class="a">Pending</em></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px"><div class="pbtn">Approve</div><div class="pbtn" style="background:var(--sunk);color:var(--ink)">Reject</div></div></div></div>`,
+    capstone: () => `<div class="dev desk" style="width:92%"><div class="bar"><i></i><i></i><i></i><span>Capstone Tracker · Supervisor view</span></div><div class="body"><div class="tbl"><div class="tr h"><span>Student</span><span>Project</span><span>Progress</span></div>${[80,55,92,35,68].map((p,i)=>`<div class="tr"><span>Student ${i+1}</span><span>Final-year project</span><span class="prog"><i style="width:${p}%"></i></span></div>`).join("")}</div></div></div>`,
+    attendance: () => `<div class="dev desk" style="width:92%"><div class="bar"><i></i><i></i><i></i><span>Lectures · Attendance this week</span></div><div class="body"><div class="grid7"><span></span><span class="h">Mon</span><span class="h">Tue</span><span class="h">Wed</span><span class="h">Thu</span><span class="h">Fri</span>${["Lecturer A","Lecturer B","Lecturer C","Lecturer D","Lecturer E"].map((l,r)=>`<span>${l}</span>`+[0,1,2,3,4].map(c=>`<i class="${(r+c)%5===3?'x':(r*c)%4===3?'n':''}"></i>`).join("")).join("")}</div><div class="li">Present<em class="g">■</em></div></div></div>`,
+    mis: () => `<div class="dev desk" style="width:92%"><div class="bar"><i></i><i></i><i></i><span>Membership MIS</span></div><div class="body"><div class="kpis"><div class="kpi"><b>Members</b><small>records</small></div><div class="kpi"><b>Regions</b><small>reporting</small></div><div class="kpi"><b>Reports</b><small>generated</small></div></div><div class="tbl"><div class="tr h"><span>Member</span><span>Region</span><span>Status</span></div><div class="tr"><span>Member record</span><span>Region</span><span>Active</span></div><div class="tr"><span>Member record</span><span>Region</span><span>Active</span></div><div class="tr"><span>Member record</span><span>Region</span><span>Pending</span></div></div></div></div>`,
+    enterprise: () => `<div class="dev desk"><div class="bar"><i></i><i></i><i></i><span>Client intranet · SharePoint</span></div><div class="body"><div class="m-site" style="height:150px"><b></b><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
+      <div class="dev phone"><div class="head">Requests<small>Power Apps</small></div><div class="body"><div class="li">Leave request<em class="g">Approved</em></div><div class="li">Expense claim<em class="a">Pending</em></div><div class="li">IT request<em class="b">New</em></div></div></div>`
+  };
+  const label = {live:"Live", wip:"In progress"};
+  let filter = "all", idx = 0;
+  const list = () => projects.filter(p => filter==="all" || (filter==="wip" ? p.status==="wip" : p.cats.includes(filter)));
+  function renderWork(){
+    const L = list(); if(idx >= L.length) idx = 0; if(idx < 0) idx = L.length-1;
+    const p = L[idx], nx = L[(idx+1) % L.length];
+    $("wDetail").innerHTML = `<span class="k">Project name</span>
+      <h3>${esc(p.title)}${p.status ? `<span class="state ${p.status}">${label[p.status]}</span>` : ""}</h3>
+      ${p.desc ? `<p>${esc(p.desc)}</p>` : ""}
+      ${p.before ? `<div class="ba"><div><b>Before</b>${esc(p.before)}</div><div class="after"><b>After</b>${esc(p.after)}</div></div>` : ""}
+      <div class="tags">${p.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
+      ${p.repo ? `<a class="repo" href="${p.repo}" target="_blank" rel="noopener">View repository ↗</a>` : ""}`;
+    $("wCtx").textContent = p.ctx;
+    $("wNextName").textContent = L.length > 1 ? "Next project → " + nx.title : "";
+    const scene = $("scene");
+    scene.innerHTML = p.image ? `<img src="${esc(p.image)}" alt="${esc(p.title)} screenshot" style="width:100%;height:100%;object-fit:contain">` : (mocks[p.mock] ? mocks[p.mock]() : "");
+    scene.classList.remove("swap"); void scene.offsetWidth; scene.classList.add("swap");
+    $("wNum").textContent = `${idx+1}/${L.length}`;
+    $("ticks").innerHTML = L.map((_,i)=>`<i class="${i===idx?"on":""}"></i>`).join("");
+  }
+  $("wPrev").addEventListener("click", () => { idx--; renderWork(); });
+  $("wNext").addEventListener("click", () => { idx++; renderWork(); });
+  $("wNextName").addEventListener("click", () => { idx++; renderWork(); });
+  $("tabs").addEventListener("click", e => {
+    const b = e.target.closest("button[data-f]"); if(!b) return;
+    document.querySelectorAll("#tabs button").forEach(x => x.setAttribute("aria-pressed", x===b ? "true" : "false"));
+    filter = b.dataset.f; idx = 0; renderWork();
+  });
+  addEventListener("keydown", e => {
+    const r = $("works").getBoundingClientRect();
+    if(r.top > innerHeight*0.6 || r.bottom < innerHeight*0.4 || e.target.closest("input,textarea,select")) return;
+    if(e.key === "ArrowRight"){ idx++; renderWork(); } if(e.key === "ArrowLeft"){ idx--; renderWork(); }
+  });
+  let tx = null;
+  $("scene").parentElement.addEventListener("touchstart", e => tx = e.touches[0].clientX, {passive:true});
+  $("scene").parentElement.addEventListener("touchend", e => { if(tx === null) return; const d = e.changedTouches[0].clientX - tx; if(Math.abs(d) > 40){ idx += d < 0 ? 1 : -1; renderWork(); } tx = null; });
+  renderWork();
+
+  /* ---------- credentials ---------- */
+  $("creds").innerHTML = certs.map(c => `
+    <article class="card cred">
+      <img src="${badgeSrc(c.lvl)}" width="348" height="360" alt="Microsoft Certified ${c.lvl === "expert" ? "Expert" : "Associate"} badge" loading="lazy">
+      <div><span class="lvl">Microsoft Certified · ${c.lvl === "expert" ? "Expert" : "Associate"}</span><h3>${c.t}</h3><p class="earned">Earned ${c.e}</p></div>
+      <div class="id"><span>ID <code>${c.id}</code></span><button class="mini" type="button" data-copy="${c.id}">Copy ID</button></div>
+    </article>`).join("");
+
+  /* ---------- clock, year, theme ---------- */
+  function tick(){
+    try{
+      const now = new Date(), tz = {timeZone:"Africa/Accra"};
+      $("clock").textContent = new Intl.DateTimeFormat("en-GB",{...tz,hour:"2-digit",minute:"2-digit"}).format(now);
+      const h = +new Intl.DateTimeFormat("en-GB",{...tz,hour:"numeric",hour12:false}).format(now);
+      const d = new Intl.DateTimeFormat("en-GB",{...tz,weekday:"short"}).format(now);
+      $("clockNote").textContent = (h>=8 && h<17 && !["Sat","Sun"].includes(d)) ? "· working hours" : "· leave a message";
+    }catch(e){}
+  }
+  tick(); setInterval(tick, 30000);
+  $("yr").textContent = new Date().getFullYear();
+  $("themeBtn").addEventListener("click", () => {
+    const dark = document.documentElement.dataset.theme !== "dark";
+    if(dark) document.documentElement.dataset.theme = "dark"; else delete document.documentElement.dataset.theme;
+    try{ localStorage.setItem("igp-theme", dark ? "dark" : "light"); }catch(e){}
+  });
+
+  /* ---------- copy ---------- */
+  const toast = $("toast"); let tt;
+  const say = m => { toast.textContent = m; toast.classList.add("show"); clearTimeout(tt); tt = setTimeout(()=>toast.classList.remove("show"), 1800); };
+  const selectText = el => { try{ const r=document.createRange(); r.selectNodeContents(el); const s=getSelection(); s.removeAllRanges(); s.addRange(r);}catch(e){} };
+  function copy(text, el){ const fail = () => { if(el) selectText(el); say("Selected. Press Ctrl+C to copy"); }; try{ navigator.clipboard.writeText(text).then(()=>say("Copied"), fail); }catch(e){ fail(); } }
+  document.addEventListener("click", e => { const b = e.target.closest("[data-copy]"); if(b) copy(b.dataset.copy, b.parentElement.querySelector("code, .v")); });
+
+  /* ---------- modern dropdowns ---------- */
+  function dropdown(root, onPick){
+    const btn = root.querySelector(".dd-btn"), pop = root.querySelector(".dd-pop"), list = root.querySelector(".dd-list"), q = root.querySelector(".dd-search input");
+    let active = -1;
+    const opts = () => [...list.querySelectorAll('[role="option"]:not([hidden])')];
+    const keyEl = q || list;
+    function hl(scroll){
+      const o = opts(); o.forEach((x,i) => x.classList.toggle("act", i === active));
+      const a = o[active]; if(a){ keyEl.setAttribute("aria-activedescendant", a.id); if(scroll !== false) a.scrollIntoView({block:"nearest"}); }
+    }
+    function open(){
+      document.querySelectorAll(".dd.open").forEach(d => d !== root && d._close && d._close());
+      pop.hidden = false; root.classList.add("open"); btn.setAttribute("aria-expanded","true");
+      if(q){ q.value = ""; filter(""); }
+      const o = opts(), sel = list.querySelector('[aria-selected="true"]');
+      active = Math.max(0, o.indexOf(sel)); hl();
+      (q || list).focus({preventScroll:true});
+    }
+    function close(focusBtn){ if(pop.hidden) return; pop.hidden = true; root.classList.remove("open"); btn.setAttribute("aria-expanded","false"); if(focusBtn) btn.focus({preventScroll:true}); }
+    root._close = close;
+    function pick(li){
+      list.querySelectorAll('[aria-selected="true"]').forEach(x => x.setAttribute("aria-selected","false"));
+      li.setAttribute("aria-selected","true"); onPick(li); close(true);
+    }
+    function filter(t){
+      t = t.trim().toLowerCase().replace(/^\+/, "");
+      let n = 0; list.querySelectorAll('[role="option"]').forEach(li => { li.hidden = !!t && !li.dataset.s.includes(t); if(!li.hidden) n++; });
+      const empty = root.querySelector(".dd-empty"); if(empty) empty.hidden = n > 0;
+      active = 0; hl(); list.scrollTop = 0;
+    }
+    btn.addEventListener("click", () => pop.hidden ? open() : close());
+    btn.addEventListener("keydown", e => { if(e.key === "ArrowDown" || e.key === "ArrowUp"){ e.preventDefault(); open(); } });
+    list.addEventListener("click", e => { const li = e.target.closest('[role="option"]'); if(li) pick(li); });
+    list.addEventListener("mousemove", e => { const li = e.target.closest('[role="option"]'); if(li){ const i = opts().indexOf(li); if(i !== active){ active = i; hl(false); } } });
+    keyEl.addEventListener("keydown", e => {
+      const o = opts();
+      if(e.key === "ArrowDown"){ e.preventDefault(); active = Math.min(o.length-1, active+1); hl(); }
+      else if(e.key === "ArrowUp"){ e.preventDefault(); active = Math.max(0, active-1); hl(); }
+      else if(e.key === "Home" && !q){ e.preventDefault(); active = 0; hl(); }
+      else if(e.key === "End" && !q){ e.preventDefault(); active = o.length-1; hl(); }
+      else if(e.key === "Enter" || (e.key === " " && !q)){ e.preventDefault(); if(o[active]) pick(o[active]); }
+      else if(e.key === "Escape"){ e.preventDefault(); close(true); }
+      else if(e.key === "Tab"){ close(); }
+      else if(!q && e.key.length === 1){ const i = o.findIndex(x => x.textContent.trim().toLowerCase().startsWith(e.key.toLowerCase())); if(i >= 0){ active = i; hl(); } }
+    });
+    if(q) q.addEventListener("input", () => filter(q.value));
+    document.addEventListener("pointerdown", e => { if(!root.contains(e.target)) close(); });
+  }
+
+  /* country codes: ISO|name|dial|example national number */
+  const COUNTRIES = "AF|Afghanistan|93|070 123 4567;AL|Albania|355|067 212 3456;DZ|Algeria|213|0551 23 45 67;AS|American Samoa|1|(684) 733-1234;AD|Andorra|376|312 345;AO|Angola|244|923 123 456;AI|Anguilla|1|(264) 235-1234;AG|Antigua and Barbuda|1|(268) 464-1234;AR|Argentina|54|011 15-2345-6789;AM|Armenia|374|077 123456;AW|Aruba|297|560 1234;AU|Australia|61|0412 345 678;AT|Austria|43|0664 123456;AZ|Azerbaijan|994|040 123 45 67;BS|Bahamas|1|(242) 359-1234;BH|Bahrain|973|3600 1234;BD|Bangladesh|880|01812-345678;BB|Barbados|1|(246) 250-1234;BY|Belarus|375|8 029 491-19-11;BE|Belgium|32|0450 00 12 34;BZ|Belize|501|622-1234;BJ|Benin|229|01 95 12 34 56;BM|Bermuda|1|(441) 370-1234;BT|Bhutan|975|17 12 34 56;BO|Bolivia|591|71234567;BQ|Bonaire, Sint Eustatius and Saba|599|318 1234;BA|Bosnia and Herzegovina|387|061 123 456;BW|Botswana|267|71 123 456;BR|Brazil|55|(11) 96123-4567;IO|British Indian Ocean Territory|246|380 1234;BN|Brunei Darussalam|673|712 3456;BG|Bulgaria|359|043 012 345;BF|Burkina Faso|226|70 12 34 56;BI|Burundi|257|79 56 12 34;CV|Cabo Verde|238|991 12 34;KH|Cambodia|855|091 234 567;CM|Cameroon|237|6 71 23 45 67;CA|Canada|1|(506) 234-5678;KY|Cayman Islands|1|(345) 323-1234;CF|Central African Republic|236|70 01 23 45;TD|Chad|235|63 01 23 45;CL|Chile|56|(2) 2123 4567;CN|China|86|131 2345 6789;CX|Christmas Island|61|0412 345 678;CC|Cocos (Keeling) Islands|61|0412 345 678;CO|Colombia|57|321 1234567;KM|Comoros|269|321 23 45;CG|Congo|242|06 123 4567;CK|Cook Islands|682|71 234;CR|Costa Rica|506|8312 3456;HR|Croatia|385|092 123 4567;CU|Cuba|53|05 1234567;CW|Curaçao|599|9 518 1234;CY|Cyprus|357|96 123456;CZ|Czechia|420|601 123 456;CI|Côte d’Ivoire|225|01 23 45 6789;CD|DR Congo|243|0991 234 567;DK|Denmark|45|34 41 23 45;DJ|Djibouti|253|77 83 10 01;DM|Dominica|1|(767) 225-1234;DO|Dominican Republic|1|(809) 234-5678;EC|Ecuador|593|099 123 4567;EG|Egypt|20|010 01234567;SV|El Salvador|503|7012 3456;GQ|Equatorial Guinea|240|222 123 456;ER|Eritrea|291|07 123 456;EE|Estonia|372|5123 4567;SZ|Eswatini|268|7612 3456;ET|Ethiopia|251|091 123 4567;FK|Falkland Islands (Malvinas)|500|51234;FO|Faroe Islands|298|21 12 34;FJ|Fiji|679|701 2345;FI|Finland|358|041 2345678;FR|France|33|06 12 34 56 78;GF|French Guiana|594|0694 20 12 34;PF|French Polynesia|689|87 12 34 56;GA|Gabon|241|06 03 12 34;GM|Gambia|220|301 2345;GE|Georgia|995|555 12 34 56;DE|Germany|49|01512 3456789;GH|Ghana|233|023 123 4567;GI|Gibraltar|350|57123456;GR|Greece|30|691 234 5678;GL|Greenland|299|22 12 34;GD|Grenada|1|(473) 403-1234;GP|Guadeloupe|590|0690 00 12 34;GU|Guam|1|(671) 300-1234;GT|Guatemala|502|5123 4567;GG|Guernsey|44|07781 123456;GN|Guinea|224|601 12 34 56;GW|Guinea-Bissau|245|955 012 345;GY|Guyana|592|609 1234;HT|Haiti|509|34 10 1234;VA|Holy See (Vatican City State)|39|312 345 6789;HN|Honduras|504|9123-4567;HK|Hong Kong|852|5123 4567;HU|Hungary|36|06 20 123 4567;IS|Iceland|354|611 1234;IN|India|91|081234 56789;ID|Indonesia|62|0812-345-678;IR|Iran|98|0912 345 6789;IQ|Iraq|964|0791 234 5678;IE|Ireland|353|085 012 3456;IM|Isle of Man|44|07924 123456;IL|Israel|972|050-234-5678;IT|Italy|39|312 345 6789;JM|Jamaica|1|(876) 210-1234;JP|Japan|81|090-1234-5678;JE|Jersey|44|07797 712345;JO|Jordan|962|07 9012 3456;KZ|Kazakhstan|7|8 (771) 000 9998;KE|Kenya|254|0712 123456;KI|Kiribati|686|72001234;KW|Kuwait|965|500 12345;KG|Kyrgyzstan|996|0700 123 456;LA|Laos|856|020 23 123 456;LV|Latvia|371|21 234 567;LB|Lebanon|961|71 123 456;LS|Lesotho|266|5012 3456;LR|Liberia|231|077 012 3456;LY|Libya|218|091-2345678;LI|Liechtenstein|423|660 234 567;LT|Lithuania|370|(0-612) 34567;LU|Luxembourg|352|628 123 456;MO|Macao|853|6612 3456;MG|Madagascar|261|032 12 345 67;MW|Malawi|265|0991 23 45 67;MY|Malaysia|60|012-345 6789;MV|Maldives|960|771-2345;ML|Mali|223|65 01 23 45;MT|Malta|356|9696 1234;MH|Marshall Islands|692|235-1234;MQ|Martinique|596|0696 20 12 34;MR|Mauritania|222|22 12 34 56;MU|Mauritius|230|5251 2345;YT|Mayotte|262|0639 01 23 45;MX|Mexico|52|222 123 4567;FM|Micronesia|691|350 1234;MD|Moldova|373|0621 12 345;MC|Monaco|377|06 12 34 56 78;MN|Mongolia|976|8812 3456;ME|Montenegro|382|060 123 456;MS|Montserrat|1|(664) 492-3456;MA|Morocco|212|06 50 12 34 56;MZ|Mozambique|258|82 123 4567;MM|Myanmar|95|09 212 3456;NA|Namibia|264|081 123 4567;NR|Nauru|674|555 1234;NP|Nepal|977|984-1234567;NL|Netherlands|31|06 12345678;NC|New Caledonia|687|75.12.34;NZ|New Zealand|64|021 123 4567;NI|Nicaragua|505|8123 4567;NE|Niger|227|93 12 34 56;NG|Nigeria|234|0802 123 4567;NU|Niue|683|888 4012;NF|Norfolk Island|672|3 81234;KP|North Korea|850|0192 123 4567;MK|North Macedonia|389|072 345 678;MP|Northern Mariana Islands|1|(670) 234-5678;NO|Norway|47|40 61 23 45;OM|Oman|968|9212 3456;PK|Pakistan|92|0301 2345678;PW|Palau|680|620 1234;PS|Palestine|970|0599 123 456;PA|Panama|507|6123-4567;PG|Papua New Guinea|675|7012 3456;PY|Paraguay|595|0961 456789;PE|Peru|51|912 345 678;PH|Philippines|63|0905 123 4567;PL|Poland|48|512 345 678;PT|Portugal|351|912 345 678;PR|Puerto Rico|1|(787) 234-5678;QA|Qatar|974|3312 3456;RO|Romania|40|0712 034 567;RU|Russia|7|8 (912) 345-67-89;RW|Rwanda|250|0720 123 456;RE|Réunion|262|0692 12 34 56;BL|Saint Barthélemy|590|0690 00 12 34;SH|Saint Helena, Ascension and Tristan da Cunha|290|51234;KN|Saint Kitts and Nevis|1|(869) 765-2917;LC|Saint Lucia|1|(758) 284-5678;MF|Saint Martin (French part)|590|0690 00 12 34;PM|Saint Pierre and Miquelon|508|055 12 34;VC|Saint Vincent and the Grenadines|1|(784) 430-1234;WS|Samoa|685|72 12345;SM|San Marino|378|66 66 12 12;ST|Sao Tome and Principe|239|981 2345;SA|Saudi Arabia|966|051 234 5678;SN|Senegal|221|70 123 45 67;RS|Serbia|381|060 1234567;SC|Seychelles|248|2 510 123;SL|Sierra Leone|232|(025) 123456;SG|Singapore|65|8123 4567;SX|Sint Maarten (Dutch part)|1|(721) 520-5678;SK|Slovakia|421|0912 123 456;SI|Slovenia|386|031 234 567;SB|Solomon Islands|677|74 21234;SO|Somalia|252|7 1123456;ZA|South Africa|27|071 123 4567;KR|South Korea|82|010-2000-0000;SS|South Sudan|211|0977 123 456;ES|Spain|34|612 34 56 78;LK|Sri Lanka|94|071 234 5678;SD|Sudan|249|091 123 1234;SR|Suriname|597|741-2345;SJ|Svalbard and Jan Mayen|47|41 23 45 67;SE|Sweden|46|070-123 45 67;CH|Switzerland|41|078 123 45 67;SY|Syria|963|0944 567 890;TW|Taiwan|886|0912 345 678;TJ|Tajikistan|992|91 712 3456;TZ|Tanzania|255|0621 234 567;TH|Thailand|66|081 234 5678;TL|Timor-Leste|670|7721 2345;TG|Togo|228|90 11 23 45;TK|Tokelau|690|7290;TO|Tonga|676|771 5123;TT|Trinidad and Tobago|1|(868) 291-1234;TN|Tunisia|216|20 123 456;TM|Turkmenistan|993|8 66 123456;TC|Turks and Caicos Islands|1|(649) 231-1234;TV|Tuvalu|688|90 1234;TR|Türkiye|90|0501 234 56 78;UG|Uganda|256|0712 345678;UA|Ukraine|380|050 123 4567;AE|United Arab Emirates|971|050 123 4567;GB|United Kingdom|44|07400 123456;US|United States|1|(201) 555-0123;UY|Uruguay|598|094 231 234;UZ|Uzbekistan|998|91 234 56 78;VU|Vanuatu|678|591 2345;VE|Venezuela|58|0412-1234567;VN|Vietnam|84|0912 345 678;VG|Virgin Islands, British|1|(284) 300-1234;VI|Virgin Islands, U.S.|1|(340) 642-1234;WF|Wallis and Futuna|681|82 12 34;EH|Western Sahara|212|06 50 12 34 56;YE|Yemen|967|0712 345 678;ZM|Zambia|260|095 5123456;ZW|Zimbabwe|263|071 234 5678;AX|Åland Islands|358|041 2345678".split(";").map(r => r.split("|"));
+  const FIDX = {}; COUNTRIES.forEach((c,i) => FIDX[c[0]] = i);
+  const flagPos = iso => `--fx:${FIDX[iso] % 16};--fy:${Math.floor(FIDX[iso] / 16)}`;
+  let cc = COUNTRIES.find(c => c[0] === "GH");
+  (function(){
+    const list = $("ccList");
+    const order = [cc, ...COUNTRIES.filter(c => c !== cc)];
+    list.innerHTML = order.map(([iso,name,dial]) => `<li role="option" id="cc-${iso}" data-iso="${iso}" data-s="${esc((name + " " + dial + " +" + dial + " " + iso).toLowerCase())}" aria-selected="${iso === "GH"}"><span class="flag" aria-hidden="true" style="${flagPos(iso)}"></span><span class="c-name">${esc(name)}</span><span class="c-dial">+${dial}</span></li>`).join("");
+    dropdown($("ddCountry"), li => {
+      cc = COUNTRIES.find(c => c[0] === li.dataset.iso);
+      $("ccFlag").setAttribute("style", flagPos(cc[0])); $("ccDial").textContent = "+" + cc[2];
+      $("ccBtn").setAttribute("aria-label", `Country code: ${cc[1]} +${cc[2]}`);
+      $("f-phone").placeholder = cc[3] || "Phone number";
+      setTimeout(() => $("f-phone").focus(), 0);
+    });
+    $("ccBtn").setAttribute("aria-label", `Country code: ${cc[1]} +${cc[2]}`);
+    $("ccFlag").setAttribute("style", flagPos(cc[0]));
+    dropdown($("ddWhen"), li => { $("f-when").value = li.dataset.v; $("whenVal").textContent = li.dataset.v; });
+  })();
+
+  /* ---------- form ---------- */
+  const form = $("hireForm"), out = $("sendout"), sent = $("sent"), pre = $("preview");
+  let lastMsg = "";
+  if(!FORM_ENDPOINT) $("formHint").textContent = "Next you'll choose WhatsApp or email to send it. Nothing is sent until you do.";
+  const sendBtn = $("sendBtn");
+  const btnIdle = () => { sendBtn.disabled = false; sendBtn.innerHTML = 'Send message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>'; };
+  btnIdle();
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+    const name = $("f-name").value.trim(), email = $("f-email").value.trim(), msg = $("f-msg").value.trim();
+    const rawPhone = $("f-phone").value.trim(), digits = rawPhone.replace(/\D/g, "");
+    const needs = [...document.querySelectorAll("#needs input:checked")].map(i=>i.value);
+    let ok = true; const set = (id, m) => { $(id).textContent = m; if(m) ok = false; };
+    set("e-name", name ? "" : "Add your name so I know who to reply to.");
+    set("e-email", /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? "" : "Enter an email address like name@company.com.");
+    set("e-phone", !rawPhone || (digits.length >= 6 && digits.length <= 14) ? "" : "Check the phone number. Use digits only, without the country code.");
+    set("e-needs", needs.length ? "" : "Pick at least one option.");
+    set("e-msg", msg.length >= 15 ? "" : "Describe the project in a sentence or two.");
+    if(!ok){ const f = form.querySelector(".err:not(:empty)"); const inp = f && f.parentElement.querySelector("input,textarea"); inp && inp.focus(); return; }
+    if($("f-gotcha").value) return;
+    const org = $("f-org").value.trim(), when = $("f-when").value;
+    const phone = rawPhone ? `+${cc[2]} ${digits.replace(/^0+/, "")} (${cc[1]})` : "";
+    const subject = `Project enquiry from ${name}${org ? " (" + org + ")" : ""}`;
+    lastMsg = `Hello Isaac,\n\n${msg}\n\nWhat I need: ${needs.join("; ")}\nStart: ${when}\n\n${name}${org ? ", " + org : ""}\n${email}${phone ? "\n" + phone : ""}`;
+    pre.textContent = lastMsg;
+    $("wa").href = "https://wa.me/233571174104?text=" + encodeURIComponent(lastMsg);
+    $("em").href = "mailto:pisagid@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lastMsg);
+    $("gm").href = "https://mail.google.com/mail/?view=cm&fs=1&to=pisagid@gmail.com&su=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lastMsg);
+    if(!FORM_ENDPOINT){ form.hidden = true; out.hidden = false; return; }
+    sendBtn.disabled = true; sendBtn.innerHTML = '<span class="spin" aria-hidden="true"></span> Sending…';
+    try{
+      const res = await fetch(FORM_ENDPOINT, {method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"},
+        body: JSON.stringify({name, email, organisation: org || "-", phone: phone || "-", needs: needs.join("; "), start: when, message: msg,
+                              _subject: subject, _replyto: email, _template: "table", _honey: ""})});
+      const data = await res.json().catch(() => ({}));
+      if(!res.ok || String(data.success) !== "true") throw new Error(data.message || res.status);
+      $("sentTitle").textContent = `Thanks, ${name.split(" ")[0]}. I've got it.`;
+      form.reset(); form.hidden = true; sent.hidden = false;
+    }catch(err){
+      $("sendoutTitle").textContent = "That didn't go through. Send it this way instead";
+      form.hidden = true; out.hidden = false;
+    }finally{ btnIdle(); }
+  });
+  $("copyMsg").addEventListener("click", () => copy(lastMsg, pre));
+  $("editMsg").addEventListener("click", () => { out.hidden = true; form.hidden = false; $("f-msg").focus(); });
+  $("another").addEventListener("click", () => { sent.hidden = true; form.hidden = false; $("f-name").focus(); });
+
+  /* ---------- music staff ---------- */
+  (function(){
+    const svg = $("staff"); if(!svg) return;
+    const NS = "http://www.w3.org/2000/svg";
+    const el = (n, a, p) => { const e = document.createElementNS(NS, n); for(const k in a) e.setAttribute(k, a[k]); (p||svg).appendChild(e); return e; };
+    // pitch, beats, lyric, beam group  (Amazing Grace, public domain)
+    const MEL = [["D4",1,"A-"],["G4",2,"ma-"],["B4",.5,"zing",1],["G4",.5,"",1],["B4",2,"grace"],["A4",1,"how"],
+                 ["G4",2,"sweet"],["E4",1,"the"],["D4",2,"sound"],["D4",1,"that"],["G4",2,"saved"],["B4",.5,"a",2],["G4",.5,"",2],
+                 ["B4",2,"wretch"],["A4",1,"like"],["D5",3,"me."]];
+    const STEP = {D4:-1,E4:0,F4:1,G4:2,A4:3,B4:4,C5:5,D5:6}, MIDI = {D4:62,E4:64,G4:67,A4:69,B4:71,D5:74};
+    const BOT = 128, SP = 16, y = st => BOT - st*(SP/2);
+    const CLEF = "M314 -801Q300 -854 291.0 -906.0Q282 -958 282 -1012Q282 -1059 288.5 -1100.5Q295 -1142 307 -1177Q320 -1217 341.0 -1252.5Q362 -1288 385.5 -1311.0Q409 -1334 427 -1334Q451 -1334 493 -1249Q514 -1206 524.0 -1156.0Q534 -1106 534 -1049Q534 -978 515.0 -907.5Q496 -837 459.5 -775.0Q423 -713 372 -666L407 -498Q422 -500 432.0 -501.0Q442 -502 447 -502Q508 -502 556.0 -467.5Q604 -433 632.5 -377.0Q661 -321 661 -254Q661 -177 621.5 -115.5Q582 -54 503 -25Q508 -8 532 117Q538 147 541.0 164.5Q544 182 545.0 195.0Q546 208 546 225Q546 275 521.5 314.5Q497 354 455.5 376.0Q414 398 363 398Q311 398 271.0 378.5Q231 359 208.0 324.5Q185 290 185 245Q185 197 211.5 165.0Q238 133 287 133Q329 133 355.5 163.5Q382 194 382 236Q382 272 357.0 299.0Q332 326 292 326H282Q308 365 364 365Q433 365 472.0 320.0Q511 275 511 205Q511 188 507.0 159.5Q503 131 493 91Q483 51 477.5 25.0Q472 -1 470 -12Q436 -2 390 -2Q304 -2 222 -52Q142 -102 96.0 -184.0Q50 -266 50 -361Q50 -451 91 -530Q132 -609 192.5 -675.0Q253 -741 314 -801ZM341 -826Q364 -838 390.0 -870.5Q416 -903 440.0 -945.0Q464 -987 479.0 -1029.5Q494 -1072 494 -1106Q494 -1142 483.0 -1163.0Q472 -1184 445 -1184Q421 -1184 398.5 -1162.0Q376 -1140 358.5 -1103.5Q341 -1067 331.0 -1022.0Q321 -977 321 -930Q321 -898 327.5 -872.0Q334 -846 341 -826ZM398 -379Q371 -373 347.0 -353.5Q323 -334 308.5 -306.5Q294 -279 294 -248Q294 -223 307.0 -196.5Q320 -170 339 -154Q352 -142 365 -136Q380 -129 380 -123Q380 -120 370 -117Q332 -126 301.5 -151.0Q271 -176 253.5 -211.5Q236 -247 236 -287Q236 -330 253.5 -370.0Q271 -410 302.5 -442.0Q334 -474 374 -490L345 -641Q229 -547 174.5 -456.5Q120 -366 120 -277Q120 -212 154.0 -156.0Q188 -100 247.0 -65.5Q306 -31 380 -31Q400 -31 420.5 -35.0Q441 -39 464 -45ZM495 -55Q593 -97 593 -227Q593 -270 571.0 -305.5Q549 -341 512.0 -362.0Q475 -383 429 -383Z";
+    // layout
+    let x = 128; const xs = [], bars = []; let beat = 0;
+    MEL.forEach(([p,b],i) => {
+      xs.push(x); beat += b; x += 26 + b*17;
+      if(beat === 1 || (beat > 1 && (beat-1) % 3 === 0 && i < MEL.length-1)){ bars.push(x - 10); x += 6; }
+    });
+    const W = x + 6, H = 188;
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+    el("rect", {class:"ph", x:0, y:BOT-SP*4-22, width:34, height:SP*4+44, rx:10, id:"ph"});
+    for(let k=0;k<5;k++) el("line", {class:"ln", x1:8, x2:W-4, y1:BOT-k*SP, y2:BOT-k*SP});
+    el("path", {class:"clef", d:CLEF, transform:`translate(16 ${BOT}) scale(${SP/250})`});
+    el("text", {class:"tsig", x:86, y:BOT-SP*3}).textContent = "3";
+    el("text", {class:"tsig", x:86, y:BOT-SP}).textContent = "4";
+    bars.forEach(bx => el("line", {class:"bar", x1:bx, x2:bx, y1:BOT-4*SP, y2:BOT}));
+    el("line", {class:"bar", x1:W-14, x2:W-14, y1:BOT-4*SP, y2:BOT});
+    el("line", {class:"bar thick", x1:W-6.5, x2:W-6.5, y1:BOT-4*SP, y2:BOT});
+    // stem direction per note (beamed pairs share one)
+    const dir = MEL.map(([p]) => STEP[p] >= 4 ? -1 : 1);   // 1 = up
+    [1,2].forEach(g => { const ids = MEL.map((m,i)=>m[3]===g?i:-1).filter(i=>i>=0); const avg = ids.reduce((s,i)=>s+STEP[MEL[i][0]],0)/ids.length; ids.forEach(i => dir[i] = avg >= 4 ? -1 : 1); });
+    const notes = [], lyrs = [], tips = [];
+    MEL.forEach(([p,b,l,g],i) => {
+      const cx = xs[i], cy = y(STEP[p]), up = dir[i] === 1;
+      const n = el("g", {class:"note", "data-i":i, style:`--i:${i}`, tabindex:0, role:"button", "aria-label":`${p.replace(/\d/,"")} ${l||""}`.trim()});
+      const nb = el("g", {class:"nb"}, n);
+      el("ellipse", {class:"head" + (b >= 2 ? " open" : ""), cx, cy, rx:8.4, ry:6.1, transform:`rotate(-20 ${cx} ${cy})`}, nb);
+      const sx = up ? cx+7.4 : cx-7.4, sy1 = up ? cy-1.5 : cy+1.5, sy2 = up ? cy-46 : cy+46;
+      el("line", {class:"stem", x1:sx, x2:sx, y1:sy1, y2:sy2, "stroke-width":2}, nb);
+      tips[i] = {x:sx, y:sy2};
+      if(b === 3) el("circle", {class:"dot", cx:cx+16, cy: STEP[p]%2===0 ? cy-4 : cy, r:2.8}, nb);
+      el("rect", {x:cx-14, y:BOT-SP*4-20, width:28, height:SP*4+40, fill:"transparent"}, n);
+      notes.push(n);
+      const t = el("text", {class:"lyr", x:cx, y:H-8}); t.textContent = l; lyrs.push(t);
+    });
+    [1,2].forEach(g => { const ids = MEL.map((m,i)=>m[3]===g?i:-1).filter(i=>i>=0); const a = tips[ids[0]], c = tips[ids[1]], up = dir[ids[0]]===1, h = up ? 6 : -6;
+      el("path", {class:"beam", d:`M${a.x-1} ${a.y} L${c.x+1} ${c.y} L${c.x+1} ${c.y+h} L${a.x-1} ${a.y+h} Z`}); });
+
+    /* sound */
+    let ctx = null, voices = [], playing = false, t0 = 0, raf = 0, last = -1;
+    const BEAT = 60/88;
+    const starts = []; { let t = 0; MEL.forEach(([,b]) => { starts.push(t); t += b*BEAT; }); }
+    const total = starts[starts.length-1] + MEL[MEL.length-1][1]*BEAT;
+    function ac(){
+      if(!ctx){ const C = window.AudioContext || window.webkitAudioContext; if(!C) return null; ctx = new C(); }
+      if(ctx.state === "suspended") ctx.resume();
+      return ctx;
+    }
+    function tone(midi, at, dur){
+      const c = ac(); if(!c) return;
+      const f = 440*Math.pow(2,(midi-69)/12), out = c.createGain(), lp = c.createBiquadFilter();
+      lp.type = "lowpass"; lp.frequency.value = 2600;
+      out.gain.setValueAtTime(0, at); out.gain.linearRampToValueAtTime(.2, at+.03);
+      out.gain.setTargetAtTime(.13, at+.06, .25); out.gain.setTargetAtTime(0, at+Math.max(.08, dur-.06), .09);
+      [[1,"triangle",1],[2,"sine",.32],[4,"sine",.08]].forEach(([m,type,v]) => {
+        const o = c.createOscillator(), g = c.createGain(); o.type = type; o.frequency.value = f*m; g.gain.value = v;
+        o.connect(g); g.connect(lp); o.start(at); o.stop(at+dur+.6); voices.push(o);
+      });
+      lp.connect(out); out.connect(c.destination);
+    }
+    function spark(i){
+      if(reduce) return;
+      const cx = xs[i], cy = y(STEP[MEL[i][0]]) - 10;
+      const g = el("g", {class:"spark", style:`--dx:${(Math.random()*30-15).toFixed(0)}px;--rot:${(Math.random()*40-20).toFixed(0)}deg;transform-box:fill-box`});
+      el("ellipse", {cx:cx, cy:cy, rx:4.2, ry:3.1, transform:`rotate(-20 ${cx} ${cy})`}, g);
+      el("rect", {x:cx+3, y:cy-16, width:1.6, height:16}, g);
+      el("path", {d:`M${cx+4.6} ${cy-16} q6 4 5 11 q-1-5 -5-6z`}, g);
+      setTimeout(() => g.remove(), 1500);
+    }
+    function mark(i){
+      notes.forEach((n,k) => n.classList.toggle("on", k===i));
+      lyrs.forEach((t,k) => t.classList.toggle("on", k===i));
+      if(i >= 0 && i !== last) spark(i);
+      last = i;
+    }
+    const ph = $("ph");
+    function frame(){
+      const t = ctx.currentTime - t0;
+      if(t >= total + .25){ stop(); return; }
+      let i = 0; while(i < starts.length-1 && t >= starts[i+1]) i++;
+      if(t >= 0) mark(i);
+      const nx = i < xs.length-1 ? xs[i+1] : W-24, frac = Math.min(1, Math.max(0, (t - starts[i]) / (MEL[i][1]*BEAT)));
+      const px = xs[i] + (nx - xs[i])*frac;
+      ph.setAttribute("x", (px - 17).toFixed(1));
+      const sc = svg.parentElement;
+      if(sc.scrollWidth > sc.clientWidth + 4) sc.scrollLeft = px/W*svg.clientWidth - sc.clientWidth/2;
+      raf = requestAnimationFrame(frame);
+    }
+    const btn = $("playBtn"), lbl = $("playLbl");
+    function play(){
+      const c = ac(); if(!c) return;
+      voices = []; t0 = c.currentTime + .08; last = -1;
+      MEL.forEach(([p,b],i) => tone(MIDI[p], t0 + starts[i], b*BEAT*.96));
+      playing = true; svg.classList.add("playing"); btn.setAttribute("aria-pressed","true"); lbl.textContent = "Stop";
+      raf = requestAnimationFrame(frame);
+    }
+    function stop(){
+      cancelAnimationFrame(raf); voices.forEach(o => { try{ o.stop(); }catch(e){} }); voices = [];
+      playing = false; svg.classList.remove("playing"); mark(-1); svg.parentElement.scrollTo({left:0, behavior: reduce ? "auto" : "smooth"}); btn.setAttribute("aria-pressed","false"); lbl.textContent = "Play the phrase";
+    }
+    btn.addEventListener("click", () => playing ? stop() : play());
+    function hit(i){ const c = ac(); if(!c) return; tone(MIDI[MEL[i][0]], c.currentTime+.01, .55); if(!playing){ mark(i); spark(i); setTimeout(() => { if(!playing && last===i) mark(-1); }, 450); } }
+    notes.forEach((n,i) => {
+      n.addEventListener("pointerdown", () => hit(i));
+      n.addEventListener("keydown", e => { if(e.key === "Enter" || e.key === " "){ e.preventDefault(); hit(i); } });
+    });
+    document.addEventListener("visibilitychange", () => { if(document.hidden && playing) stop(); });
+  })();
+
+  /* ---------- count-up + reveal on scroll ---------- */
+  (function(){
+    const nums = [...document.querySelectorAll("[data-count]")];
+    function count(){
+      nums.forEach(b => {
+        const n = +b.dataset.count, suf = b.dataset.suffix || "", t0 = performance.now(), d = 1300;
+        if(reduce){ b.textContent = n + suf; return; }
+        (function f(t){ const p = Math.min(1, (t - t0)/d), e = 1 - Math.pow(1-p, 3); b.textContent = Math.round(n*e) + (p === 1 ? suf : ""); if(p < 1) requestAnimationFrame(f); })(t0);
+      });
+    }
+    if(!("IntersectionObserver" in window) || reduce) return;
+    let counted = false;
+    const imp = $("impact");
+    const startCount = () => { if(counted) return; counted = true; nums.forEach(b => b.textContent = "0"); count(); };
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if(!e.isIntersecting) return;
+      if(e.target === imp){ if(!document.body.classList.contains("loading")) startCount(); else setTimeout(startCount, 900); }
+      else e.target.classList.add("in");
+      io.unobserve(e.target);
+    }), {rootMargin:"0px 0px -8% 0px"});
+    io.observe(imp);
+    const sel = ".sheet .ptitle,.sheet .psub,.about-photo,.about-body>div,.svc,.proc-title,.step,.works,.mus-copy,.staff-card,.cred,.hire>*";
+    document.querySelectorAll(sel).forEach((el, i) => {
+      if(el.getBoundingClientRect().top < innerHeight) return;
+      el.classList.add("rv"); el.style.transitionDelay = ((i % 3) * 80) + "ms"; io.observe(el);
+    });
+  })();
+
+  spy();
+  layoutOrbit();
+})();
+</script>
+</body>
+</html>

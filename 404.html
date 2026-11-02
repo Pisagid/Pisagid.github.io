@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found · pisagid</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="/assets/logo/pisagid-icon.svg">
+<script>
+  // isaacgideonpoku.com/works → isaacgideonpoku.com/#works (the site is one page)
+  (function(){
+    var name = location.pathname.replace(/^\/+|\/+$/g, "").toLowerCase();
+    var map = {about:"about", "about-me":"about", services:"services", works:"works", work:"works", projects:"works",
+               credentials:"credentials", certifications:"credentials", music:"music", hire:"hire", contact:"hire", "hire-me":"hire"};
+    if(map[name]) location.replace("/#" + map[name]);
+  })();
+</script>
+<style>
+  :root{color-scheme:light dark}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;background:#EEF1F7;color:#0E1B3D;font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;padding:24px;box-sizing:border-box}
+  @media (prefers-color-scheme: dark){body{background:#070C1C;color:#EAF0FF}}
+  main{text-align:center;display:grid;gap:14px;justify-items:center}
+  img{width:72px;height:72px;border-radius:18px}
+  h1{margin:0;font-size:clamp(1.6rem,5vw,2.4rem)}
+  p{margin:0;opacity:.75}
+  a{display:inline-block;margin-top:8px;padding:12px 22px;border-radius:14px;background:#1F6FEB;color:#fff;text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+<main>
+  <img src="/assets/logo/pisagid-icon.svg" alt="pisagid">
+  <h1>This page doesn't exist.</h1>
+  <p>Everything lives on one page at isaacgideonpoku.com.</p>
+  <a href="/">Go to isaacgideonpoku.com</a>
+</main>
+</body>
+</html>
