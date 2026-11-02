@@ -4,7 +4,6 @@ The personal website of Isaac Gideon Poku. It is a single page with no build ste
 
 ```
 index.html                 the whole site (styles and script included)
-CNAME                      tells GitHub Pages to serve the site on isaacgideonpoku.com
 assets/isaac.webp          portrait with the background removed
 assets/og.png              preview image shown when the link is shared (1200×630)
 assets/badges/             Microsoft Certified Associate and Expert badges, taken from your certificates
@@ -20,7 +19,7 @@ robots.txt, sitemap.xml    help search engines find and index the site
 1. Create a public repository on the `Pisagid` account. Any name works, for example `isaacgideonpoku.com` or `Pisagid.github.io`.
 2. Upload everything in this folder, keeping the `assets` folder structure, to the main branch.
 3. Open **Settings → Pages**. Under **Source**, choose **Deploy from a branch**, then select **main** and **/ (root)**.
-4. Under **Custom domain**, enter `isaacgideonpoku.com`. The `CNAME` file already contains it.
+4. The site is live at **https://pisagid.github.io**. Once you own isaacgideonpoku.com and have added the DNS records below, enter `isaacgideonpoku.com` under **Settings → Pages → Custom domain** and save. GitHub then serves the site on your domain and redirects the github.io address to it.
 
 ## 2. Point isaacgideonpoku.com at GitHub
 
