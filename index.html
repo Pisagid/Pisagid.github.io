@@ -737,7 +737,7 @@ footer.site a:hover{color:var(--blue-ink)}
     <div class="card stat"><b data-count="6">6</b><span>active Microsoft certifications</span></div>
     <div class="card stat"><b data-count="2">2</b><span>Expert-level: DevOps &amp; Solution Architect</span></div>
     <div class="card stat"><b data-count="10" data-suffix="+">10+</b><span>years in IT, since 2012</span></div>
-    <div class="card stat"><b data-count="12">12</b><span>apps &amp; systems built or in progress</span></div>
+    <div class="card stat"><b data-count="15">15</b><span>apps &amp; systems built or in progress</span></div>
   </div>
 
   <div class="frame sheet">
@@ -1124,10 +1124,10 @@ footer.site a:hover{color:var(--blue-ink)}
   /* Projects. image: optional screenshot path (e.g. "assets/work/helpdesk.png") replaces the illustration.
      mock: which illustration to draw when there is no image. */
   const projects = [
-    {title:"Correspondence Management System", ctx:"Memos & approvals", status:"live", cats:["web"],
-     before:"Memos and letters printed, signed and carried from office to office, with no record of who has seen what.",
-     after:"Memos created, assigned and approved online, with an approval trail, signatures, attachments and a PDF copy.",
-     tags:["Memos","Approval trail","Digital signatures","PDF"],
+    {title:"Correspondence Management System", ctx:"Memos & letters · Power Platform", status:"live", cats:["power"],
+     before:"Letters and memos printed, signed and carried from office to office, with no record of who has seen what.",
+     after:"Correspondence is routed by division, assigned and approved online, with an approval trail, signatures, attachments and a PDF copy. Each person sees only their division's letters plus general ones.",
+     tags:["Power Apps","SharePoint","Approval trail","PDF"],
      images:[["assets/work/correspondence.webp","Inbox and memo detail with the approval trail"]]},
     {title:"Performance Monitoring", ctx:"Team task tracking", status:"live", cats:["web"],
      desc:"Tracks every task across teams and sectors in one place, with grid, board, calendar and chart views, overdue alerts, checklists, reports and exports.",
@@ -1138,17 +1138,32 @@ footer.site a:hover{color:var(--blue-ink)}
      after:"Each review stage runs in one app, with scoring, rating scales, HR controls for appraisal periods and a PDF of the final appraisal.",
      tags:["Power Apps","Power Automate","SharePoint","HR"],
      images:[["assets/work/appraisal-home.webp","Home screen with reviews waiting at each stage"],["assets/work/appraisal-form.webp","Appraisal form (personal details hidden)"],["assets/work/appraisal-hr.webp","HR dashboard for appraisal periods"]]},
-    {title:"Licence Proposal Generator", ctx:"eSolutions · Microsoft licensing", status:"wip", cats:["power"],
-     before:"Client proposals for Microsoft licences priced and formatted by hand.", after:"Proposals generated automatically as PDFs, with partner discount and markup applied per licence.",
-     tags:["Microsoft licensing","PDF generation","Automation"], mock:"proposal"},
+    {title:"Proposal Studio", ctx:"Internal tool · Microsoft licensing", status:"live", cats:["web"],
+     before:"Licence proposals and proforma invoices priced and formatted by hand for every client.",
+     after:"Pick the licences and the app produces a proposal or proforma invoice as a PDF that matches the company's own documents, from a saved price list, with every proposal and its status kept on file.",
+     tags:["JavaScript","PDF generation","Price list","Proposals"], mock:"proposal"},
+    {title:"Invoice App", ctx:"Proposal Studio inside Microsoft 365", status:"wip", cats:["power"],
+     desc:"The Power Apps version of Proposal Studio. It prices licences, saves proposals and calls a Power Automate flow that turns the proposal into a PDF, stores it in SharePoint and emails it with the sender's signature.",
+     pipe:["Power App","Power Automate","PDF","SharePoint","Outlook"],
+     tags:["Power Apps","Power Fx","Power Automate","SharePoint"], mock:"invoice"},
+    {title:"Project Planner App", ctx:"Power Platform", status:"wip", cats:["power"],
+     desc:"Brings Microsoft Planner's board and grid views into Power Apps. Each card is drawn by a single HTML control with shared helper formulas, which keeps the board fast even with many tasks.",
+     tags:["Power Apps","SharePoint","HTML controls","Performance tuning"], mock:"planner"},
+    {title:"Modular Workspace App", ctx:"Web platform", status:"wip", cats:["web"],
+     desc:"A web workspace built from separate modules, starting with a helpdesk module that checks who is allowed in before showing anything.",
+     tags:["React","TypeScript","Node.js","API"], mock:"workspace"},
+    {title:"Claims & Email Automation", ctx:"Power Automate", status:"live", cats:["power"],
+     desc:"Flows that send claim notifications automatically and file email attachments, so nobody has to forward messages or save files by hand.",
+     pipe:["Email arrives","Power Automate","Notification sent","Attachment filed"],
+     tags:["Power Automate","Outlook","SharePoint"], mock:"flows"},
+    {title:"EB Enterprise Website", ctx:"My own clothing business", status:"wip", cats:["web"],
+     desc:"The website for my clothing business, now being modernised, with the brand's logo and invoice template built in.",
+     tags:["ASP.NET","Web development","E-commerce"], mock:"store"},
     {title:"Agency Onboarding App", ctx:"Smart Workplace", status:"live", cats:["power"],
      desc:"Registers new agencies onto the Smart Workplace platform, with a Power BI dashboard that tracks onboarding, training and portal status across hundreds of agencies.",
      tags:["Onboarding","Power BI","Registration"], repo:"https://github.com/Pisagid/Onboarding_App", mock:"onboarding"},
     {title:"Helpdesk App", ctx:"Support", status:"live", cats:["power"],
      desc:"A helpdesk app for logging and following up support requests.", tags:["Helpdesk","Requests"], repo:"https://github.com/Pisagid/Helpdesk_App", mock:"helpdesk"},
-    {title:"Sensor Data Pipeline", ctx:"Intern mentoring", status:"wip", cats:["power"],
-     desc:"A project I designed for the two computer engineering interns I supervise: MATLAB logs sensor readings to OneDrive, Power Automate moves them into a list, and a Power App shows them.",
-     tags:["MATLAB","OneDrive","Power Automate","Power Apps"], mock:"sensor"},
     {title:"Approval System", ctx:"Power Platform", status:"live", cats:["power"],
      before:"Documents and products passed hand to hand for review and sign-off.", after:"Reviews and approvals routed and tracked in one Power App.",
      tags:["Power Apps","Power Automate"], repo:"https://github.com/Pisagid/Approval", mock:"approval"},
@@ -1160,6 +1175,10 @@ footer.site a:hover{color:var(--blue-ink)}
      desc:"Supervisors follow every final-year project's progress in real time instead of chasing students one by one.", tags:["PHP","MySQL","JavaScript"], repo:"https://github.com/Pisagid/Capstone-Project-Tracker", mock:"capstone"},
     {title:"NPP Membership & MIS", ctx:"Core contributor", status:"", cats:["web"],
      desc:"A membership and management information system that keeps member records and reporting in one place.", tags:["Web application","Database"], mock:"mis"},
+    {title:"Intern Projects", ctx:"Mentoring two computer engineering interns", status:"wip", cats:["power"],
+     desc:"Projects I designed to teach my interns the Power Platform end to end: a sensor fault-detection dashboard and a room acoustics analyser, where MATLAB results flow through OneDrive and Power Automate into SharePoint and a Power App.",
+     pipe:["MATLAB","OneDrive","Power Automate","SharePoint","Power Apps"],
+     tags:["MATLAB","Power Automate","Power Apps","Mentoring"], mock:"sensor"},
     {title:"Enterprise Power Platform delivery", ctx:"eSolutions Consulting Ghana", status:"", cats:["power"],
      desc:"Business apps, workflows and Microsoft 365 / SharePoint rollouts for clients across sectors, with training so teams adopt them.", tags:["Power Platform","Azure","SharePoint"], mock:"enterprise"}
   ];
@@ -1271,6 +1290,13 @@ footer.site a:hover{color:var(--blue-ink)}
 
   /* ---------- works carousel ---------- */
   const mocks = {
+    invoice: () => `<div class="dev desk"><div class="bar"><i></i><i></i><i></i><span>Invoice App · New proposal</span></div><div class="body"><div class="tbl"><div class="tr h"><span>Licence</span><span>Qty</span><span>Line total</span></div><div class="tr"><span>Licence item</span><span>··</span><span>···</span></div><div class="tr"><span>Licence item</span><span>··</span><span>···</span></div><div class="tr"><span>Licence item</span><span>··</span><span>···</span></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px"><div class="pbtn">Create PDF</div><div class="pbtn" style="background:var(--green)">Email with signature</div></div></div></div>
+      <div class="dev phone"><div class="head">Power Automate<small>Make PDF</small></div><div class="body"><div class="li">Convert to PDF<em class="g">done</em></div><div class="li">Save to SharePoint<em class="g">done</em></div><div class="li">Send email<em class="b">sending</em></div></div></div>`,
+    planner: () => `<div class="dev desk" style="width:94%"><div class="bar"><i></i><i></i><i></i><span>Project Planner · Board</span></div><div class="body"><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">${["To do","In progress","Done"].map((c,k)=>`<div style="display:grid;gap:6px;align-content:start"><b style="font-size:10px">${c}</b>${[0,1,2].slice(0,3-k%2).map(i=>`<div class="li" style="display:grid;gap:4px"><span style="height:6px;width:${60+i*12}%;background:var(--line);border-radius:3px;display:block"></span><span class="prog"><i style="width:${[20,55,100][k]}%"></i></span></div>`).join("")}</div>`).join("")}</div></div></div>`,
+    workspace: () => `<div class="dev desk" style="width:92%"><div class="bar"><i></i><i></i><i></i><span>Workspace · Modules</span></div><div class="body"><div style="display:grid;grid-template-columns:90px 1fr;gap:10px"><div style="display:grid;gap:5px;align-content:start"><div class="li">Home</div><div class="li" style="background:var(--blue-soft);color:var(--blue-ink)">Helpdesk</div><div class="li">Module</div><div class="li">Module</div></div><div style="display:grid;gap:6px;align-content:start"><div class="kpis"><div class="kpi"><b>Open</b><small>tickets</small></div><div class="kpi"><b>Access</b><small>checked</small></div><div class="kpi"><b>API</b><small>connected</small></div></div><div class="li">Ticket<em class="a">Open</em></div><div class="li">Ticket<em class="g">Resolved</em></div></div></div></div></div>`,
+    flows: () => `<div class="dev desk" style="width:92%"><div class="bar"><i></i><i></i><i></i><span>Power Automate · Flows</span></div><div class="body" style="gap:10px">${["When a claim is submitted","Send notification to the team","When an email has an attachment","Save the attachment to SharePoint"].map((t,i)=>`<div class="li" style="border-left:4px solid ${i%2?"var(--green)":"var(--blue)"}">${t}<em class="${i%2?"g":"b"}">${i%2?"action":"trigger"}</em></div>`).join("")}</div></div>`,
+    store: () => `<div class="dev desk"><div class="bar"><i></i><i></i><i></i><span>EB Enterprise · Shop</span></div><div class="body"><div style="height:40px;border-radius:8px;background:linear-gradient(90deg,var(--ink),var(--blue));"></div><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px">${[0,1,2,3].map(()=>`<div style="display:grid;gap:4px"><span style="aspect-ratio:1;border-radius:8px;background:var(--sunk);display:block"></span><span style="height:5px;width:70%;background:var(--line);border-radius:3px;display:block"></span></div>`).join("")}</div></div></div>
+      <div class="dev phone"><div class="head">EB Enterprise<small>Invoice</small></div><div class="body"><div class="li">Shirt<em class="b">×2</em></div><div class="li">Shirt<em class="b">×1</em></div><div class="pbtn">Download invoice</div></div></div>`,
     proposal: () => `<div class="dev desk docp"><div class="bar"><i></i><i></i><i></i><span>Proposal · Client Ltd.pdf</span></div><span class="pdf">PDF</span><div class="body"><h4>Licence proposal</h4><div class="docl" style="width:60%"></div><div class="tbl"><div class="tr h"><span>Licence</span><span>Qty × unit</span><span>Total</span></div><div class="tr"><span>Microsoft 365 E3</span><span>50 × ···</span><span>···</span></div><div class="tr"><span>Power BI Pro</span><span>20 × ···</span><span>···</span></div><div class="tr"><span>Partner discount</span><span>applied</span><span>−···</span></div><div class="tr"><span><b>Total</b></span><span></span><span><b>···</b></span></div></div></div></div>
       <div class="dev phone"><div class="head">New proposal<small>Pick licences</small></div><div class="body"><div class="li">Microsoft 365 E3<em class="b">×50</em></div><div class="li">Power BI Pro<em class="b">×20</em></div><div class="li">Third-party<em class="a">no markup</em></div><div class="pbtn">Generate PDF</div></div></div>`,
     onboarding: () => `<div class="dev desk"><div class="bar"><i></i><i></i><i></i><span>Smart Workplace · Agencies</span></div><div class="body"><div class="kpis"><div class="kpi"><b>Agencies</b><small>registered</small></div><div class="kpi"><b>Pending</b><small>review</small></div><div class="kpi"><b>Users</b><small>onboarded</small></div></div><div class="li">Agency record<em class="g">Active</em></div><div class="li">Agency record<em class="a">Review</em></div><div class="li">Agency record<em class="g">Active</em></div></div></div>
