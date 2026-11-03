@@ -248,7 +248,14 @@ body.loading .frame,body.loading .hello>*,body.loading #me{animation:unhide .01s
 .about>*{min-width:0}
 @media (max-width:860px){.about{grid-template-columns:1fr}}
 .about-photo{position:relative;border-radius:28px;background:var(--panel);overflow:hidden;aspect-ratio:4/5;display:flex;align-items:flex-end;justify-content:center;box-shadow:var(--shadow)}
-.about-photo{position:sticky;top:20px}
+.about-media{position:sticky;top:90px;display:grid;gap:12px;align-self:start}
+.about-photo.real{aspect-ratio:4/5;display:block;margin:0;box-shadow:var(--shadow)}
+.about-photo.real img{width:100%;height:100%;object-fit:cover;object-position:62% 30%;display:block;max-width:none}
+.about-strip{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.zoomable{padding:0;border:0;border-radius:18px;overflow:hidden;cursor:zoom-in;aspect-ratio:4/3;background:var(--panel);box-shadow:var(--shadow)}
+.zoomable img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.zoomable:hover img{transform:scale(1.05)}
+@media (max-width:860px){.about-media{position:static}}
 .about-photo img{height:94%;width:auto;max-width:none;display:block}
 .about-photo .tagline{position:absolute;left:16px;top:16px;padding:8px 12px;border-radius:12px;background:var(--card);box-shadow:var(--shadow);font-size:13px;font-weight:600}
 .about-photo .tagline small{display:block;font-weight:400;color:var(--muted);font-size:12px}
@@ -298,6 +305,7 @@ body.loading .frame,body.loading .hello>*,body.loading #me{animation:unhide .01s
 .state{display:inline-block;font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;margin-left:8px;vertical-align:middle;letter-spacing:0}
 .state.live{background:var(--green-soft);color:var(--green)}
 .state.wip{background:var(--amber-soft);color:var(--amber)}
+.state.new{background:var(--blue-soft);color:var(--blue-ink)}
 .ba{display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:14px}
 .ba div{background:var(--sunk);border-radius:12px;padding:10px 12px}
 .ba div.after{background:var(--blue-soft)}
@@ -356,6 +364,22 @@ body.loading .frame,body.loading .hello>*,body.loading #me{animation:unhide .01s
 .w-count .ticks i{width:14px;height:2px;border-radius:2px;background:color-mix(in srgb,var(--ink) 20%,transparent)}
 .w-count .ticks i.on{width:30px;background:var(--ink)}
 @media (max-width:560px){.scene{height:300px}.dev.desk{width:86%}.dev.phone{width:36%}}
+
+.shotview{margin:0;position:absolute;inset:4% 3% auto 3%;background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 40px 60px -30px rgba(14,27,61,.45),0 2px 6px rgba(14,27,61,.08)}
+.sv-bar{height:28px;display:flex;align-items:center;gap:5px;padding:0 12px;background:var(--sunk);font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+.sv-bar i{width:8px;height:8px;border-radius:50%;background:var(--line)}
+.sv-bar span{margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sv-img{display:block;width:100%;padding:0;border:0;background:var(--card);cursor:zoom-in}
+.sv-img img{display:block;width:100%;height:auto;max-height:300px;object-fit:cover;object-position:top left}
+.sv-thumbs{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.sv-thumbs .k{width:100%}
+.sv-thumbs button{width:64px;height:42px;padding:0;border-radius:9px;overflow:hidden;border:2px solid transparent;background:var(--card);cursor:pointer;opacity:.7;box-shadow:var(--shadow);transition:opacity .15s, border-color .15s}
+.sv-thumbs button.on{border-color:var(--blue);opacity:1}
+.sv-thumbs img{width:100%;height:100%;object-fit:cover;object-position:top left;display:block}
+dialog.zoom{max-width:min(1400px,calc(100vw - 24px));max-height:calc(100dvh - 24px);padding:0;border:0;border-radius:18px;background:var(--card);overflow:hidden}
+dialog.zoom::backdrop{background:rgba(7,12,28,.75);backdrop-filter:blur(4px)}
+dialog.zoom img{display:block;max-width:100%;max-height:calc(100dvh - 24px);object-fit:contain}
+dialog.zoom .icon-btn{position:absolute;top:10px;right:10px}
 
 /* ---------- CREDENTIALS ---------- */
 .creds{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -582,6 +606,14 @@ dialog.reader[open]{animation:readerIn .35s cubic-bezier(.2,.8,.2,1)}
 .mus>*{min-width:0}
 @media (max-width:980px){.mus{grid-template-columns:1fr}}
 .mus-copy{display:grid;gap:16px;justify-items:start}
+.mus-head{display:block}
+.mus-right{display:grid;gap:18px;min-width:0}
+.mus-pics{display:flex;align-items:flex-end;gap:16px;padding-left:6px}
+.mus-cap{font-family:var(--display);font-weight:700;font-size:1.05rem;margin:0 0 10px}
+.mus-cap small{display:block;font-family:var(--body);font-weight:400;font-size:13px;color:var(--muted)}
+.mus-head>div{display:grid;gap:12px;min-width:0}
+.mus-photo{flex-shrink:0;width:clamp(110px,11vw,140px);aspect-ratio:601/864;border-radius:18px;transform:rotate(-3deg);border:5px solid var(--card)}
+.mus-photo:hover{transform:rotate(0)}
 .mus-copy h2{font-size:clamp(2rem,3.8vw,3rem);font-weight:800}
 .mus-copy p{color:var(--muted);max-width:46ch}
 .instr{display:flex;flex-wrap:wrap;gap:6px}
@@ -705,7 +737,7 @@ footer.site a:hover{color:var(--blue-ink)}
     <div class="card stat"><b data-count="6">6</b><span>active Microsoft certifications</span></div>
     <div class="card stat"><b data-count="2">2</b><span>Expert-level: DevOps &amp; Solution Architect</span></div>
     <div class="card stat"><b data-count="10" data-suffix="+">10+</b><span>years in IT, since 2012</span></div>
-    <div class="card stat"><b data-count="9">9</b><span>apps &amp; systems built or in progress</span></div>
+    <div class="card stat"><b data-count="12">12</b><span>apps &amp; systems built or in progress</span></div>
   </div>
 
   <div class="frame sheet">
@@ -713,7 +745,13 @@ footer.site a:hover{color:var(--blue-ink)}
         <h2 class="ptitle">About me</h2>
         <p class="psub">From fixing school computers in 2012 to architecting Power Platform and Azure solutions today.</p>
         <div class="about">
-          <div class="about-photo"><img src="assets/isaac.webp" width="900" height="1560" alt="Isaac Gideon Poku" loading="lazy"><div class="tagline">Isaac Gideon Poku<small>Accra, Ghana</small></div></div>
+          <div class="about-media">
+            <figure class="about-photo real"><img src="assets/photos/speaking-1.webp" width="1400" height="933" alt="Isaac Gideon Poku presenting at a Smart Workplace session" loading="lazy"><figcaption class="tagline">Presenting Smart Workplace<small>eSolutions Consulting Ghana</small></figcaption></figure>
+            <div class="about-strip">
+              <button type="button" class="zoomable" data-src="assets/photos/speaking-2.webp" aria-label="Enlarge photo: speaking to a room of participants"><img src="assets/photos/speaking-2.webp" alt="" loading="lazy"></button>
+              <button type="button" class="zoomable" data-src="assets/photos/speaking-3.webp" aria-label="Enlarge photo: answering questions"><img src="assets/photos/speaking-3.webp" alt="" loading="lazy"></button>
+            </div>
+          </div>
           <div class="about-body">
             <div>
               <div class="lbl">Bio</div>
@@ -751,8 +789,10 @@ footer.site a:hover{color:var(--blue-ink)}
       <section class="page" id="music" aria-label="Off the clock">
         <div class="mus">
           <div class="mus-copy">
-            <span class="eyebrow">Off the clock</span>
-            <h2>Choir director, brass player, music teacher.</h2>
+            <div class="mus-head">
+              <div><span class="eyebrow">Off the clock</span>
+              <h2>Choir director, brass player, music teacher.</h2></div>
+            </div>
             <p>Leading a choir is a lot like delivering a system: every part has to know its line and come in on time. When I'm not building apps, I'm rehearsing, conducting or teaching music.</p>
             <div class="instr"><span>Keyboard / Piano</span><span>Organ</span><span>Trumpet</span><span>Trombone</span><span>Euphonium</span><span>Choir direction</span></div>
             <div class="player">
@@ -767,10 +807,16 @@ footer.site a:hover{color:var(--blue-ink)}
               <audio id="recAudio" preload="none"></audio>
             </div>
           </div>
+          <div class="mus-right">
+            <div class="mus-pics">
+              <button type="button" class="mus-photo zoomable" data-src="assets/photos/euphonium.webp" aria-label="Enlarge photo: Isaac playing the euphonium"><img src="assets/photos/euphonium.webp" alt="" loading="lazy"></button>
+              <p class="mus-cap">On the euphonium<small>One of the five instruments I play</small></p>
+            </div>
           <figure class="staff-card">
             <div class="staff-scroll"><svg id="staff" role="img" aria-label="The opening phrase of Amazing Grace written on a treble staff in three-four time"></svg></div>
             <figcaption>Amazing Grace, opening phrase. Words by John Newton (1779), tune "New Britain".</figcaption>
           </figure>
+          </div>
         </div>
       </section>
   </div>
@@ -881,7 +927,7 @@ footer.site a:hover{color:var(--blue-ink)}
             <div class="w-foot"><span id="wCtx"></span><button type="button" id="wNextName"></button></div>
           </div>
           <div class="w-visual">
-            <span class="cap">Illustration</span>
+            <span class="cap" id="wCap">Illustration</span>
             <div class="scene" id="scene"></div>
             <div class="w-nav"><button type="button" id="wPrev" aria-label="Previous project"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg></button><button type="button" id="wNext" aria-label="Next project"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button></div>
             <div class="w-count"><span class="ticks" id="ticks"></span><span id="wNum">1/9</span></div>
@@ -1028,6 +1074,10 @@ footer.site a:hover{color:var(--blue-ink)}
   </ul>
   <a class="btn blue" href="#hire">Hire Me</a>
 </div>
+<dialog class="zoom" id="zoom" aria-label="Screenshot">
+  <button class="icon-btn" type="button" id="zoomClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <img id="zoomImg" alt="">
+</dialog>
 <dialog class="reader" id="reader" aria-labelledby="readerTitle">
   <article>
     <div class="r-top"><span class="eyebrow" id="readerTag"></span><button class="icon-btn" type="button" id="readerClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
@@ -1051,9 +1101,9 @@ footer.site a:hover{color:var(--blue-ink)}
   /* ── SWITCH-ON SETTINGS ────────────────────────────────────
      Each feature stays hidden until you fill in its value.   */
   const SETTINGS = {
-    BOOKING_URL: "",        // Calendly or Microsoft Bookings link, e.g. "https://calendly.com/pisagid/30min"
-    TRANSCRIPT_URL: "",     // Microsoft Learn transcript share link (Profile → Transcript → Share link)
-    GOATCOUNTER: "",        // your GoatCounter code, e.g. "pisagid" for https://pisagid.goatcounter.com
+    BOOKING_URL: "https://calendly.com/pisagid",        // Calendly or Microsoft Bookings link, e.g. "https://calendly.com/pisagid/30min"
+    TRANSCRIPT_URL: "https://learn.microsoft.com/en-gb/users/isaacgideonpoku-5734/transcript",     // Microsoft Learn transcript share link (Profile → Transcript → Share link)
+    GOATCOUNTER: "isaacgideonpoku",        // your GoatCounter code, e.g. "pisagid" for https://pisagid.goatcounter.com
     MUSIC_RECORDING: "",    // a recording of you, e.g. "assets/music/my-choir.mp3"
     RATE_PER_WEEK: 0,       // set above 0 to show a budget guide in the estimator
     CURRENCY: "GHS"
@@ -1074,11 +1124,26 @@ footer.site a:hover{color:var(--blue-ink)}
   /* Projects. image: optional screenshot path (e.g. "assets/work/helpdesk.png") replaces the illustration.
      mock: which illustration to draw when there is no image. */
   const projects = [
+    {title:"Correspondence Management System", ctx:"Memos & approvals", status:"new", cats:["web"],
+     before:"Memos and letters printed, signed and carried from office to office, with no record of who has seen what.",
+     after:"Memos created, assigned and approved online, with an approval trail, signatures, attachments and a PDF copy.",
+     tags:["Memos","Approval trail","Digital signatures","PDF"],
+     images:[["assets/work/correspondence.webp","Inbox and memo detail with the approval trail"]]},
+    {title:"Performance Monitoring", ctx:"Team task tracking", status:"new", cats:["web"],
+     desc:"Tracks every task across teams and sectors in one place, with grid, board, calendar and chart views, overdue alerts, checklists, reports and exports.",
+     tags:["Dashboards","Kanban board","Reports","Light & dark mode"],
+     images:[["assets/work/performance-dashboard.webp","Dashboard with task status and overdue work"],["assets/work/performance-charts.webp","Charts by status, priority and team member"],["assets/work/performance-newtask.webp","Creating a new task"]]},
+    {title:"Performance Appraisal System", ctx:"HR · Power Platform", status:"new", cats:["power"],
+     before:"Appraisal forms filled in on paper and passed between staff, line managers, heads of department and HR.",
+     after:"Each review stage runs in one app, with scoring, rating scales, HR controls for appraisal periods and a PDF of the final appraisal.",
+     tags:["Power Apps","Power Automate","SharePoint","HR"],
+     images:[["assets/work/appraisal-home.webp","Home screen with reviews waiting at each stage"],["assets/work/appraisal-form.webp","Appraisal form (personal details hidden)"],["assets/work/appraisal-hr.webp","HR dashboard for appraisal periods"]]},
     {title:"Licence Proposal Generator", ctx:"eSolutions · Microsoft licensing", status:"wip", cats:["power"],
      before:"Client proposals for Microsoft licences priced and formatted by hand.", after:"Proposals generated automatically as PDFs, with partner discount and markup applied per licence.",
      tags:["Microsoft licensing","PDF generation","Automation"], mock:"proposal"},
     {title:"Agency Onboarding App", ctx:"Smart Workplace", status:"live", cats:["power"],
-     desc:"Registers new agencies onto the Smart Workplace platform.", tags:["Onboarding","Registration"], repo:"https://github.com/Pisagid/Onboarding_App", mock:"onboarding"},
+     desc:"Registers new agencies onto the Smart Workplace platform, with a Power BI dashboard that tracks onboarding, training and portal status across hundreds of agencies.",
+     tags:["Onboarding","Power BI","Registration"], repo:"https://github.com/Pisagid/Onboarding_App", mock:"onboarding"},
     {title:"Helpdesk App", ctx:"Support", status:"live", cats:["power"],
      desc:"A helpdesk app for logging and following up support requests.", tags:["Helpdesk","Requests"], repo:"https://github.com/Pisagid/Helpdesk_App", mock:"helpdesk"},
     {title:"Sensor Data Pipeline", ctx:"Intern mentoring", status:"wip", cats:["power"],
@@ -1087,10 +1152,12 @@ footer.site a:hover{color:var(--blue-ink)}
     {title:"Approval System", ctx:"Power Platform", status:"live", cats:["power"],
      before:"Documents and products passed hand to hand for review and sign-off.", after:"Reviews and approvals routed and tracked in one Power App.",
      tags:["Power Apps","Power Automate"], repo:"https://github.com/Pisagid/Approval", mock:"approval"},
+    {title:"Lectures & Attendance Management", ctx:"Final-year project · Accra Institute of Technology", status:"live", cats:["web"],
+     desc:"Lecture periods are scheduled per campus and session, lecturers sign in and out of each lecture, and administrators see attendance and make-up lectures at a glance.",
+     tags:["PHP","MySQL","JavaScript","Bootstrap"],
+     images:[["assets/work/lectures-dashboard.webp","Dashboard of scheduled and attended lectures"],["assets/work/lectures-schedule.webp","Scheduling lecture periods"],["assets/work/lectures-login.webp","Sign-in page"]]},
     {title:"Capstone Tracker", ctx:"Accra Institute of Technology", status:"live", cats:["web"],
      desc:"Supervisors follow every final-year project's progress in real time instead of chasing students one by one.", tags:["PHP","MySQL","JavaScript"], repo:"https://github.com/Pisagid/Capstone-Project-Tracker", mock:"capstone"},
-    {title:"Lectures & Attendance Monitoring", ctx:"Accra Institute of Technology", status:"live", cats:["web"],
-     desc:"Lecture scheduling and lecturer attendance moved from paper into one web system.", tags:["PHP","MySQL","jQuery"], mock:"attendance"},
     {title:"NPP Membership & MIS", ctx:"Core contributor", status:"", cats:["web"],
      desc:"A membership and management information system that keeps member records and reporting in one place.", tags:["Web application","Database"], mock:"mis"},
     {title:"Enterprise Power Platform delivery", ctx:"eSolutions Consulting Ghana", status:"", cats:["power"],
@@ -1194,6 +1261,14 @@ footer.site a:hover{color:var(--blue-ink)}
   $("me").addEventListener("load", layoutOrbit);
   if(!reduce) requestAnimationFrame(spin);
 
+  /* ---------- screenshot zoom ---------- */
+  const zoom = $("zoom");
+  function openZoom(src, alt){ $("zoomImg").src = src; $("zoomImg").alt = alt; if(zoom.showModal) zoom.showModal(); else zoom.setAttribute("open",""); }
+  $("zoomClose").addEventListener("click", () => zoom.close());
+  zoom.addEventListener("click", e => { if(e.target === zoom) zoom.close(); });
+
+  document.addEventListener("click", e => { const z = e.target.closest(".zoomable"); if(z) openZoom(z.dataset.src, z.getAttribute("aria-label").replace(/^Enlarge photo: /, "")); });
+
   /* ---------- works carousel ---------- */
   const mocks = {
     proposal: () => `<div class="dev desk docp"><div class="bar"><i></i><i></i><i></i><span>Proposal · Client Ltd.pdf</span></div><span class="pdf">PDF</span><div class="body"><h4>Licence proposal</h4><div class="docl" style="width:60%"></div><div class="tbl"><div class="tr h"><span>Licence</span><span>Qty × unit</span><span>Total</span></div><div class="tr"><span>Microsoft 365 E3</span><span>50 × ···</span><span>···</span></div><div class="tr"><span>Power BI Pro</span><span>20 × ···</span><span>···</span></div><div class="tr"><span>Partner discount</span><span>applied</span><span>−···</span></div><div class="tr"><span><b>Total</b></span><span></span><span><b>···</b></span></div></div></div></div>
@@ -1211,7 +1286,7 @@ footer.site a:hover{color:var(--blue-ink)}
     enterprise: () => `<div class="dev desk"><div class="bar"><i></i><i></i><i></i><span>Client intranet · SharePoint</span></div><div class="body"><div class="m-site" style="height:150px"><b></b><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
       <div class="dev phone"><div class="head">Requests<small>Power Apps</small></div><div class="body"><div class="li">Leave request<em class="g">Approved</em></div><div class="li">Expense claim<em class="a">Pending</em></div><div class="li">IT request<em class="b">New</em></div></div></div>`
   };
-  const label = {live:"Live", wip:"In progress"};
+  const label = {live:"Live", wip:"In progress", new:"New"};
   let filter = "all", idx = 0;
   const list = () => projects.filter(p => filter==="all" || (filter==="wip" ? p.status==="wip" : p.cats.includes(filter)));
   function renderWork(){
@@ -1226,7 +1301,20 @@ footer.site a:hover{color:var(--blue-ink)}
     $("wCtx").textContent = p.ctx;
     $("wNextName").textContent = L.length > 1 ? "Next project → " + nx.title : "";
     const scene = $("scene");
-    scene.innerHTML = p.image ? `<img src="${esc(p.image)}" alt="${esc(p.title)} screenshot" style="width:100%;height:100%;object-fit:contain">` : (mocks[p.mock] ? mocks[p.mock]() : "");
+    const imgs = p.images || (p.image ? [[p.image, p.title]] : null);
+    $("wCap").textContent = imgs ? "Real screens · private details blurred" : "Illustration";
+    if(imgs){
+      scene.innerHTML = `<figure class="shotview"><div class="sv-bar"><i></i><i></i><i></i><span id="svCap">${esc(imgs[0][1])}</span></div><button type="button" class="sv-img" id="svOpen" aria-label="Enlarge screenshot"><img id="svImg" src="${esc(imgs[0][0])}" alt="${esc(p.title)}: ${esc(imgs[0][1])}" loading="lazy"></button></figure>` +
+        "";
+      if(imgs.length > 1) $("wDetail").insertAdjacentHTML("beforeend", `<div class="sv-thumbs" role="group" aria-label="Screens"><span class="k">Screens</span>${imgs.map((m,i) => `<button type="button" class="${i===0?"on":""}" data-i="${i}" aria-label="${esc(m[1])}"><img src="${esc(m[0])}" alt="" loading="lazy"></button>`).join("")}</div>`);
+      $("wDetail").querySelectorAll(".sv-thumbs button").forEach(b => b.addEventListener("click", () => {
+        const m = imgs[+b.dataset.i]; $("svImg").src = m[0]; $("svImg").alt = `${p.title}: ${m[1]}`; $("svCap").textContent = m[1];
+        $("wDetail").querySelectorAll(".sv-thumbs button").forEach(x => x.classList.toggle("on", x === b));
+      }));
+      $("svOpen").addEventListener("click", () => openZoom($("svImg").src, $("svImg").alt));
+    } else {
+      scene.innerHTML = mocks[p.mock] ? mocks[p.mock]() : "";
+    }
     scene.classList.remove("swap"); void scene.offsetWidth; scene.classList.add("swap");
     $("wNum").textContent = `${idx+1}/${L.length}`;
     $("ticks").innerHTML = L.map((_,i)=>`<i class="${i===idx?"on":""}"></i>`).join("");

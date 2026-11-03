@@ -11,6 +11,8 @@ assets/flags.webp          all country flags for the phone country picker, in on
 assets/apple-touch-icon.png
 assets/logo/               logo files (see below)
 assets/Isaac-Gideon-Poku-CV.pdf  one-page CV behind the Download CV buttons
+assets/work/               real app screenshots (names, IDs, signatures and client details blurred)
+assets/photos/             speaking and music photos
 404.html                   friendly "not found" page; also sends isaacgideonpoku.com/works etc. to the right section
 robots.txt, sitemap.xml    help search engines find and index the site
 ```
@@ -52,7 +54,7 @@ To use something else (Formspree, or a Power Automate flow that saves enquiries 
 
 ## 4. Switch-on features
 
-Near the top of the `<script>` in `index.html` there is a `SETTINGS` block. Each feature stays hidden until you fill in its value:
+Near the top of the `<script>` in `index.html` there is a `SETTINGS` block. Each feature stays hidden until you fill in its value. Booking (Calendly), Microsoft Learn verify links and GoatCounter stats are already switched on.
 
 | Setting | What it turns on | Where to get it |
 | --- | --- | --- |
@@ -105,7 +107,7 @@ The site opens with a loading screen, then shows one scrolling page. The top men
 | --- | --- |
 | Certifications (the orbiting badges and the Credentials page) | the `certs` list at the top of the `<script>`. Set `lvl` to `"associate"` or `"expert"`. |
 | Projects (the Works carousel) | the `projects` list just below it |
-| Real screenshots | put an image in `assets/work/` and add `image:"assets/work/name.png"` to that project. It replaces the illustration. |
+| Real screenshots | put images in `assets/work/` and add `images:[["assets/work/name.webp","caption"], …]` to that project. Blur names, staff IDs and client details first. |
 | About me, Services | the `#about` and `#services` sections |
 | Contact details and social links | the hero and the `#hire` section (each contact is a link with its own icon) |
 | Colours and fonts | the `:root` block at the top of `<style>` |
