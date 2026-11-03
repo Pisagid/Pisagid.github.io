@@ -11,7 +11,6 @@ assets/flags.webp          all country flags for the phone country picker, in on
 assets/apple-touch-icon.png
 assets/logo/               logo files (see below)
 assets/Isaac-Gideon-Poku-CV.pdf  one-page CV behind the Download CV buttons
-assets/work/               real app screenshots (names, IDs, signatures and client details blurred)
 assets/photos/             speaking and music photos
 404.html                   friendly "not found" page; also sends isaacgideonpoku.com/works etc. to the right section
 robots.txt, sitemap.xml    help search engines find and index the site
@@ -107,7 +106,7 @@ The site opens with a loading screen, then shows one scrolling page. The top men
 | --- | --- |
 | Certifications (the orbiting badges and the Credentials page) | the `certs` list at the top of the `<script>`. Set `lvl` to `"associate"` or `"expert"`. |
 | Projects (the Works carousel) | the `projects` list just below it |
-| Real screenshots | put images in `assets/work/` and add `images:[["assets/work/name.webp","caption"], …]` to that project. Blur names, staff IDs and client details first. |
+| Project illustrations | the `mocks` list in the script draws each project's picture; add one per project and set `mock:"name"` |
 | About me, Services | the `#about` and `#services` sections |
 | Contact details and social links | the hero and the `#hire` section (each contact is a link with its own icon) |
 | Colours and fonts | the `:root` block at the top of `<style>` |
