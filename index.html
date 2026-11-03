@@ -475,6 +475,88 @@ fieldset{border:0;margin:0;padding:0}
 .panel p{color:var(--muted);font-size:14px}
 .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--ground);padding:10px 16px;border-radius:999px;font-size:14px;z-index:70;opacity:0;pointer-events:none;transition:opacity .2s}
 .toast.show{opacity:1}
+/* ---------- CV button ---------- */
+.cvbtn svg{width:16px;height:16px}
+.center{gap:10px;flex-wrap:wrap}
+.center .btn svg{width:16px;height:16px}
+.id-act{display:flex;gap:6px}
+.mini.vfy{text-decoration:none;color:var(--green);background:var(--green-soft)}
+.cvrow .go{width:18px;height:18px}
+
+/* ---------- estimator ---------- */
+.est{display:grid;grid-template-columns:1.25fr 1fr;gap:18px;align-items:start}
+.est>*{min-width:0}
+@media (max-width:980px){.est{grid-template-columns:1fr}}
+.est-q{display:grid;gap:22px}
+.q{border:0;margin:0;padding:0;display:grid;gap:12px;min-width:0}
+.q legend{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:1.08rem;padding:0;margin-bottom:12px}
+.qn{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-size:13px;font-weight:800;flex-shrink:0}
+.kinds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media (max-width:620px){.kinds{grid-template-columns:repeat(2,1fr)}}
+.kind{position:relative;display:grid;gap:2px;padding:14px;border-radius:16px;background:var(--sunk);border:1.5px solid transparent;cursor:pointer;transition:border-color .15s, background .15s, transform .15s}
+.kind:hover{transform:translateY(-2px)}
+.kind input{position:absolute;opacity:0;pointer-events:none}
+.kind .k-ico{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:var(--card);color:var(--blue-ink);margin-bottom:8px;box-shadow:var(--shadow)}
+.kind .k-ico svg{width:19px;height:19px}
+.kind b{font-size:14.5px;font-weight:600}
+.kind small{font-size:12.5px;color:var(--muted);line-height:1.35}
+.kind:has(input:checked){border-color:var(--blue);background:var(--blue-soft)}
+.kind:has(input:checked)::after{content:"✓";position:absolute;top:10px;right:12px;width:20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;font-size:12px;font-weight:800;display:grid;place-items:center}
+.kind:has(input:focus-visible){outline:2px solid var(--blue);outline-offset:2px}
+.seg{display:flex;flex-wrap:wrap;gap:4px;padding:4px;border-radius:14px;background:var(--sunk);width:fit-content;max-width:100%}
+.seg label{position:relative;cursor:pointer}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:block;padding:9px 14px;border-radius:10px;font-size:14px;font-weight:500;color:var(--muted);transition:background .15s, color .15s}
+.seg input:checked+span{background:var(--card);color:var(--ink);box-shadow:var(--shadow)}
+.seg input:focus-visible+span{outline:2px solid var(--blue);outline-offset:1px}
+.est-out{position:sticky;top:90px;display:grid;gap:16px;background:linear-gradient(160deg,var(--card),var(--sunk))}
+.est-empty .big{display:block;font-family:var(--display);font-weight:800;font-size:1.5rem;line-height:1.15;color:var(--muted)}
+.est-empty p{color:var(--muted);margin-top:6px}
+.est-res{display:grid;gap:16px}
+.est-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.est-head small,.est-price small{display:block;font-size:12.5px;color:var(--muted)}
+.est-head b{font-family:var(--display);font-weight:800;font-size:clamp(2rem,3.4vw,2.6rem);line-height:1;font-variant-numeric:tabular-nums}
+.lvl-pill{padding:6px 12px;border-radius:999px;font-size:13px;font-weight:700;background:var(--blue-soft);color:var(--blue-ink)}
+.meter{height:8px;border-radius:8px;background:var(--line);overflow:hidden}
+.meter i{display:block;height:100%;width:30%;border-radius:8px;background:linear-gradient(90deg,var(--green),var(--blue));transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.est-price b{font-family:var(--display);font-weight:800;font-size:1.4rem}
+.phases{display:grid;gap:8px}
+.ph-row{display:grid;grid-template-columns:128px 1fr auto;gap:10px;align-items:center;font-size:13.5px}
+.ph-row .bar{height:12px;border-radius:6px;background:var(--line);position:relative;overflow:hidden}
+.ph-row .bar i{position:absolute;top:0;bottom:0;border-radius:6px;background:var(--blue);transition:left .5s cubic-bezier(.2,.8,.2,1), width .5s cubic-bezier(.2,.8,.2,1)}
+.ph-row:nth-child(1) .bar i{background:#7FA8F5}.ph-row:nth-child(2) .bar i{background:#4C8DFF}.ph-row:nth-child(3) .bar i{background:var(--blue)}.ph-row:nth-child(4) .bar i{background:var(--green)}
+.ph-row em{font-style:normal;font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap}
+.est-list{margin:0;padding-left:18px;color:var(--muted);font-size:14px;display:grid;gap:3px}
+.est-cta{display:flex;flex-wrap:wrap;gap:10px}
+.est-note{font-size:12.5px;color:var(--muted)}
+@media (max-width:980px){.est-out{position:static}}
+
+/* ---------- notes ---------- */
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:980px){.notes{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.notes{grid-template-columns:1fr}}
+.note-card{display:flex;flex-direction:column;gap:12px;text-align:left;font:inherit;color:inherit;border:0;cursor:pointer;transition:transform .2s, box-shadow .2s;text-decoration:none}
+.note-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.note-art{height:130px;border-radius:16px;background:var(--panel);display:grid;place-items:center;overflow:hidden;position:relative}
+.note-art span{font-family:var(--display);font-weight:800;font-size:64px;color:color-mix(in srgb,var(--blue) 30%,transparent);letter-spacing:-.04em}
+.note-art b{position:absolute;left:14px;bottom:12px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-ink);font-weight:500}
+.note-card h3{font-size:1.25rem;font-weight:700}
+.note-card p{color:var(--muted);font-size:14.5px}
+.note-card .rt{margin-top:auto;font-family:var(--mono);font-size:12px;color:var(--muted)}
+dialog.reader{width:min(760px,calc(100vw - 24px));max-height:calc(100dvh - 32px);padding:0;border:0;border-radius:28px;background:var(--card);color:var(--ink);box-shadow:0 40px 80px -20px rgba(0,0,0,.45)}
+dialog.reader::backdrop{background:rgba(7,12,28,.55);backdrop-filter:blur(4px)}
+dialog.reader[open]{animation:readerIn .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes readerIn{from{opacity:0;transform:translateY(24px) scale(.98)}}
+.reader article{padding:clamp(22px,4vw,44px);display:grid;gap:14px}
+.r-top{display:flex;justify-content:space-between;align-items:center}
+.reader h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:800}
+.r-meta{color:var(--muted);font-size:14px}
+.r-body{display:grid;gap:14px;font-size:16.5px;line-height:1.7;max-width:64ch}
+.r-body h3{font-size:1.15rem;font-weight:700;margin-top:6px;font-family:var(--display)}
+.r-body ul,.r-body ol{margin:0;padding-left:22px;display:grid;gap:6px}
+.r-body p,.r-body li{color:color-mix(in srgb,var(--ink) 85%,var(--muted))}
+.r-foot{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;padding-top:18px;border-top:1px solid var(--line)}
+
 /* ---------- impact strip ---------- */
 .impact{max-width:var(--max);margin:clamp(14px,1.8vw,22px) auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.4vw,18px)}
 .impact .stat{display:flex;align-items:center;gap:16px;padding:18px 22px}
@@ -549,6 +631,7 @@ footer.site a:hover{color:var(--blue-ink)}
 
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;transition-delay:0s!important}}
 </style>
+<!-- Google Search Console: paste the verification tag Google gives you on the next line (see README) -->
 </head>
 <body class="loading">
 
@@ -573,7 +656,7 @@ footer.site a:hover{color:var(--blue-ink)}
         <li><a href="#about">About me</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#works">Works</a></li>
-        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#credentials">Credentials</a></li><li><a href="#notes">Notes</a></li>
       </ul>
       <div class="right">
         <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch light or dark theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
@@ -590,7 +673,7 @@ footer.site a:hover{color:var(--blue-ink)}
             <p class="hi">Hello, I'm</p>
             <h1>Isaac<span>Poku</span></h1>
             <p class="bio">Technical consultant at <b>eSolutions Consulting Ghana</b> with 10+ years in IT. I turn paper forms, spreadsheets and email chains into <b>Power Platform, Azure and web systems</b> people actually use.</p>
-            <div class="ctas"><a class="btn blue" href="#hire">Hire Me</a><a class="btn soft" href="#works">See my work</a></div>
+            <div class="ctas"><a class="btn blue" href="#hire">Hire Me</a><a class="btn soft" href="#works">See my work</a><a class="btn soft cvbtn" href="assets/Isaac-Gideon-Poku-CV.pdf" download="Isaac-Gideon-Poku-CV.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span>Download CV</span></a></div>
             <div class="reach"><span class="mailpill">pisagid@gmail.com</span><span class="clock">Accra <b id="clock">--:--</b> <span id="clockNote"></span></span></div>
             <div class="socials">
               <a class="main" href="#hire" aria-label="Contact form"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></a>
@@ -680,6 +763,8 @@ footer.site a:hover{color:var(--blue-ink)}
                 <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
               </button>
               <span class="hint">Or tap any note to hear it.</span>
+              <button class="btn soft" id="recBtn" type="button" hidden aria-pressed="false"><span id="recLbl">Hear my recording</span></button>
+              <audio id="recAudio" preload="none"></audio>
             </div>
           </div>
           <figure class="staff-card">
@@ -711,9 +796,74 @@ footer.site a:hover{color:var(--blue-ink)}
             <li class="card step"><span class="num">04</span><h4>Train &amp; hand over</h4><p>Your team is trained to use it, and I stay on hand after go-live.</p></li>
           </ol>
         </div>
-        <div class="center"><a class="btn blue" href="#hire">Start a project</a></div>
+        <div class="center"><a class="btn blue" href="#estimate">Estimate your project</a><a class="btn soft" href="#hire">Start a project</a></div>
       </section>
 
+  </div>
+
+  <div class="frame sheet">
+      <section class="page" id="estimate" aria-label="Estimate your project">
+        <h2 class="ptitle">Plan your project</h2>
+        <p class="psub">Pick what you need and get a rough timeline in seconds. Send it to me and we'll refine it together on a call.</p>
+        <div class="est">
+          <div class="est-q card">
+            <fieldset class="q">
+              <legend><span class="qn">1</span>What do you want built?</legend>
+              <div class="kinds" id="kinds">
+                <label class="kind"><input type="checkbox" value="app"><span class="k-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M11 18h2"/></svg></span><b>Business app</b><small>Power Apps for phone or desktop</small></label>
+                <label class="kind"><input type="checkbox" value="flow"><span class="k-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2.5 4.5 14H11l-1 7.5L18.5 10H12z"/></svg></span><b>Automated workflow</b><small>Approvals, reminders, data moves</small></label>
+                <label class="kind"><input type="checkbox" value="bi"><span class="k-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V11M10 20V5M16 20v-7M21 20.5H3"/></svg></span><b>Dashboard</b><small>Power BI reports</small></label>
+                <label class="kind"><input type="checkbox" value="web"><span class="k-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><b>Website or web app</b><small>PHP, JavaScript, MySQL</small></label>
+                <label class="kind"><input type="checkbox" value="azure"><span class="k-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18.5a4 4 0 0 1-.6-8A6 6 0 0 1 18 9.5a4.5 4.5 0 0 1-.5 9z"/></svg></span><b>Azure &amp; DevOps</b><small>Cloud setup, pipelines</small></label>
+                <label class="kind"><input type="checkbox" value="m365"><span class="k-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.5a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span><b>Microsoft 365</b><small>SharePoint, Teams rollout</small></label>
+              </div>
+            </fieldset>
+            <fieldset class="q">
+              <legend><span class="qn">2</span>How many people will use it?</legend>
+              <div class="seg" id="segUsers" role="radiogroup">
+                <label><input type="radio" name="users" value="1" checked><span>Under 20</span></label>
+                <label><input type="radio" name="users" value="1.15"><span>20–100</span></label>
+                <label><input type="radio" name="users" value="1.35"><span>100–500</span></label>
+                <label><input type="radio" name="users" value="1.6"><span>500+</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="q">
+              <legend><span class="qn">3</span>Does it need to connect to other systems?</legend>
+              <div class="seg" id="segInt" role="radiogroup">
+                <label><input type="radio" name="integ" value="0" checked><span>No</span></label>
+                <label><input type="radio" name="integ" value="1"><span>1–2 systems</span></label>
+                <label><input type="radio" name="integ" value="2"><span>3 or more</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="q">
+              <legend><span class="qn">4</span>Should your team be trained on it?</legend>
+              <div class="seg" id="segTrain" role="radiogroup">
+                <label><input type="radio" name="train" value="1" checked><span>Yes, please</span></label>
+                <label><input type="radio" name="train" value="0"><span>No need</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="est-out card" aria-live="polite">
+            <span class="eyebrow">Your rough plan</span>
+            <div class="est-empty" id="estEmpty"><span class="big">Pick at least one thing to build</span><p>Your timeline and plan appear here.</p></div>
+            <div class="est-res" id="estRes" hidden>
+              <div class="est-head">
+                <div><small>Estimated timeline</small><b id="estWeeks">4–6 weeks</b></div>
+                <span class="lvl-pill" id="estLevel">Standard</span>
+              </div>
+              <div class="meter" aria-hidden="true"><i id="estMeter"></i></div>
+              <div class="est-price" id="estPrice" hidden><small>Budget guide</small><b id="estPriceVal"></b></div>
+              <div class="phases" id="estPhases"></div>
+              <ul class="est-list" id="estList"></ul>
+              <div class="est-cta">
+                <button class="btn blue" type="button" id="estSend">Send this plan to me</button>
+                <a class="btn soft" id="estBook" href="#" target="_blank" rel="noopener" hidden>Book a call</a>
+              </div>
+              <p class="est-note">A rough guide based on similar work, not a quote. Every project is scoped properly on a short call.</p>
+            </div>
+          </div>
+        </div>
+      </section>
   </div>
 
   <div class="frame sheet">
@@ -745,10 +895,19 @@ footer.site a:hover{color:var(--blue-ink)}
       <section class="page" id="credentials" aria-label="Credentials">
         <h2 class="ptitle">Credentials</h2>
         <p class="psub">Six Microsoft certifications, all verifiable online. Copy a credential ID to check it with Microsoft Learn.</p>
+        <div class="center" id="verifyAll" hidden style="margin:-12px 0 26px"><a class="btn soft" id="verifyAllLink" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 4.5 5.5v6c0 5 3.3 8.6 7.5 10 4.2-1.4 7.5-5 7.5-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><span>Verify all on Microsoft Learn</span></a></div>
         <div class="creds" id="creds"></div>
         <p class="note">Also: BSc IT (Network Systems), First Class Honours · MCSE, System &amp; Network Administration (2016) · Diploma in Hardware &amp; Networking (2012)</p>
       </section>
 
+  </div>
+
+  <div class="frame sheet">
+      <section class="page" id="notes" aria-label="Notes">
+        <h2 class="ptitle">Notes</h2>
+        <p class="psub">Short, practical notes from replacing paperwork with working systems.</p>
+        <div class="notes" id="notesList"></div>
+      </section>
   </div>
 
   <div class="frame sheet">
@@ -763,11 +922,13 @@ footer.site a:hover{color:var(--blue-ink)}
             </div>
             <p>Reach me wherever suits you, or fill in the form.</p>
             <div class="contacts">
+              <a class="ct" id="bookRow" href="#" target="_blank" rel="noopener" hidden><span class="ci" style="--c:#13895A"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8 14h2M14 14h2M8 17.5h2"/></svg></span><span class="cx"><small>Book a call</small><b>Pick a time that suits you</b></span><svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
               <a class="ct" href="https://wa.me/233571174104" target="_blank" rel="noopener"><span class="ci" style="--c:#25D366"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span><span class="cx"><small>WhatsApp</small><b>+233 57 117 4104</b></span><svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
               <a class="ct" href="tel:+233550612038"><span class="ci" style="--c:#1F6FEB"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span class="cx"><small>Call</small><b>+233 55 061 2038</b></span><svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
               <a class="ct" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=pisagid@gmail.com" target="_blank" rel="noopener"><span class="ci" style="--c:#EA4335"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></span><span class="cx"><small>Gmail</small><b>pisagid@gmail.com</b></span><svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
               <a class="ct" href="https://outlook.live.com/mail/0/deeplink/compose?to=pisagid@outlook.com" target="_blank" rel="noopener"><span class="ci" style="--c:#0078D4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6.5 9 6.5 9-6.5"/></svg></span><span class="cx"><small>Outlook</small><b>pisagid@outlook.com</b></span><svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
             </div>
+            <a class="ct cvrow" href="assets/Isaac-Gideon-Poku-CV.pdf" download="Isaac-Gideon-Poku-CV.pdf"><span class="ci" style="--c:#0E1B3D"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2.5H6.5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V8z"/><path d="M14 2.5V8h5.5M8.5 13h7M8.5 17h5"/></svg></span><span class="cx"><small>My CV</small><b>Download PDF · 1 page</b></span><svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg></a>
             <div class="next">
               <div class="soc-lbl">What happens next</div>
               <ol>
@@ -863,10 +1024,19 @@ footer.site a:hover{color:var(--blue-ink)}
     <li><a href="#about">About me</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#works">Works</a></li>
-    <li><a href="#credentials">Credentials</a></li>
+    <li><a href="#credentials">Credentials</a></li><li><a href="#notes">Notes</a></li>
   </ul>
   <a class="btn blue" href="#hire">Hire Me</a>
 </div>
+<dialog class="reader" id="reader" aria-labelledby="readerTitle">
+  <article>
+    <div class="r-top"><span class="eyebrow" id="readerTag"></span><button class="icon-btn" type="button" id="readerClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <h2 id="readerTitle"></h2>
+    <p class="r-meta" id="readerMeta"></p>
+    <div class="r-body" id="readerBody"></div>
+    <div class="r-foot"><a class="btn blue" href="#hire" id="readerHire">Talk to me about this</a><button class="btn soft" type="button" id="readerShare">Copy link</button></div>
+  </article>
+</dialog>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
@@ -877,6 +1047,18 @@ footer.site a:hover{color:var(--blue-ink)}
      "https://formspree.io/f/abcdwxyz"
      Left empty, the form offers WhatsApp / email instead. */
   const FORM_ENDPOINT = "https://formsubmit.co/ajax/pisagid@gmail.com";
+
+  /* ── SWITCH-ON SETTINGS ────────────────────────────────────
+     Each feature stays hidden until you fill in its value.   */
+  const SETTINGS = {
+    BOOKING_URL: "",        // Calendly or Microsoft Bookings link, e.g. "https://calendly.com/pisagid/30min"
+    TRANSCRIPT_URL: "",     // Microsoft Learn transcript share link (Profile → Transcript → Share link)
+    GOATCOUNTER: "",        // your GoatCounter code, e.g. "pisagid" for https://pisagid.goatcounter.com
+    MUSIC_RECORDING: "",    // a recording of you, e.g. "assets/music/my-choir.mp3"
+    RATE_PER_WEEK: 0,       // set above 0 to show a budget guide in the estimator
+    CURRENCY: "GHS"
+  };
+  /* ───────────────────────────────────────────────────────── */
   /* ───────────────────────────────────────────────────────── */
 
   /* Certifications (no expiry shown). level: "associate" | "expert" */
@@ -942,7 +1124,7 @@ footer.site a:hover{color:var(--blue-ink)}
   })();
 
   /* ---------- section highlight (single page) ---------- */
-  const pages = ["home","about","services","works","credentials","hire"];
+  const pages = ["home","about","services","works","credentials","notes","hire"];
   let current = "home";
   const allLinks = () => document.querySelectorAll(".menu a, .mlinks a");
   function spy(){
@@ -1072,7 +1254,7 @@ footer.site a:hover{color:var(--blue-ink)}
     <article class="card cred">
       <img src="${badgeSrc(c.lvl)}" width="348" height="360" alt="Microsoft Certified ${c.lvl === "expert" ? "Expert" : "Associate"} badge" loading="lazy">
       <div><span class="lvl">Microsoft Certified · ${c.lvl === "expert" ? "Expert" : "Associate"}</span><h3>${c.t}</h3><p class="earned">Earned ${c.e}</p></div>
-      <div class="id"><span>ID <code>${c.id}</code></span><button class="mini" type="button" data-copy="${c.id}">Copy ID</button></div>
+      <div class="id"><span>ID <code>${c.id}</code></span><span class="id-act">${(c.verify || SETTINGS.TRANSCRIPT_URL) ? `<a class="mini vfy" href="${esc(c.verify || SETTINGS.TRANSCRIPT_URL)}" target="_blank" rel="noopener">Verify ↗</a>` : ""}<button class="mini" type="button" data-copy="${c.id}">Copy ID</button></span></div>
     </article>`).join("");
 
   /* ---------- clock, year, theme ---------- */
@@ -1216,6 +1398,133 @@ footer.site a:hover{color:var(--blue-ink)}
   $("copyMsg").addEventListener("click", () => copy(lastMsg, pre));
   $("editMsg").addEventListener("click", () => { out.hidden = true; form.hidden = false; $("f-msg").focus(); });
   $("another").addEventListener("click", () => { sent.hidden = true; form.hidden = false; $("f-name").focus(); });
+
+
+  /* ---------- switch-on features ---------- */
+  (function(){
+    if(SETTINGS.BOOKING_URL){ ["bookRow","estBook"].forEach(id => { const a = $(id); a.href = SETTINGS.BOOKING_URL; a.hidden = false; }); }
+    if(SETTINGS.TRANSCRIPT_URL){ $("verifyAllLink").href = SETTINGS.TRANSCRIPT_URL; $("verifyAll").hidden = false; }
+    if(SETTINGS.GOATCOUNTER){
+      const sc = document.createElement("script"); sc.async = true; sc.src = "https://gc.zgo.at/count.js";
+      sc.dataset.goatcounter = `https://${SETTINGS.GOATCOUNTER}.goatcounter.com/count`; document.head.appendChild(sc);
+    }
+    if(SETTINGS.MUSIC_RECORDING){
+      const btn = $("recBtn"), au = $("recAudio"), lbl = $("recLbl");
+      au.src = SETTINGS.MUSIC_RECORDING; btn.hidden = false;
+      btn.addEventListener("click", () => { if(au.paused){ au.play().catch(()=>{}); } else { au.pause(); } });
+      au.addEventListener("play", () => { btn.setAttribute("aria-pressed","true"); lbl.textContent = "Pause recording"; });
+      au.addEventListener("pause", () => { btn.setAttribute("aria-pressed","false"); lbl.textContent = "Hear my recording"; });
+    }
+  })();
+
+  /* ---------- project estimator ---------- */
+  (function(){
+    const W = {app:[2,4,"Power App"], flow:[1,2,"Automated workflows"], bi:[1,3,"Power BI dashboard"], web:[3,6,"Website / web app"], azure:[1,3,"Azure & DevOps setup"], m365:[2,4,"Microsoft 365 / SharePoint rollout"]};
+    const NEED = {app:"n1", flow:"n1", bi:"n4", web:"n3", azure:"n2", m365:"n5"};
+    const root = $("estimate"); let plan = null;
+    function calc(){
+      const kinds = [...root.querySelectorAll("#kinds input:checked")].map(i => i.value);
+      if(!kinds.length){ $("estEmpty").hidden = false; $("estRes").hidden = true; plan = null; return; }
+      const users = +root.querySelector('input[name="users"]:checked').value;
+      const integ = +root.querySelector('input[name="integ"]:checked').value;
+      const train = +root.querySelector('input[name="train"]:checked').value;
+      let lo = 0, hi = 0; kinds.forEach(k => { lo += W[k][0]; hi += W[k][1]; });
+      if(kinds.length > 1){ lo *= .85; hi *= .85; }
+      lo *= users; hi *= users;
+      lo += [0,1,2][integ]; hi += [0,2,4][integ];
+      if(train){ lo += .5; hi += 1; }
+      lo = Math.max(1, Math.round(lo)); hi = Math.max(lo + 1, Math.round(hi));
+      const score = Math.min(1, hi / 24);
+      const level = hi <= 4 ? "Light" : hi <= 9 ? "Standard" : hi <= 16 ? "Advanced" : "Enterprise";
+      $("estWeeks").textContent = `${lo}–${hi} weeks`;
+      $("estLevel").textContent = level;
+      $("estMeter").style.width = (12 + score*88) + "%";
+      if(SETTINGS.RATE_PER_WEEK > 0){
+        const f = n => SETTINGS.CURRENCY + " " + Math.round(n).toLocaleString("en-GB");
+        $("estPriceVal").textContent = `${f(lo*SETTINGS.RATE_PER_WEEK)} – ${f(hi*SETTINGS.RATE_PER_WEEK)}`; $("estPrice").hidden = false;
+      }
+      const phases = [["Map the process",.15],["Prototype",.2],["Build & automate",.45],["Train & hand over", train ? .2 : .08]];
+      const tot = phases.reduce((s,p) => s + p[1], 0); let acc = 0;
+      $("estPhases").innerHTML = phases.map(([n,w]) => { const left = acc/tot*100, width = w/tot*100; acc += w;
+        const wk = Math.max(.5, Math.round(w/tot*hi*2)/2);
+        return `<div class="ph-row"><span>${n}</span><span class="bar"><i style="left:${left.toFixed(1)}%;width:${width.toFixed(1)}%"></i></span><em>~${wk} wk</em></div>`; }).join("");
+      const userTxt = root.querySelector('input[name="users"]:checked').nextElementSibling.textContent;
+      const intTxt = root.querySelector('input[name="integ"]:checked').nextElementSibling.textContent;
+      const items = kinds.map(k => W[k][2]);
+      $("estList").innerHTML = [...items, `${userTxt} users`, integ ? `Connects to ${intTxt.toLowerCase()}` : "Stand-alone", train ? "Team training included" : "No training"].map(t => `<li>${esc(t)}</li>`).join("");
+      $("estEmpty").hidden = true; $("estRes").hidden = false;
+      plan = {kinds, items, userTxt, intTxt, train, lo, hi, level};
+    }
+    root.addEventListener("change", calc);
+    $("estSend").addEventListener("click", () => {
+      if(!plan) return;
+      document.querySelectorAll("#needs input").forEach(i => i.checked = false);
+      plan.kinds.forEach(k => { const c = $(NEED[k]); if(c) c.checked = true; });
+      if(plan.train) $("n6").checked = true;
+      const msg = $("f-msg");
+      msg.value = `I used your project planner:\n- ${plan.items.join("\n- ")}\n- ${plan.userTxt} users\n- ${plan.intTxt === "No" ? "Stand-alone" : "Connects to " + plan.intTxt.toLowerCase()}\n- Rough estimate: ${plan.lo}–${plan.hi} weeks (${plan.level})\n\nWhat happens today: `;
+      if(location.hash === "#hire") $("hire").scrollIntoView({behavior: reduce ? "auto" : "smooth"}); else location.hash = "#hire";
+      setTimeout(() => { msg.focus(); msg.setSelectionRange(msg.value.length, msg.value.length); }, 700);
+    });
+  })();
+
+  /* ---------- notes ---------- */
+  const NOTES = [
+    {slug:"ready-for-an-app", tag:"Process", title:"Five signs a paper process is ready to become an app", mins:4,
+     excerpt:"If you recognise three or more of these in your office, the process is costing you more than an app would.",
+     body:`<p>Most teams don't decide to "digitise" a process. They just get tired of it. Here are the signs I look for when someone tells me about the way work gets done today.</p>
+<h3>1. The same details are typed more than once</h3><p>A form is filled in by hand, then someone re-types it into Excel, then someone copies it into an email. Every re-type is a chance for a mistake and an hour nobody gets back.</p>
+<h3>2. Nobody knows where a request is</h3><p>"Has my leave been approved?" "Did finance get the invoice?" If the answer always involves walking to someone's desk or searching an inbox, the process has no single source of truth.</p>
+<h3>3. Approvals wait for one person's signature</h3><p>When the manager travels, everything stops. An approval that can be done on a phone in one tap removes that bottleneck without removing the control.</p>
+<h3>4. Reports are built by hand at month end</h3><p>If someone spends days collecting numbers from spreadsheets to make a report, the data already exists. It just isn't connected. A dashboard can show it live.</p>
+<h3>5. Mistakes are found late</h3><p>Missing fields, wrong totals, duplicate entries: paper and spreadsheets accept anything. A form can check entries the moment they're made.</p>
+<h3>What to do next</h3><p>Pick the process that frustrates people most and write down every step, every form and every signature. That list is the first thing I ask for, and it's usually half of the design.</p>`},
+    {slug:"power-apps-or-web-app", tag:"Choosing tools", title:"Power Apps or a custom web app? How I decide", mins:4,
+     excerpt:"Both can solve the same problem. The right choice depends on who uses it, what you already pay for, and where the data lives.",
+     body:`<p>Clients often ask whether they need "a proper app" or whether Power Apps will do. I build both, so here's the honest way I decide.</p>
+<h3>Choose Power Apps when…</h3><ul><li><b>Your staff already use Microsoft 365.</b> They sign in with the accounts they have, and security follows your existing settings.</li><li><b>The users are inside your organisation.</b> Internal tools like approvals, requests, inspections and registers are where Power Apps shines.</li><li><b>You need it fast and want to change it often.</b> Screens and rules can be adjusted in hours, not weeks.</li><li><b>The data lives in SharePoint, Excel, Dataverse or other Microsoft services.</b> The connections are already built.</li></ul>
+<h3>Choose a custom web app when…</h3><ul><li><b>The public will use it.</b> Customers, applicants or members who don't have your company accounts.</li><li><b>You need full control of the design</b> and the experience has to feel like your brand.</li><li><b>You expect many outside users.</b> Licensing a Microsoft product per person may cost more than hosting a web app.</li><li><b>It must run anywhere</b>, independent of any one vendor.</li></ul>
+<h3>Often the answer is both</h3><p>A public web form collects applications, and a Power App lets staff review and approve them, with Power Automate moving data between the two. Start with who the users are, and the right tool usually becomes obvious.</p>`},
+    {slug:"getting-people-to-use-it", tag:"Adoption", title:"Getting people to actually use the new system", mins:3,
+     excerpt:"A system nobody uses is just an expensive shortcut back to paper. Adoption is designed, not hoped for.",
+     body:`<p>I've seen good systems fail because people quietly went back to the old way. Training on launch day isn't enough. Here's what works.</p>
+<h3>Involve the people who do the work</h3><p>The clerk who fills in the form every day knows its problems better than anyone. Show them the prototype early, and use their words on the screens.</p>
+<h3>Make the new way easier than the old way</h3><p>If the app takes longer than the paper form, people will use the paper form. Pre-fill what you already know, cut fields nobody reads, and make the common case one tap.</p>
+<h3>Switch off the old way</h3><p>Pick a date after which paper forms are no longer accepted. Running both in parallel for too long doubles the work and keeps old habits alive.</p>
+<h3>Train in short, practical sessions</h3><p>Fifteen minutes on "how to submit a request on your phone" beats a two-hour tour of every feature. Leave a one-page guide behind.</p>
+<h3>Name a champion</h3><p>One person in each team who answers quick questions and reports problems. Adoption spreads person to person, not by email.</p>
+<h3>Look at the numbers after a month</h3><p>How many requests went through the app, and how long did approvals take? Real usage tells you what to fix next.</p>`}
+  ];
+  (function(){
+    $("notesList").innerHTML = NOTES.map((n,i) => `<a class="card note-card" href="#note-${n.slug}"><div class="note-art"><span>0${i+1}</span><b>${esc(n.tag)}</b></div><h3>${esc(n.title)}</h3><p>${esc(n.excerpt)}</p><span class="rt">${n.mins} min read</span></a>`).join("");
+    const dlg = $("reader");
+    let lastHash = "#notes";
+    function openNote(slug){
+      const n = NOTES.find(x => x.slug === slug); if(!n) return false;
+      $("readerTag").textContent = n.tag; $("readerTitle").textContent = n.title;
+      $("readerMeta").textContent = `Isaac Gideon Poku · ${n.mins} min read`;
+      $("readerBody").innerHTML = n.body;
+      document.title = n.title + " · Isaac Gideon Poku";
+      if(!dlg.open){ if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open",""); }
+      dlg.scrollTop = 0; return true;
+    }
+    function closeNote(){
+      if(dlg.open) dlg.close();
+      document.title = "Isaac Gideon Poku · pisagid";
+    }
+    function fromHash(){
+      const h = location.hash.slice(1);
+      if(h.startsWith("note-")){ if(!openNote(h.slice(5))) closeNote(); }
+      else { closeNote(); }
+    }
+    addEventListener("hashchange", fromHash);
+    $("readerClose").addEventListener("click", () => { history.pushState(null, "", "#notes"); closeNote(); });
+    dlg.addEventListener("cancel", e => { e.preventDefault(); history.pushState(null, "", "#notes"); closeNote(); });
+    dlg.addEventListener("click", e => { if(e.target === dlg){ history.pushState(null, "", "#notes"); closeNote(); } });
+    $("readerHire").addEventListener("click", () => closeNote());
+    $("readerShare").addEventListener("click", () => copy(location.href.split("#")[0] + location.hash, null));
+    fromHash();
+  })();
 
   /* ---------- music staff ---------- */
   (function(){

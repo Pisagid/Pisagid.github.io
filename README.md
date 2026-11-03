@@ -10,6 +10,7 @@ assets/badges/             Microsoft Certified Associate and Expert badges, take
 assets/flags.webp          all country flags for the phone country picker, in one small image (no outside service needed)
 assets/apple-touch-icon.png
 assets/logo/               logo files (see below)
+assets/Isaac-Gideon-Poku-CV.pdf  one-page CV behind the Download CV buttons
 404.html                   friendly "not found" page; also sends isaacgideonpoku.com/works etc. to the right section
 robots.txt, sitemap.xml    help search engines find and index the site
 ```
@@ -49,6 +50,27 @@ Optional: after activation, FormSubmit's email shows a random address for your f
 
 To use something else (Formspree, or a Power Automate flow that saves enquiries to SharePoint), replace `FORM_ENDPOINT` with that service's address. The form sends JSON with `name`, `email`, `organisation`, `phone`, `needs`, `start`, `message` and `_subject`.
 
+## 4. Switch-on features
+
+Near the top of the `<script>` in `index.html` there is a `SETTINGS` block. Each feature stays hidden until you fill in its value:
+
+| Setting | What it turns on | Where to get it |
+| --- | --- | --- |
+| `BOOKING_URL` | **Book a call** in the Hire Me panel and the project planner | Your Calendly or Microsoft Bookings page link |
+| `TRANSCRIPT_URL` | **Verify** on every certification, plus **Verify all on Microsoft Learn** | learn.microsoft.com → your profile → **Transcript** → **Share link** |
+| `GOATCOUNTER` | Visitor statistics without cookie banners | Sign up free at goatcounter.com and enter your code (e.g. `pisagid`) |
+| `MUSIC_RECORDING` | **Hear my recording** in the music section | Put an MP3 in `assets/music/` and enter its path |
+| `RATE_PER_WEEK` + `CURRENCY` | A budget guide in the project planner | Your typical weekly rate |
+
+A certification can also get its own verify link: add `verify:"https://…"` to that certificate in the `certs` list.
+
+**Google Search Console:** go to search.google.com/search-console, add the property `isaacgideonpoku.com`, choose **HTML tag**, and paste the tag Google gives you just above `</head>` (there is a marked spot). Then submit `https://isaacgideonpoku.com/sitemap.xml`.
+
+## Project planner and notes
+
+- The planner's timeline is a rough guide. Adjust the weeks per item in the `W` list inside the "project estimator" script if they don't match how long your projects take.
+- Notes live in the `NOTES` list in the script. Each has a `slug` (its link), `tag`, `title`, `mins`, `excerpt` and `body` (HTML). Copy one to add another.
+
 ## Logo
 
 The logo is the name **pisagid**: **P**oku, **isa** for Isaac, **gid** for Gideon. The **a** and **g** are joined into one symbol: the a's arch and bowl sit on top, and its stem drops into the g's tail, joining Isaac and Gideon. The dots of the two i's are linked, a nod to networks and connected systems.
@@ -73,6 +95,8 @@ The site opens with a loading screen, then shows one scrolling page. The top men
 | Services | isaacgideonpoku.com/#services |
 | Works | isaacgideonpoku.com/#works |
 | Credentials | isaacgideonpoku.com/#credentials |
+| Estimate your project | isaacgideonpoku.com/#estimate |
+| Notes | isaacgideonpoku.com/#notes (each note has its own link, e.g. #note-power-apps-or-web-app) |
 | Hire me | isaacgideonpoku.com/#hire |
 
 ## Updating content

@@ -11,7 +11,7 @@
   (function(){
     var name = location.pathname.replace(/^\/+|\/+$/g, "").toLowerCase();
     var map = {about:"about", "about-me":"about", services:"services", works:"works", work:"works", projects:"works",
-               credentials:"credentials", certifications:"credentials", music:"music", hire:"hire", contact:"hire", "hire-me":"hire"};
+               credentials:"credentials", certifications:"credentials", music:"music", hire:"hire", contact:"hire", "hire-me":"hire", notes:"notes", blog:"notes", estimate:"estimate", planner:"estimate", cv:"home"};
     if(map[name]) location.replace("/#" + map[name]);
   })();
 </script>
